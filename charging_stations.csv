@@ -1,0 +1,756 @@
+name,address,lat,lng, type
+Vincom Plaza Hòa Bình,Đường Cù Chính Lan P. Đồng Tiến TP. Hòa Bình,20.825869749770696,105.35107579543782,VinFast DC 30kW
+Serena Resort Kim Bôi,Xóm Khai Đồi Xã Sào Báy H. Kim Bôi,20.598787151034674, 105.58918731670616,VinFast AC 11kW
+PVOil Cao Phong,Quốc lộ 6 Thị trấn Cao Phong H. Cao Phong,20.734567,105.267891,VinFast DC 60kW
+Khách sạn AP Plaza,Đường Chi Lăng P. Trại Mát TP. Hòa Bình,20.815678,105.336789,VinFast DC 30kW
+Trạm dừng nghỉ Số 29 (Hà Nội - Mộc Châu),Huyện Cao Phong Hòa Bình,20.745678,105.254321,VinFast DC 60kW
+Ivory Villas & Resort,Xã Lâm Sơn H. Lương Sơn,20.898765,105.487654,Eboost AC 22kW
+PVOil Tân Lạc,Thị trấn Mãn Đức H. Tân Lạc,20.634567,105.278901,VinFast DC 60kW
+An Lạc Eco Farm,Xã Vĩnh Đồng H. Kim Bôi,20.612345,105.587654,VinFast AC 11kW
+Khách sạn Grand Hotel Hòa Bình,129 Lê Thánh Tông P. Tân Thịnh,20.814567,105.323456,VinFast DC 30kW
+PVOil Kỳ Sơn,Xã Dân Hạ H. Kỳ Sơn,20.912345,105.423456,VinFast DC 60kW
+V-Resort Kim Bôi,Xã Vĩnh Tiến H. Kim Bôi,20.678901,105.534567,VinFast DC 30kW
+Bakhan Village Resort,Xã Khan Hạ H. Mai Châu,20.712345,105.123456,Eboost AC 11kW
+PVOil Mai Châu,Ngã ba Tòng Đậu H. Mai Châu,20.678902,105.098765,VinFast DC 60kW
+Bãi xe Bản Lác,Bản Lác Xã Chiềng Châu H. Mai Châu,20.665432,105.087654,VinFast AC 11kW
+Ohara Villas & Resort,Xã Mông Hóa H. Kỳ Sơn,20.923456,105.412345,Eboost AC 22kW
+VinFast Showroom Hòa Bình,102 Trần Hưng Đạo P. Đồng Tiến,20.817890,105.335678,VinFast DC 60kW
+Sân Golf Long Thành (Hilltop Valley),Xã Dân Hạ H. Kỳ Sơn,20.901234,105.512345,VinFast AC 11kW
+PVOil Yên Thủy,Thị trấn Hàng Trạm H. Yên Thủy,20.456789,105.678901,VinFast DC 60kW
+Mai Châu Ecolodge,Bản Nà Phòn H. Mai Châu,20.654321,105.078901,Eboost AC 11kW
+Kho bạc Nhà nước Hòa Bình,P. Phương Lâm TP. Hòa Bình,20.823456,105.345678,VinFast AC 11kW
+Bệnh viện Đa khoa Tỉnh Hòa Bình,P. Đồng Tiến TP. Hòa Bình,20.818901,105.332345,VinFast DC 30kW
+PVOil Đà Bắc,Thị trấn Đà Bắc H. Đà Bắc,20.876543,105.234567,VinFast DC 60kW
+Avana Retreat,Xã Bao La H. Mai Châu,20.723456,105.067890,Eboost AC 22kW
+Vincom Plaza Sơn La,Đường Giảng Lắc P. Quyết Thắng TP. Sơn La,21.328901,103.912345,VinFast DC 30kW
+Mường Thanh Luxury Sơn La,Đường Giảng Lắc P. Quyết Thắng TP. Sơn La,21.329876,103.913456,VinFast DC 30kW
+PVOil Mộc Châu,Tiểu khu 4 Thị trấn Mộc Châu,20.845678,104.623456,VinFast DC 60kW
+Khách sạn Sao Xanh Mộc Châu,Tiêu khu 14 Thị trấn Mộc Châu,20.856789,104.634567,VinFast DC 30kW
+PVOil Yên Châu,Quốc lộ 6 Thị trấn Yên Châu,21.045678,104.234567,VinFast DC 60kW
+PVOil Mai Sơn,Thị trấn Hát Lót H. Mai Sơn,21.234567,104.012345,VinFast DC 60kW
+VinFast Showroom Sơn La,Đường Chu Văn An P. Quyết Tâm,21.334567,103.901234,VinFast DC 60kW
+Thảo Nguyên Resort,Tiểu khu 32 Thị trấn Nông Trường Mộc Châu,20.867890,104.654321,VinFast AC 11kW
+PVOil Thuận Châu,Thị trấn Thuận Châu H. Thuận Châu,21.434567,103.678901,VinFast DC 60kW
+Phoenix Mộc Châu Resort,Rừng thông Bản Áng xã Đông Sang,20.834567,104.612345,VinFast AC 11kW
+PVOil Thành Phố Sơn La,P. Chiềng Sinh TP. Sơn La,21.289012,103.956789,VinFast DC 150kW
+Mộc Châu Island (Cầu Kính),Xã Mường Sang H. Mộc Châu,20.812345,104.589012,VinFast DC 60kW
+Bệnh viện Đa khoa Mộc Châu,Tiểu khu 11 Thị trấn Mộc Châu,20.848901,104.628901,VinFast DC 30kW
+PVOil Vân Hồ,Xã Vân Hồ H. Vân Hồ,20.789012,104.765432,VinFast DC 60kW
+Khách sạn Công Đoàn Mộc Châu,Thị trấn Nông Trường Mộc Châu,20.876543,104.667890,VinFast AC 11kW
+PVOil Chiềng Cơi,P. Chiềng Cơi TP. Sơn La,21.312345,103.905678,VinFast DC 60kW
+VinWonders Mộc Châu (Dự kiến),Khu du lịch Mộc Châu,20.854321,104.643210,VinFast DC 150kW
+Trung tâm Hành chính Huyện Mai Sơn,Thị trấn Hát Lót Mai Sơn,21.232345,104.015678,VinFast AC 11kW
+PVOil Phù Yên,Thị trấn Phù Yên H. Phù Yên,21.256789,104.654321,VinFast DC 60kW
+Glenda Hotel Mộc Châu,Tiểu khu Nhà Nghỉ TT. Nông Trường,20.865432,104.651234,VinFast AC 11kW
+Vincom Plaza Điện Biên Phủ,Đường Võ Nguyên Giáp P. Tân Thanh,21.391234,103.018901,VinFast DC 30kW
+Mường Thanh Grand Điện Biên,514 Võ Nguyên Giáp P. Him Lam,21.385678,103.021234,VinFast DC 30kW
+PVOil Điện Biên,P. Thanh Bình TP. Điện Biên Phủ,21.378901,103.015678,VinFast DC 60kW
+Him Lam Resort,P. Him Lam TP. Điện Biên Phủ,21.365432,103.034567,VinFast AC 11kW
+PVOil Tuần Giáo,Thị trấn Tuần Giáo H. Tuần Giáo,21.589012,103.423456,VinFast DC 60kW
+Sân bay Điện Biên Phủ,P. Thanh Trường TP. Điện Biên Phủ,21.398765,103.004321,VinFast DC 60kW
+VinFast Showroom Điện Biên,Đường 7/5 P. Him Lam,21.382345,103.025678,VinFast DC 60kW
+Bảo tàng Chiến thắng Điện Biên,P. Mường Thanh TP. Điện Biên Phủ,21.389012,103.017890,VinFast AC 11kW
+PVOil Mường Ảng,Thị trấn Mường Ảng H. Mường Ảng,21.489012,103.189012,VinFast DC 60kW
+Khách sạn Phadin Quân Khu 2,P. Thanh Bình TP. Điện Biên Phủ,21.376543,103.012345,VinFast AC 11kW
+Quảng trường 7/5,P. Tân Thanh TP. Điện Biên Phủ,21.393456,103.021234,VinFast AC 11kW
+PVOil Mường Chà,Thị trấn Mường Chà H. Mường Chà,21.845678,103.089012,VinFast DC 60kW
+Bến xe khách Điện Biên,P. Thanh Bình TP. Điện Biên Phủ,21.371234,103.011234,VinFast DC 30kW
+PVOil Mường Lay,Thị xã Mường Lay Điện Biên,22.056789,103.156789,VinFast DC 60kW
+Khách sạn A1,P. Mường Thanh TP. Điện Biên Phủ,21.387654,103.016789,VinFast AC 11kW
+Cửa hàng Xăng dầu Số 20,Quốc lộ 279 P. Noong Bua,21.367890,103.045678,VinFast DC 60kW
+PVOil Điện Biên Đông,TT. Điện Biên Đông H. Điện Biên Đông,21.334567,103.256789,VinFast DC 60kW
+Trung tâm Thương mại Him Lam,P. Him Lam TP. Điện Biên Phủ,21.381234,103.028901,VinFast DC 30kW
+Khách sạn Nậm Rốm,P. Him Lam TP. Điện Biên Phủ,21.379012,103.023456,VinFast AC 11kW
+Khu di tích Sở Chỉ huy chiến dịch,Xã Mường Phăng TP. Điện Biên Phủ,21.456789,103.178901,VinFast AC 11kW
+Vincom Plaza Lai Châu,Đại lộ Lê Lợi P. Tân Phong TP. Lai Châu,22.396789,103.461234,VinFast DC 30kW
+Mường Thanh Lai Châu,Đường Lê Duẩn P. Tân Phong TP. Lai Châu,22.398901,103.458901,VinFast DC 30kW
+PVOil Tam Đường,Thị trấn Tam Đường H. Tam Đường,22.334567,103.623456,VinFast DC 60kW
+Quảng trường Nhân dân Lai Châu,P. Tân Phong TP. Lai Châu,22.395432,103.463456,VinFast AC 11kW
+VinFast Showroom Lai Châu,Đường 58m P. Tân Phong,22.391234,103.456789,VinFast DC 60kW
+PVOil Phong Thổ,Thị trấn Phong Thổ H. Phong Thổ,22.534567,103.356789,VinFast DC 60kW
+Cửa khẩu Ma Lù Thàng,Xã Ma Ly Pho H. Phong Thổ,22.601234,103.167890,VinFast DC 30kW
+PVOil Than Uyên,Thị trấn Than Uyên H. Than Uyên,21.945678,103.889012,VinFast DC 60kW
+PVOil Tân Uyên,Thị trấn Tân Uyên H. Tân Uyên,22.089012,103.912345,VinFast DC 60kW
+Khách sạn Hoang Nham Luxury,P. Quyết Thắng TP. Lai Châu,22.401234,103.467890,VinFast DC 30kW
+Bến xe khách Lai Châu,P. Đông Phong TP. Lai Châu,22.387654,103.478901,VinFast DC 60kW
+PVOil Nậm Nhùn,Thị trấn Nậm Nhùn H. Nậm Nhùn,22.289012,103.034567,VinFast DC 60kW
+Trung tâm Hành chính Công Lai Châu,P. Tân Phong TP. Lai Châu,22.393456,103.460123,VinFast AC 11kW
+PVOil Sìn Hồ,Thị trấn Sìn Hồ H. Sìn Hồ,22.356789,103.245678,VinFast DC 60kW
+Khu du lịch Cầu Kính Rồng Mây,Đèo Ô Quy Hồ Tam Đường,22.352345,103.765432,VinFast AC 11kW
+PVOil Mường Tè,Thị trấn Mường Tè H. Mường Tè,22.378901,102.789012,VinFast DC 60kW
+Chợ Trung tâm Lai Châu,P. Đoàn Kết TP. Lai Châu,22.389012,103.465678,VinFast AC 11kW
+Khách sạn Putaleng,P. Tân Phong TP. Lai Châu,22.397890,103.454567,VinFast AC 11kW
+PVOil San Thàng,Xã San Thàng TP. Lai Châu,22.376543,103.498765,VinFast DC 60kW
+Hồ Thủy Sơn Parking,P. Tân Phong TP. Lai Châu,22.394567,103.462345,VinFast AC 11kW
+Cửa khẩu Quốc tế Lào Cai,P. Lào Cai TP. Lào Cai,22.495678,103.967890,VinFast DC 60kW
+Sun Plaza Sapa,TT. Sa Pa Thị xã Sa Pa,22.334567,103.841234,VinFast AC 11kW
+PVOil Cốc Lếu,Đường Hoàng Liên P. Cốc Lếu TP. Lào Cai,22.489012,103.956789,VinFast DC 150kW
+Trạm dừng nghỉ Cốc San (Cao tốc),Xã Cốc San TP. Lào Cai,22.434567,103.989012,VinFast DC 250kW
+Hotel de la Coupole - MGallery,1 Hoàng Liên TT. Sa Pa,22.332345,103.842345,Eboost AC 22kW
+PVOil Sa Pa,Điện Biên Phủ TT. Sa Pa,22.345678,103.856789,VinFast DC 60kW
+VinFast Showroom Lào Cai,88 Trần Hưng Đạo P. Bắc Cường,22.467890,103.978901,VinFast DC 60kW
+PVOil Bảo Thắng,TT. Phố Lu H. Bảo Thắng,22.323456,104.189012,VinFast DC 60kW
+PVOil Bảo Yên,TT. Phố Ràng H. Bảo Yên,22.234567,104.456789,VinFast DC 60kW
+Silk Path Grand Resort & Spa Sapa,Đồi Quan 6 Tổ 10 Sa Pa,22.341234,103.834567,VinFast AC 11kW
+GO! Lào Cai (Big C),Đường Trần Hưng Đạo P. Bắc Lệnh,22.456789,103.989012,VinFast DC 60kW
+PVOil Bát Xát,TT. Bát Xát H. Bát Xát,22.512345,103.890123,VinFast DC 60kW
+PVOil Văn Bàn,TT. Khánh Yên H. Văn Bàn,22.045678,104.234567,VinFast DC 60kW
+Lady Hill Sapa Resort,Nguyễn Chí Thanh Tổ 4 Sa Pa,22.348901,103.823456,Eboost AC 22kW
+Bến xe Trung tâm Lào Cai,Đường Trần Phú P. Bắc Cường,22.461234,103.971234,VinFast DC 60kW
+PVOil Bắc Hà,TT. Bắc Hà H. Bắc Hà,22.534567,104.289012,VinFast DC 30kW
+Khách sạn Mường Thanh Lào Cai,86 Thanh Niên P. Duyên Hải,22.501234,103.963456,VinFast DC 30kW
+Pao's Sapa Leisure Hotel,Mường Hoa TT. Sa Pa,22.321234,103.847890,Eboost AC 11kW
+Đền Thượng Lào Cai,P. Lào Cai TP. Lào Cai,22.498765,103.971234,VinFast AC 11kW
+PVOil Xuân Giao,Nút giao IC17 Cao tốc Xuân Giao,22.367890,104.056789,VinFast DC 150kW
+Topas Ecolodge,Thanh Kim Sa Pa,22.289012,103.912345,Eboost AC 11kW
+Quảng trường Trung tâm Sa Pa,TT. Sa Pa,22.335678,103.841234,VinFast AC 11kW
+Bệnh viện Đa khoa Tỉnh Lào Cai,P. Bình Minh TP. Lào Cai,22.445678,103.991234,VinFast DC 30kW
+PVOil Si Ma Cai,TT. Si Ma Cai H. Si Ma Cai,22.689012,104.278901,VinFast DC 60kW
+Sân vận động Lào Cai,P. Nam Cường TP. Lào Cai,22.478901,103.982345,VinFast DC 30kW
+Vincom Plaza Yên Bái,Đường Nguyễn Thái Học P. Nguyễn Thái Học,21.712345,104.878901,VinFast DC 30kW
+Trạm dừng nghỉ Km114 (Cao tốc),Xã Minh Quân H. Trấn Yên,21.634567,104.989012,VinFast DC 360kW
+PVOil Nghĩa Lộ,P. Pú Trạng Thị xã Nghĩa Lộ,21.601234,104.512345,VinFast DC 60kW
+VinFast Showroom Yên Bái,Đường Điện Biên P. Yên Ninh,21.723456,104.891234,VinFast DC 60kW
+PVOil Mù Cang Chải,Thị trấn Mù Cang Chải,21.845678,104.089012,VinFast DC 30kW
+Khách sạn Mường Thanh Yên Bái,Đường Tú Xương P. Đồng Tâm,21.705678,104.882345,VinFast DC 30kW
+PVOil Lục Yên,Thị trấn Yên Thế H. Lục Yên,22.112345,104.765432,VinFast DC 60kW
+PVOil Yên Bình,Thị trấn Yên Bình H. Yên Bình,21.745678,104.923456,VinFast DC 60kW
+PVOil Văn Chấn,Thị trấn Sơn Thịnh H. Văn Chấn,21.567890,104.623456,VinFast DC 60kW
+Le Champ Tu Le Resort,Xã Tú Lệ H. Văn Chấn,21.765432,104.432109,Eboost AC 22kW
+Hồ Thác Bà (Khu du lịch),Huyện Yên Bình Yên Bái,21.789012,104.956789,VinFast AC 11kW
+PVOil Văn Yên,Thị trấn Mậu A H. Văn Yên,21.890123,104.678901,VinFast DC 60kW
+Bến xe Khách Yên Bái,P. Nguyễn Thái Học TP. Yên Bái,21.714567,104.876543,VinFast DC 30kW
+PVOil Trạm Tấu,Thị trấn Trạm Tấu H. Trạm Tấu,21.534567,104.489012,VinFast DC 30kW
+Bệnh viện Đa khoa Yên Bái,P. Minh Tân TP. Yên Bái,21.726789,104.885678,VinFast DC 30kW
+Quảng trường 19/8,P. Đồng Tâm TP. Yên Bái,21.703456,104.881234,VinFast AC 11kW
+PVOil Âu Lâu,Xã Âu Lâu TP. Yên Bái,21.689012,104.856789,VinFast DC 60kW
+Khách sạn Như Nguyệt,Đường Đinh Tiên Hoàng P. Đồng Tâm,21.706789,104.884567,VinFast AC 11kW
+PVOil Cổ Phúc,Thị trấn Cổ Phúc H. Trấn Yên,21.756789,104.823456,VinFast DC 60kW
+Khu nghỉ dưỡng Mù Cang Chải,Xã La Pán Tẩn H. Mù Cang Chải,21.856789,104.123456,Eboost AC 11kW
+Chợ Đồng Tâm,P. Đồng Tâm TP. Yên Bái,21.704567,104.883456,VinFast AC 11kW
+PVOil Km5,P. Yên Ninh TP. Yên Bái,21.728901,104.894567,VinFast DC 60kW
+Công viên Yên Hòa,P. Yên Ninh TP. Yên Bái,21.718901,104.889012,VinFast AC 11kW
+Nhà khách Hào Gia,P. Đồng Tâm TP. Yên Bái,21.702345,104.880123,VinFast AC 11kW
+PVOil Giới Phiên,Xã Giới Phiên TP. Yên Bái,21.691234,104.867890,VinFast DC 60kW
+Vincom Plaza Việt Trì,Đại lộ Hùng Vương P. Tiên Cát TP. Việt Trì,21.321234,105.401234,VinFast DC 30kW
+Mường Thanh Luxury Phú Thọ,Đại lộ Hùng Vương P. Gia Cẩm TP. Việt Trì,21.314567,105.396789,VinFast DC 30kW
+Trạm dừng nghỉ Km57 (Cao tốc),Xã Phù Ninh H. Phù Ninh,21.456789,105.289012,VinFast DC 250kW
+Đền Hùng (Khu di tích),Xã Hy Cương TP. Việt Trì,21.378901,105.323456,VinFast DC 60kW
+PVOil Thanh Thủy,Thị trấn Thanh Thủy H. Thanh Thủy,21.123456,105.289012,VinFast DC 60kW
+VinFast Showroom Việt Trì,Đại lộ Hùng Vương P. Vân Phú,21.345678,105.389012,VinFast DC 60kW
+PVOil Phú Thọ (Thị xã),P. Âu Cơ Thị xã Phú Thọ,21.401234,105.223456,VinFast DC 60kW
+Vườn Vua Resort & Villas,Xã Trung Thịnh H. Thanh Thủy,21.145678,105.267890,Eboost AC 22kW
+PVOil Cẩm Khê,Thị trấn Cẩm Khê H. Cẩm Khê,21.456789,105.067890,VinFast DC 60kW
+PVOil Đoan Hùng,Thị trấn Đoan Hùng H. Đoan Hùng,21.623456,105.189012,VinFast DC 60kW
+PVOil Lâm Thao,Thị trấn Lâm Thao H. Lâm Thao,21.312345,105.289012,VinFast DC 60kW
+Đảo Ngọc Xanh,Thị trấn Thanh Thủy H. Thanh Thủy,21.134567,105.278901,VinFast AC 11kW
+PVOil Tân Sơn,Xã Tân Phú H. Tân Sơn,21.156789,104.989012,VinFast DC 30kW
+GO! Việt Trì (Big C),Đường Nguyễn Tất Thành P. Thanh Miếu,21.298901,105.412345,VinFast DC 60kW
+Bến xe Việt Trì,P. Gia Cẩm TP. Việt Trì,21.316789,105.394567,VinFast DC 30kW
+PVOil Tam Nông,Thị trấn Hưng Hóa H. Tam Nông,21.245678,105.312345,VinFast DC 60kW
+PVOil Yên Lập,Thị trấn Yên Lập H. Yên Lập,21.345678,105.034567,VinFast DC 60kW
+Khách sạn X2 Vibe Việt Trì,P. Bến Gót TP. Việt Trì,21.289012,105.423456,VinFast AC 11kW
+PVOil Hạ Hòa,Thị trấn Hạ Hòa H. Hạ Hòa,21.567890,105.012345,VinFast DC 60kW
+Khu công nghiệp Thụy Vân,Xã Thụy Vân TP. Việt Trì,21.356789,105.367890,VinFast DC 150kW
+Sân vận động Việt Trì,Đại lộ Hùng Vương P. Thọ Sơn,21.305678,105.405678,VinFast AC 11kW
+PVOil Phù Ninh,Thị trấn Phong Châu H. Phù Ninh,21.412345,105.345678,VinFast DC 60kW
+Thanh Thủy Hot Spring Resort,Xã La Phù H. Thanh Thủy,21.112345,105.290123,Eboost AC 11kW
+Bảo tàng Hùng Vương,Đường Trần Phú P. Gia Cẩm,21.318901,105.392345,VinFast AC 11kW
+Quảng trường Hùng Vương,P. Gia Cẩm TP. Việt Trì,21.313456,105.398901,VinFast AC 11kW
+Vincom Shophouse Hà Giang,Đường Trần Phú P. Trần Phú TP. Hà Giang,22.823456,104.987654,VinFast AC 11kW
+PVOil Hà Giang (Km0),Đường Nguyễn Trãi P. Nguyễn Trãi TP. Hà Giang,22.812345,104.981234,VinFast DC 60kW
+PVOil Quản Bạ,Thị trấn Tam Sơn H. Quản Bạ,23.067890,104.989012,VinFast DC 60kW
+PVOil Yên Minh,Thị trấn Yên Minh H. Yên Minh,23.123456,105.123456,VinFast DC 60kW
+PVOil Đồng Văn,Thị trấn Đồng Văn H. Đồng Văn,23.278901,105.356789,VinFast DC 60kW
+PVOil Mèo Vạc,Thị trấn Mèo Vạc H. Mèo Vạc,23.165432,105.412345,VinFast DC 60kW
+PVOil Bắc Quang,Thị trấn Việt Quang H. Bắc Quang,22.456789,104.823456,VinFast DC 60kW
+PVOil Vị Xuyên,Thị trấn Vị Xuyên H. Vị Xuyên,22.678901,104.956789,VinFast DC 60kW
+P'apiu Resort,Xã Yên Định H. Bắc Mê,22.745678,105.145678,Eboost AC 22kW
+H'Mong Village Resort,Khu Tráng Kìm xã Đông Hà H. Quản Bạ,23.045678,105.012345,VinFast AC 11kW
+Khách sạn Yên Biên Luxury,Đường Nguyễn Trãi P. Nguyễn Trãi TP. HG,22.816789,104.985678,VinFast DC 30kW
+PVOil Hoàng Su Phì,Thị trấn Vinh Quang H. Hoàng Su Phì,22.689012,104.678901,VinFast DC 60kW
+PVOil Xín Mần,Thị trấn Cốc Pài H. Xín Mần,22.689012,104.456789,VinFast DC 30kW
+PVOil Bắc Mê,Thị trấn Yên Phú H. Bắc Mê,22.756789,105.212345,VinFast DC 60kW
+Bến xe khách Hà Giang,P. Phương Thiện TP. Hà Giang,22.801234,104.976543,VinFast DC 60kW
+Quảng trường 26/3,P. Minh Khai TP. Hà Giang,22.825678,104.983456,VinFast AC 11kW
+PVOil Quang Bình,Thị trấn Yên Bình H. Quang Bình,22.412345,104.623456,VinFast DC 60kW
+Pan Hou Village,Xã Thông Nguyên H. Hoàng Su Phì,22.589012,104.645678,Eboost AC 11kW
+Khách sạn Phoenix Hà Giang,P. Nguyễn Trãi TP. Hà Giang,22.814567,104.982345,VinFast AC 11kW
+Cột cờ Lũng Cú (Bãi xe),Xã Lũng Cú H. Đồng Văn,23.367890,105.312345,VinFast AC 11kW
+Chợ Đồng Văn,TT. Đồng Văn H. Đồng Văn,23.279801,105.357890,VinFast AC 11kW
+Nhà khách Hà An,P. Nguyễn Trãi TP. Hà Giang,22.818901,104.984567,VinFast AC 11kW
+PVOil Thanh Thủy (Cửa khẩu),Xã Thanh Thủy H. Vị Xuyên,22.912345,104.956789,VinFast DC 60kW
+Silk River Hotel,P. Nguyễn Trãi TP. Hà Giang,22.813456,104.980123,VinFast AC 11kW
+Dinh Vua Mèo (Bãi xe),Xã Sà Phìn H. Đồng Văn,23.256789,105.289012,VinFast AC 11kW
+Vincom Plaza Tuyên Quang,Đường Quang Trung P. Phan Thiết TP. TQ,21.823456,105.218901,VinFast DC 30kW
+Mường Thanh Grand Tuyên Quang,Đường Bình Thuận P. Tân Quang TP. TQ,21.825678,105.221234,VinFast DC 30kW
+PVOil Tuyên Quang,P. Tân Hà TP. Tuyên Quang,21.845678,105.234567,VinFast DC 60kW
+Khu di tích Tân Trào,Xã Tân Trào H. Sơn Dương,21.756789,105.512345,VinFast DC 60kW
+PVOil Hàm Yên,Thị trấn Tân Yên H. Hàm Yên,22.056789,104.989012,VinFast DC 60kW
+PVOil Chiêm Hóa,Thị trấn Vĩnh Lộc H. Chiêm Hóa,22.145678,105.267890,VinFast DC 60kW
+PVOil Na Hang,Thị trấn Na Hang H. Na Hang,22.345678,105.389012,VinFast DC 60kW
+PVOil Sơn Dương,Thị trấn Sơn Dương H. Sơn Dương,21.701234,105.401234,VinFast DC 60kW
+PVOil Yên Sơn,Xã Tứ Quận H. Yên Sơn,21.912345,105.201234,VinFast DC 60kW
+VinFast Showroom Tuyên Quang,Đường Quang Trung P. Phan Thiết,21.821234,105.216789,VinFast DC 60kW
+Suối khoáng Mỹ Lâm (Bãi xe),P. Mỹ Lâm TP. Tuyên Quang,21.767890,105.145678,VinFast AC 11kW
+Khách sạn Royal Palace,P. Tân Quang TP. Tuyên Quang,21.818901,105.224567,VinFast DC 30kW
+Quảng trường Nguyễn Tất Thành,P. Tân Quang TP. Tuyên Quang,21.822345,105.223456,VinFast AC 11kW
+PVOil Lâm Bình,Thị trấn Lăng Can H. Lâm Bình,22.412345,105.289012,VinFast DC 30kW
+Bến xe Tuyên Quang,P. Tân Hà TP. Tuyên Quang,21.848901,105.236789,VinFast DC 60kW
+Khu công nghiệp Long Bình An,Xã Đội Cấn TP. Tuyên Quang,21.789012,105.256789,VinFast DC 150kW
+Bệnh viện Đa khoa Tuyên Quang,P. Tân Hà TP. Tuyên Quang,21.834567,105.230123,VinFast DC 30kW
+Khách sạn Mai Sơn,P. Phan Thiết TP. Tuyên Quang,21.826789,105.214567,VinFast AC 11kW
+PVOil Km 31,Đường Quốc lộ 2 H. Hàm Yên,22.012345,105.045678,VinFast DC 60kW
+Khu du lịch Na Hang (Bến thủy),TT. Na Hang H. Na Hang,22.356789,105.391234,VinFast AC 11kW
+Cổng trời Na Hang,QL279 H. Na Hang,22.423456,105.345678,VinFast AC 11kW
+Trung tâm Hội nghị Tỉnh,P. Tân Trào TP. Tuyên Quang,21.824567,105.222345,VinFast AC 11kW
+PVOil Thượng Lâm,Xã Thượng Lâm H. Lâm Bình,22.456789,105.312345,VinFast DC 30kW
+Khách sạn Lavender,P. Tân Quang TP. Tuyên Quang,21.821234,105.225678,VinFast AC 11kW
+Chợ Tam Cờ,P. Tân Quang TP. Tuyên Quang,21.816789,105.227890,VinFast AC 11kW
+Vincom Plaza Cao Bằng,P. Hợp Giang TP. Cao Bằng,22.665432,106.256789,VinFast DC 30kW
+Mường Thanh Luxury Cao Bằng,P. Hợp Giang TP. Cao Bằng,22.667890,106.254567,VinFast DC 30kW
+PVOil Thành Phố Cao Bằng,P. Sông Hiến TP. Cao Bằng,22.654321,106.245678,VinFast DC 60kW
+Thác Bản Giốc (Khu du lịch),Xã Đàm Thủy H. Trùng Khánh,22.854321,106.723456,VinFast DC 60kW
+PVOil Trùng Khánh,Thị trấn Trùng Khánh H. Trùng Khánh,22.834567,106.523456,VinFast DC 60kW
+PVOil Quảng Hòa,Thị trấn Quảng Uyên H. Quảng Hòa,22.745678,106.456789,VinFast DC 60kW
+Khu di tích Pác Bó,Xã Trường Hà H. Hà Quảng,22.987654,106.056789,VinFast DC 30kW
+PVOil Nguyên Bình,Thị trấn Nguyên Bình H. Nguyên Bình,22.678901,105.967890,VinFast DC 60kW
+PVOil Hòa An,Thị trấn Nước Hai H. Hòa An,22.712345,106.189012,VinFast DC 60kW
+PVOil Bảo Lạc,Thị trấn Bảo Lạc H. Bảo Lạc,22.945678,105.678901,VinFast DC 60kW
+VinFast Showroom Cao Bằng,Đường Kim Đồng P. Hợp Giang,22.663456,106.258901,VinFast DC 60kW
+PVOil Thạch An,Thị trấn Đông Khê H. Thạch An,22.423456,106.434567,VinFast DC 60kW
+Bến xe khách Cao Bằng,P. Sông Bằng TP. Cao Bằng,22.656789,106.267890,VinFast DC 30kW
+PVOil Bảo Lâm,Thị trấn Pác Miầu H. Bảo Lâm,22.834567,105.489012,VinFast DC 30kW
+Khách sạn Bằng Giang,P. Hợp Giang TP. Cao Bằng,22.664567,106.252345,VinFast AC 11kW
+PVOil Hạ Lang,Thị trấn Thanh Nhật H. Hạ Lang,22.701234,106.678901,VinFast DC 30kW
+Sài Gòn - Ban Gioc Resort,Xã Đàm Thủy H. Trùng Khánh,22.852345,106.721234,VinFast AC 11kW
+Quảng trường Tượng đài Bác Hồ,P. Hợp Giang TP. Cao Bằng,22.668901,106.256789,VinFast AC 11kW
+PVOil Đèo Cao Bắc,QL3 Ranh giới Bắc Kạn - Cao Bằng,22.567890,106.012345,VinFast DC 60kW
+Động Ngườm Ngao (Bãi xe),Xã Đàm Thủy H. Trùng Khánh,22.845678,106.712345,VinFast AC 11kW
+Chợ Xanh Cao Bằng,P. Hợp Giang TP. Cao Bằng,22.661234,106.255678,VinFast AC 11kW
+Khách sạn Max Boutique,P. Hợp Giang TP. Cao Bằng,22.666789,106.259012,VinFast AC 11kW
+PVOil Trà Lĩnh,Thị trấn Hùng Quốc H. Trùng Khánh,22.812345,106.345678,VinFast DC 60kW
+Nhà khách UBND Tỉnh,P. Hợp Giang TP. Cao Bằng,22.669012,106.253456,VinFast AC 11kW
+PVOil Thông Nông,Thị trấn Thông Nông H. Hà Quảng,22.801234,105.989012,VinFast DC 30kW
+Vincom Plaza Bắc Kạn,P. Đức Xuân TP. Bắc Kạn,22.145678,105.834567,VinFast DC 30kW
+PVOil Bắc Kạn,P. Phùng Chí Kiên TP. Bắc Kạn,22.134567,105.823456,VinFast DC 60kW
+Hồ Ba Bể (Bến Buốc Lốm),Xã Khang Ninh H. Ba Bể,22.389012,105.623456,VinFast DC 60kW
+PVOil Chợ Mới,Thị trấn Đồng Tâm H. Chợ Mới,21.890123,105.745678,VinFast DC 60kW
+PVOil Bạch Thông,Thị trấn Phủ Thông H. Bạch Thông,22.256789,105.867890,VinFast DC 60kW
+PVOil Ngân Sơn,Thị trấn Vân Tùng H. Ngân Sơn,22.434567,105.989012,VinFast DC 60kW
+PVOil Na Rì,Thị trấn Yến Lạc H. Na Rì,22.234567,106.078901,VinFast DC 60kW
+PVOil Chợ Đồn,Thị trấn Bằng Lũng H. Chợ Đồn,22.156789,105.612345,VinFast DC 60kW
+Khách sạn Núi Hoa,P. Đức Xuân TP. Bắc Kạn,22.146789,105.836789,VinFast DC 30kW
+Nhà khách Tỉnh Bắc Kạn,P. Phùng Chí Kiên TP. Bắc Kạn,22.136789,105.825678,VinFast AC 11kW
+VinFast Showroom Bắc Kạn,P. Sông Cầu TP. Bắc Kạn,22.151234,105.841234,VinFast DC 60kW
+PVOil Pác Nặm,Xã Bộc Bố H. Pác Nặm,22.545678,105.678901,VinFast DC 30kW
+Bến xe khách Bắc Kạn,P. Đức Xuân TP. Bắc Kạn,22.148901,105.838901,VinFast DC 30kW
+Ba Bể Resort (Vườn Quốc gia),Xã Khang Ninh H. Ba Bể,22.401234,105.634567,Eboost AC 11kW
+Bệnh viện Đa khoa Bắc Kạn,P. Nguyễn Thị Minh Khai TP. BK,22.123456,105.812345,VinFast DC 30kW
+PVOil Nà Phặc,Xã Nà Phặc H. Ngân Sơn,22.345678,105.912345,VinFast DC 60kW
+Quảng trường Nhà văn hóa Tỉnh,P. Sông Cầu TP. Bắc Kạn,22.153456,105.843456,VinFast AC 11kW
+Mr. Linh's Homestay (Ba Bể),Thôn Cốc Tộc Xã Nam Mẫu Ba Bể,22.412345,105.612345,Eboost AC 11kW
+PVOil Thanh Vận,Xã Thanh Vận H. Chợ Mới,22.012345,105.712345,VinFast DC 60kW
+Chợ Đức Xuân,P. Đức Xuân TP. Bắc Kạn,22.143456,105.832345,VinFast AC 11kW
+Khách sạn Green Bắc Kạn,P. Sông Cầu TP. Bắc Kạn,22.152345,105.845678,VinFast AC 11kW
+PVOil Đèo Giàng,QL3 Bạch Thông,22.301234,105.890123,VinFast DC 60kW
+Trạm Y tế Phường Đức Xuân,P. Đức Xuân TP. Bắc Kạn,22.141234,105.830123,VinFast AC 11kW
+PVOil Cao Kỳ,Xã Cao Kỳ H. Chợ Mới,22.089012,105.789012,VinFast DC 60kW
+Sân vận động Bắc Kạn,P. Nguyễn Thị Minh Khai TP. BK,22.125678,105.814567,VinFast DC 30kW
+Vincom Plaza Thái Nguyên,286 Lương Ngọc Quyến TP. Thái Nguyên,21.589012,105.834567,VinFast DC 30kW
+GO! Thái Nguyên (Big C),Khu dân cư số 1 Đường Việt Bắc,21.578901,105.845678,VinFast DC 60kW
+PVOil Sông Công,P. Mỏ Chè TP. Sông Công,21.489012,105.856789,VinFast DC 60kW
+Samsung Thái Nguyên (SEVT),KCN Yên Bình TP. Phổ Yên,21.434567,105.967890,VinFast DC 150kW
+PVOil Phổ Yên,P. Ba Hàng TP. Phổ Yên,21.412345,105.890123,VinFast DC 60kW
+Trạm dừng nghỉ Hải Đăng (Cao tốc),TP. Phổ Yên Thái Nguyên,21.401234,105.912345,VinFast DC 250kW
+Đại học Thái Nguyên,P. Tân Thịnh TP. Thái Nguyên,21.591234,105.812345,VinFast DC 30kW
+PVOil Phú Lương,Thị trấn Đu H. Phú Lương,21.689012,105.765432,VinFast DC 60kW
+PVOil Đại Từ,Thị trấn Hùng Sơn H. Đại Từ,21.634567,105.623456,VinFast DC 60kW
+Hồ Núi Cốc (Khu du lịch),Xã Tân Thái H. Đại Từ,21.545678,105.712345,VinFast DC 60kW
+VinFast Showroom Thái Nguyên,Đường Phan Đình Phùng TP. TN,21.593456,105.838901,VinFast DC 60kW
+PVOil Gang Thép,P. Trung Thành TP. Thái Nguyên,21.534567,105.867890,VinFast DC 60kW
+PVOil Định Hóa,Thị trấn Chợ Chu H. Định Hóa,21.912345,105.634567,VinFast DC 60kW
+PVOil Võ Nhai,Thị trấn Đình Cả H. Võ Nhai,21.789012,106.034567,VinFast DC 60kW
+Khách sạn May Plaza,Đường Phan Đình Phùng TP. TN,21.595678,105.836789,VinFast DC 30kW
+PVOil Đồng Hỷ,Thị trấn Trại Cau H. Đồng Hỷ,21.623456,105.945678,VinFast DC 60kW
+Bệnh viện Trung ương Thái Nguyên,479 Lương Ngọc Quyến TP. TN,21.596789,105.832345,VinFast DC 30kW
+Flamingo Thái Nguyên (Dự kiến),Hồ Núi Cốc Thái Nguyên,21.556789,105.723456,Eboost AC 22kW
+Danko City Thái Nguyên,P. Chùa Hang TP. Thái Nguyên,21.612345,105.856789,VinFast AC 11kW
+PVOil Phú Bình,Thị trấn Hương Sơn H. Phú Bình,21.489012,105.989012,VinFast DC 60kW
+KCN Điềm Thụy,Xã Điềm Thụy H. Phú Bình,21.467890,105.956789,VinFast DC 150kW
+Khách sạn Đông Á Plaza,Đường Hoàng Văn Thụ TP. TN,21.592345,105.841234,VinFast AC 11kW
+Trạm Y tế P. Phan Thiết,TP. Thái Nguyên,21.587654,105.835678,VinFast AC 11kW
+Showroom Hyundai Thái Nguyên,Đường Bắc Sơn TP. Thái Nguyên,21.576543,105.823456,VinFast DC 60kW
+Nhà hát Ca múa nhạc Dân gian Việt Bắc,P. Hoàng Văn Thụ TP. TN,21.598901,105.843456,VinFast AC 11kW
+Vincom Plaza Lạng Sơn,Đường Hùng Vương P. Chi Lăng TP. LS,21.845678,106.765432,VinFast DC 60kW
+Cửa khẩu Quốc tế Hữu Nghị,Thị trấn Đồng Đăng H. Cao Lộc,21.967890,106.712345,VinFast DC 60kW
+PVOil Chi Lăng,Quốc lộ 1A TT. Đồng Mỏ H. Chi Lăng,21.601234,106.634567,VinFast DC 150kW
+Vinpearl Hotel Lạng Sơn,P. Chi Lăng TP. Lạng Sơn,21.846789,106.766789,VinFast AC 11kW
+PVOil Hữu Lũng,Thị trấn Hữu Lũng H. Hữu Lũng,21.534567,106.356789,VinFast DC 60kW
+PVOil Cao Lộc,Thị trấn Cao Lộc H. Cao Lộc,21.856789,106.778901,VinFast DC 60kW
+Cửa khẩu Tân Thanh,Xã Tân Thanh H. Văn Lãng,21.989012,106.689012,VinFast DC 60kW
+PVOil Văn Lãng,Thị trấn Na Sầm H. Văn Lãng,22.056789,106.612345,VinFast DC 60kW
+PVOil Lộc Bình,Thị trấn Lộc Bình H. Lộc Bình,21.767890,106.912345,VinFast DC 60kW
+Khu du lịch Mẫu Sơn,Xã Mẫu Sơn H. Lộc Bình,21.834567,106.945678,VinFast AC 11kW
+PVOil Tràng Định,Thị trấn Thất Khê H. Tràng Định,22.289012,106.456789,VinFast DC 60kW
+PVOil Bắc Sơn,Thị trấn Bắc Sơn H. Bắc Sơn,21.912345,106.323456,VinFast DC 60kW
+PVOil Đình Lập,Thị trấn Đình Lập H. Đình Lập,21.545678,107.089012,VinFast DC 60kW
+VinFast Showroom Lạng Sơn,Quốc lộ 1A TP. Lạng Sơn,21.832345,106.756789,VinFast DC 60kW
+Khách sạn Four Points by Sheraton,2 Trần Hưng Đạo P. Chi Lăng,21.844567,106.764567,VinFast DC 30kW
+PVOil Bình Gia,Thị trấn Bình Gia H. Bình Gia,22.012345,106.412345,VinFast DC 60kW
+PVOil Văn Quan,Thị trấn Văn Quan H. Văn Quan,21.878901,106.567890,VinFast DC 60kW
+Cửa khẩu Chi Ma,Xã Yên Khoái H. Lộc Bình,21.689012,107.012345,VinFast DC 30kW
+Đền Kỳ Cùng (Bãi xe),P. Vĩnh Trại TP. Lạng Sơn,21.851234,106.758901,VinFast AC 11kW
+Chợ Đông Kinh,P. Vĩnh Trại TP. Lạng Sơn,21.849012,106.761234,VinFast DC 30kW
+Khu đô thị Phú Lộc 4,P. Hoàng Văn Thụ TP. Lạng Sơn,21.843456,106.753456,VinFast AC 11kW
+Khách sạn Mường Thanh Lạng Sơn,68 Ngô Quyền P. Vĩnh Trại,21.850123,106.763456,VinFast DC 30kW
+Bệnh viện Đa khoa Lạng Sơn,P. Tam Thanh TP. Lạng Sơn,21.856789,106.745678,VinFast DC 30kW
+Ga Lạng Sơn,P. Vĩnh Trại TP. Lạng Sơn,21.847890,106.759012,VinFast AC 11kW
+Trạm dừng nghỉ Chi Lăng (Mới),Cao tốc Bắc Giang - Lạng Sơn,21.589012,106.456789,VinFast DC 150kW
+Vincom Plaza Bắc Giang,43 Ngô Gia Tự P. Trần Phú TP. BG,21.278901,106.189012,VinFast DC 30kW
+GO! Bắc Giang (Big C),Xã Tân Tiến TP. Bắc Giang,21.267890,106.201234,VinFast DC 60kW
+KCN Vân Trung,Xã Vân Trung H. Việt Yên,21.323456,106.089012,VinFast DC 150kW
+KCN Quang Châu,Xã Quang Châu H. Việt Yên,21.201234,106.123456,VinFast DC 150kW
+PVOil Việt Yên,Thị trấn Bích Động H. Việt Yên,21.278901,106.112345,VinFast DC 60kW
+PVOil Yên Dũng,Thị trấn Nham Biền H. Yên Dũng,21.234567,106.245678,VinFast DC 60kW
+PVOil Lạng Giang,Thị trấn Vôi H. Lạng Giang,21.367890,106.267890,VinFast DC 150kW
+PVOil Lục Nam,Thị trấn Đồi Ngô H. Lục Nam,21.312345,106.389012,VinFast DC 60kW
+PVOil Lục Ngạn,Thị trấn Chũ H. Lục Ngạn,21.367890,106.567890,VinFast DC 60kW
+PVOil Hiệp Hòa,Thị trấn Thắng H. Hiệp Hòa,21.345678,105.989012,VinFast DC 60kW
+VinFast Showroom Bắc Giang,Đường Hùng Vương TP. Bắc Giang,21.281234,106.205678,VinFast DC 60kW
+PVOil Sơn Động,Thị trấn An Châu H. Sơn Động,21.289012,106.890123,VinFast DC 60kW
+PVOil Yên Thế,Thị trấn Phồn Xương H. Yên Thế,21.523456,106.156789,VinFast DC 60kW
+Mường Thanh Grand Bắc Giang,P. Ngô Quyền TP. Bắc Giang,21.275678,106.198901,VinFast DC 30kW
+KCN Đình Trám,Xã Hồng Thái H. Việt Yên,21.301234,106.101234,VinFast DC 150kW
+Legacy Hill Resort (Yên Thế),Bản Ven Yên Thế,21.501234,106.134567,Eboost AC 11kW
+Sân Golf Yên Dũng,Xã Tiền Phong H. Yên Dũng,21.212345,106.289012,VinFast AC 11kW
+Bệnh viện Đa khoa Bắc Giang,P. Hoàng Văn Thụ TP. Bắc Giang,21.286789,106.195678,VinFast DC 30kW
+Khách sạn Ravatel,1 Hùng Vương TP. Bắc Giang,21.280123,106.204567,VinFast AC 11kW
+PVOil Tân Yên,Thị trấn Cao Thượng H. Tân Yên,21.412345,106.112345,VinFast DC 60kW
+Chùa Vĩnh Nghiêm (Bãi xe),Xã Trí Yên H. Yên Dũng,21.234567,106.345678,VinFast AC 11kW
+Quảng trường 3/2,P. Hoàng Văn Thụ TP. Bắc Giang,21.282345,106.196789,VinFast AC 11kW
+Vincom Shophouse Bắc Giang,Đường Ngô Gia Tự TP. Bắc Giang,21.277890,106.188901,VinFast AC 11kW
+PVOil Song Mai,Xã Song Mai TP. Bắc Giang,21.301234,106.178901,VinFast DC 60kW
+KCN Song Khê - Nội Hoàng,Xã Song Khê TP. Bắc Giang,21.256789,106.167890,VinFast DC 150kW
+Vincom Plaza Hạ Long,Cột Đồng Hồ Bạch Đằng TP. Hạ Long,20.954320,107.087650,VinFast DC 60kW
+Vinpearl Resort & Spa Hạ Long,Đảo Rều Bãi Cháy TP. Hạ Long,20.945670,107.034560,VinFast AC 11kW
+Sun World Hạ Long Complex,Đường Hạ Long Bãi Cháy TP. Hạ Long,20.951230,107.028900,VinFast DC 60kW
+PVOil Cái Lân,KCN Cái Lân Giếng Đáy Hạ Long,20.976540,107.056780,VinFast DC 150kW
+Sân bay Quốc tế Vân Đồn,Xã Đoàn Kết H. Vân Đồn,21.112340,107.412340,VinFast DC 60kW
+Vincom Plaza Móng Cái,Đại lộ Hòa Bình Trần Phú Móng Cái,21.534560,107.967890,VinFast DC 30kW
+FLC Ha Long Bay Golf Club,Nguyễn Văn Cừ Hồng Hải Hạ Long,20.958760,107.094560,VinFast AC 11kW
+PVOil Cẩm Phả,Trần Phú Cẩm Thạch TP. Cẩm Phả,21.012340,107.265430,VinFast DC 60kW
+Cảng tàu khách Quốc tế Tuần Châu,Đảo Tuần Châu TP. Hạ Long,20.934560,106.998760,VinFast DC 60kW
+Bảo tàng Quảng Ninh,Trần Quốc Nghiễn Hồng Hải Hạ Long,20.947890,107.095670,VinFast DC 30kW
+PVOil Uông Bí,Quang Trung TP. Uông Bí,21.034560,106.778900,VinFast DC 60kW
+Yên Tử Legacy (MGallery),Thượng Yên Công TP. Uông Bí,21.134560,106.712340,VinFast DC 30kW
+Trạm dừng nghỉ Quảng Ninh,Cao tốc Vân Đồn - Móng Cái,21.345670,107.789010,VinFast DC 250kW
+VinFast Showroom Cẩm Phả,530 Trần Phú Cẩm Thành Cẩm Phả,21.013450,107.264560,VinFast DC 60kW
+PVOil Đông Triều,TX. Đông Triều Quảng Ninh,21.087650,106.567890,VinFast DC 60kW
+Mường Thanh Luxury Quảng Ninh,Bãi Cháy TP. Hạ Long,20.952340,107.031230,VinFast DC 30kW
+Sun Premier Village,Bãi Cháy TP. Hạ Long,20.953450,107.035670,Eboost AC 22kW
+Citadines Marina Halong,Bán đảo 3 Marina Halong Hùng Thắng,20.961230,107.012340,Eboost AC 22kW
+PVOil Tiên Yên,TT. Tiên Yên H. Tiên Yên,21.312340,107.401230,VinFast DC 60kW
+Vinhomes Dragon Bay,1 Bến Đoan Hồng Gai Hạ Long,20.948900,107.076540,VinFast AC 11kW
+Vincom Shophouse Móng Cái,Trần Phú Móng Cái,21.536789,107.965678,VinFast AC 11kW
+PVOil Hải Hà,TT. Quảng Hà H. Hải Hà,21.456789,107.756789,VinFast DC 60kW
+PVOil Đầm Hà,TT. Đầm Hà H. Đầm Hà,21.389012,107.634567,VinFast DC 60kW
+Khách sạn Wyndham Legend,12 Hạ Long Bãi Cháy TP. Hạ Long,20.954567,107.045678,VinFast DC 30kW
+Onsen Quang Hanh (Yoko),P. Quang Hanh TP. Cẩm Phả,20.998901,107.212345,VinFast DC 60kW
+Vincom Plaza Chí Linh,TT. Sao Đỏ TP. Chí Linh,21.112345,106.389012,VinFast DC 30kW
+Vincom Shophouse Hải Dương,P. Lê Thanh Nghị TP. Hải Dương,20.934567,106.323456,VinFast AC 11kW
+Trạm dừng nghỉ V52 (Cao tốc),Xã Gia Khánh H. Gia Lộc,20.890123,106.289012,VinFast DC 250kW
+PVOil Hải Dương,Đại lộ Nguyễn Lương Bằng TP. HD,20.945678,106.312345,VinFast DC 60kW
+Ford Hải Dương,Ngô Quyền P. Cẩm Thượng TP. HD,20.956789,106.334567,VinFast DC 60kW
+Ecopark Hải Dương (Ecorivers),P. Hải Tân TP. Hải Dương,20.923456,106.345678,VinFast AC 11kW
+PVOil Cẩm Giàng,TT. Lai Cách H. Cẩm Giàng,20.967890,106.267890,VinFast DC 60kW
+PVOil Kim Thành,Xã Cổ Dũng H. Kim Thành,20.956789,106.412345,VinFast DC 60kW
+PVOil Nam Sách,TT. Nam Sách H. Nam Sách,21.012345,106.345678,VinFast DC 60kW
+PVOil Kinh Môn,P. An Lưu Thị xã Kinh Môn,21.034567,106.523456,VinFast DC 60kW
+PVOil Ninh Giang,TT. Ninh Giang H. Ninh Giang,20.734567,106.389012,VinFast DC 60kW
+PVOil Thanh Miện,TT. Thanh Miện H. Thanh Miện,20.789012,106.234567,VinFast DC 60kW
+PVOil Bình Giang,TT. Kẻ Sặt H. Bình Giang,20.912345,106.123456,VinFast DC 60kW
+PVOil Tứ Kỳ,TT. Tứ Kỳ H. Tứ Kỳ,20.845678,106.456789,VinFast DC 60kW
+Khách sạn Nam Cường Hải Dương,Đại lộ 30/10 P. Tứ Minh,20.938901,106.298901,VinFast DC 30kW
+GO! Hải Dương (Big C),P. Nhị Châu TP. Hải Dương,20.951234,106.325678,VinFast DC 60kW
+VinFast Showroom Hải Dương,208 Nguyễn Lương Bằng TP. HD,20.942345,106.310123,VinFast DC 60kW
+Sân Golf Chí Linh,P. Sao Đỏ TP. Chí Linh,21.123456,106.401234,VinFast AC 11kW
+Côn Sơn - Kiếp Bạc (Bãi xe),TP. Chí Linh Hải Dương,21.145678,106.434567,VinFast AC 11kW
+KCN Đại An,P. Tứ Minh TP. Hải Dương,20.936789,106.289012,VinFast DC 150kW
+Bệnh viện Đa khoa Hải Dương,P. Thanh Bình TP. Hải Dương,20.928901,106.318901,VinFast DC 30kW
+Khách sạn Purple Lotus,Trường Chinh P. Tân Bình,20.932345,106.308901,VinFast AC 11kW
+PVOil Thanh Hà,TT. Thanh Hà H. Thanh Hà,20.923456,106.423456,VinFast DC 60kW
+Nhà Thi đấu Hải Dương,P. Hải Tân TP. Hải Dương,20.925678,106.334567,VinFast AC 11kW
+PVOil Gia Lộc,TT. Gia Lộc H. Gia Lộc,20.878901,106.290123,VinFast DC 60kW
+Vinhomes Ocean Park 2 (The Empire),Xã Nghĩa Trụ H. Văn Giang,20.967890,106.012345,VinFast DC 150kW
+Vinhomes Ocean Park 3 (The Crown),Xã Tân Quang H. Văn Lâm,20.978901,106.023456,VinFast DC 150kW
+Ecopark (Khu Rừng Cọ),Xã Xuân Quan H. Văn Giang,20.985678,105.923456,VinFast AC 11kW
+Ecopark (Khu Aquabay),Xã Phụng Công H. Văn Giang,20.965432,105.934567,VinFast DC 60kW
+Vincom Plaza Hưng Yên,P. Hiến Nam TP. Hưng Yên,20.654321,106.056789,VinFast DC 30kW
+PVOil Phố Nối,TT. Bần Yên Nhân H. Mỹ Hào,20.923456,106.067890,VinFast DC 60kW
+KCN Thăng Long II,H. Yên Mỹ Hưng Yên,20.901234,106.034567,VinFast DC 150kW
+PVOil Khoái Châu,TT. Khoái Châu H. Khoái Châu,20.845678,105.989012,VinFast DC 60kW
+PVOil Kim Động,TT. Lương Bằng H. Kim Động,20.734567,106.045678,VinFast DC 60kW
+PVOil Tiên Lữ,TT. Vương H. Tiên Lữ,20.689012,106.123456,VinFast DC 60kW
+PVOil Phù Cừ,TT. Trần Cao H. Phù Cừ,20.712345,106.234567,VinFast DC 60kW
+PVOil Văn Lâm,TT. Như Quỳnh H. Văn Lâm,20.989012,105.989012,VinFast DC 60kW
+PVOil Ân Thi,TT. Ân Thi H. Ân Thi,20.823456,106.156789,VinFast DC 60kW
+VinFast Showroom Hưng Yên,Số 1 Nguyễn Văn Linh TP. Hưng Yên,20.651234,106.058901,VinFast DC 60kW
+Trạm dừng nghỉ Hưng Yên (Cao tốc),Xã Lý Thường Kiệt H. Yên Mỹ,20.867890,106.012345,VinFast DC 250kW
+Vincom Shophouse Phố Nối,TT. Bần Yên Nhân Mỹ Hào,20.925678,106.071234,VinFast AC 11kW
+Ecopark (Khu West Bay),Xã Phụng Công H. Văn Giang,20.963456,105.932345,VinFast AC 11kW
+Bệnh viện Đa khoa Phố Nối,TT. Bần Yên Nhân Mỹ Hào,20.921234,106.065432,VinFast DC 30kW
+Khách sạn Hưng Thái,P. An Tảo TP. Hưng Yên,20.667890,106.052345,VinFast DC 30kW
+Khu đô thị Ecopark Grand,Xã Xuân Quan H. Văn Giang,20.976543,105.928901,Eboost AC 22kW
+Quảng trường TP Hưng Yên,P. Hiến Nam TP. Hưng Yên,20.655678,106.054567,VinFast AC 11kW
+PVOil Yên Mỹ,TT. Yên Mỹ H. Yên Mỹ,20.890123,106.023456,VinFast DC 60kW
+Chợ Bao Bì,TT. Bần Yên Nhân Mỹ Hào,20.926789,106.068901,VinFast AC 11kW
+Đại học Sư phạm Kỹ thuật Hưng Yên,TT. Khoái Châu Hưng Yên,20.843456,105.987890,VinFast DC 30kW
+Sân vận động PVF,Xã Long Hưng H. Văn Giang,20.956789,106.045678,VinFast DC 60kW
+Vincom Plaza Phủ Lý,42 Biên Hòa P. Minh Khai TP. Phủ Lý,20.543210,105.912345,VinFast DC 30kW
+Mường Thanh Luxury Hà Nam,KCN Đồng Văn Thị xã Duy Tiên,20.623456,105.945678,VinFast DC 30kW
+Trạm dừng nghỉ Liêm Tuyền (Cao tốc),P. Liêm Tuyền TP. Phủ Lý,20.523456,105.956789,VinFast DC 250kW
+PVOil Đồng Văn,TT. Đồng Văn Thị xã Duy Tiên,20.634567,105.934567,VinFast DC 150kW
+Chùa Tam Chúc (Bãi xe),TT. Ba Sao H. Kim Bảng,20.534567,105.823456,VinFast DC 60kW
+PVOil Phủ Lý,P. Lê Hồng Phong TP. Phủ Lý,20.556789,105.923456,VinFast DC 60kW
+VinFast Showroom Hà Nam,Quốc lộ 1A TP. Phủ Lý,20.548901,105.918901,VinFast DC 60kW
+PVOil Bình Lục,TT. Bình Mỹ H. Bình Lục,20.512345,106.034567,VinFast DC 60kW
+PVOil Lý Nhân,TT. Vĩnh Trụ H. Lý Nhân,20.589012,106.089012,VinFast DC 60kW
+PVOil Thanh Liêm,TT. Tân Thanh H. Thanh Liêm,20.489012,105.945678,VinFast DC 60kW
+Khách sạn Vinpearl Condotel Phủ Lý,P. Minh Khai TP. Phủ Lý,20.542345,105.913456,VinFast AC 11kW
+KCN Châu Sơn,P. Châu Sơn TP. Phủ Lý,20.534567,105.890123,VinFast DC 150kW
+Bệnh viện Bạch Mai cơ sở 2,P. Lam Hạ TP. Phủ Lý,20.567890,105.934567,VinFast DC 30kW
+Bệnh viện Việt Đức cơ sở 2,P. Liêm Tuyền TP. Phủ Lý,20.565432,105.936789,VinFast DC 30kW
+Sân Golf Kim Bảng (Stone Valley),TT. Ba Sao H. Kim Bảng,20.523456,105.845678,VinFast AC 11kW
+Melia Vinpearl Phủ Lý,60 Biên Hòa P. Minh Khai,20.541234,105.914567,VinFast DC 30kW
+PVOil Hòa Mạc,TT. Hòa Mạc TX. Duy Tiên,20.656789,105.978901,VinFast DC 60kW
+Nhà thi đấu Hà Nam,Xã Tiên Hiệp TP. Phủ Lý,20.554321,105.925678,VinFast AC 11kW
+Khách sạn Inco 515.9,Đường Lê Hoàn TP. Phủ Lý,20.546789,105.916789,VinFast AC 11kW
+PVOil Duy Tiên,P. Hoàng Đông TX. Duy Tiên,20.612345,105.923456,VinFast DC 60kW
+GO! Hà Nam (Big C),P. Lam Hạ TP. Phủ Lý,20.561234,105.931234,VinFast DC 60kW
+Khu đô thị River Silk City,P. Liêm Chính TP. Phủ Lý,20.538901,105.934567,VinFast AC 11kW
+PVOil Nhật Tựu,Xã Nhật Tựu H. Kim Bảng,20.601234,105.867890,VinFast DC 60kW
+Đền Trần Thương (Bãi xe),Xã Trần Hưng Đạo H. Lý Nhân,20.623456,106.101234,VinFast AC 11kW
+Chợ Bầu,P. Minh Khai TP. Phủ Lý,20.544567,105.911234,VinFast AC 11kW
+Vincom Plaza Hà Tĩnh,Hà Huy Tập P. Hà Huy Tập TP. Hà Tĩnh,18.345678,105.901234,VinFast DC 30kW
+Vinpearl Discovery Hà Tĩnh,Xã Thịnh Lộc H. Lộc Hà,18.456789,105.923456,VinFast AC 11kW
+Vinpearl Hotel Hà Tĩnh,Hàm Nghi P. Hà Huy Tập TP. Hà Tĩnh,18.346789,105.902345,VinFast DC 60kW
+PVOil Vũng Áng,KKT Vũng Áng TX. Kỳ Anh,18.067890,106.289012,VinFast DC 150kW
+PVOil Cẩm Xuyên,TT. Cẩm Xuyên H. Cẩm Xuyên,18.256789,106.012345,VinFast DC 60kW
+PVOil Hồng Lĩnh,TX. Hồng Lĩnh Hà Tĩnh,18.534567,105.712345,VinFast DC 60kW
+PVOil Hương Sơn,TT. Phố Châu H. Hương Sơn,18.567890,105.389012,VinFast DC 60kW
+PVOil Hương Khê,TT. Hương Khê H. Hương Khê,18.178901,105.712345,VinFast DC 60kW
+PVOil Can Lộc,TT. Nghèn H. Can Lộc,18.423456,105.789012,VinFast DC 60kW
+PVOil Đức Thọ,TT. Đức Thọ H. Đức Thọ,18.545678,105.567890,VinFast DC 60kW
+PVOil Nghi Xuân,TT. Xuân An H. Nghi Xuân,18.654321,105.678901,VinFast DC 60kW
+PVOil Thạch Hà,TT. Thạch Hà H. Thạch Hà,18.367890,105.867890,VinFast DC 60kW
+Mường Thanh Luxury Xuân Thành,Xã Xuân Thành H. Nghi Xuân,18.623456,105.765432,VinFast DC 30kW
+Biển Thiên Cầm (Khách sạn Thiên Ý),TT. Thiên Cầm H. Cẩm Xuyên,18.289012,106.089012,VinFast AC 11kW
+VinFast Showroom Hà Tĩnh,157 Hà Huy Tập TP. Hà Tĩnh,18.342345,105.903456,VinFast DC 60kW
+PVOil Kỳ Anh,P. Sông Trí TX. Kỳ Anh,18.089012,106.267890,VinFast DC 60kW
+KCN Gia Lách,TT. Xuân An H. Nghi Xuân,18.645678,105.689012,VinFast DC 150kW
+Khách sạn BMC Hà Tĩnh,6 Phan Đình Phùng TP. Hà Tĩnh,18.347890,105.906789,VinFast DC 30kW
+Ngã ba Đồng Lộc (Bãi xe),Xã Đồng Lộc H. Can Lộc,18.389012,105.678901,VinFast AC 11kW
+Bệnh viện Đa khoa Hà Tĩnh,P. Bắc Hà TP. Hà Tĩnh,18.351234,105.904567,VinFast DC 30kW
+Cửa khẩu Cầu Treo,Xã Sơn Kim 1 H. Hương Sơn,18.378901,105.156789,VinFast DC 30kW
+Quỳnh Viên Resort,Xã Thạch Hải H. Thạch Hà,18.390123,105.989012,Eboost AC 11kW
+PVOil Vũ Quang,TT. Vũ Quang H. Vũ Quang,18.434567,105.456789,VinFast DC 30kW
+Sân vận động Hà Tĩnh,P. Nam Hà TP. Hà Tĩnh,18.334567,105.908901,VinFast AC 11kW
+PVOil Lộc Hà,TT. Lộc Hà H. Lộc Hà,18.401234,105.934567,VinFast DC 60kW
+Vincom Plaza Đồng Hới,P. Hải Đình TP. Đồng Hới,17.467890,106.612345,VinFast DC 30kW
+Mường Thanh Luxury Nhật Lệ,121 Trương Pháp TP. Đồng Hới,17.489012,106.623456,VinFast DC 30kW
+PVOil Bố Trạch (Phong Nha),TT. Hoàn Lão H. Bố Trạch,17.567890,106.523456,VinFast DC 60kW
+Sun Spa Resort,Mỹ Cảnh Bảo Ninh TP. Đồng Hới,17.478901,106.634567,VinFast AC 11kW
+Gold Coast Hotel Resort,Võ Nguyên Giáp Bảo Ninh,17.456789,106.645678,VinFast AC 11kW
+PVOil Ba Đồn,TX. Ba Đồn Quảng Bình,17.756789,106.423456,VinFast DC 60kW
+PVOil Quảng Trạch,Xã Quảng Đông H. Quảng Trạch,17.890123,106.456789,VinFast DC 150kW
+PVOil Lệ Thủy,TT. Kiến Giang H. Lệ Thủy,17.212345,106.789012,VinFast DC 60kW
+PVOil Quảng Ninh,TT. Quán Hàu H. Quảng Ninh,17.412345,106.656789,VinFast DC 60kW
+Động Thiên Đường (Bãi xe),Xã Sơn Trạch H. Bố Trạch,17.534567,106.234567,VinFast DC 30kW
+VinFast Showroom Quảng Bình,Quang Trung P. Phú Hải TP. ĐH,17.451234,106.608901,VinFast DC 60kW
+PVOil Tuyên Hóa,TT. Đồng Lê H. Tuyên Hóa,17.967890,106.056789,VinFast DC 60kW
+PVOil Minh Hóa,TT. Quy Đạt H. Minh Hóa,17.823456,105.989012,VinFast DC 60kW
+Sân bay Đồng Hới,Xã Lộc Ninh TP. Đồng Hới,17.512345,106.589012,VinFast DC 60kW
+Celina Peninsula Resort,Võ Nguyên Giáp Bảo Ninh,17.465432,106.638901,Eboost AC 22kW
+Biển Đá Nhảy (Bãi xe),Xã Hải Trạch H. Bố Trạch,17.656789,106.543210,VinFast AC 11kW
+Vũng Chùa - Đảo Yến,Xã Quảng Đông H. Quảng Trạch,17.912345,106.467890,VinFast AC 11kW
+Khách sạn Tân Bình,4 Lê Văn Hưu TP. Đồng Hới,17.471234,106.615678,VinFast AC 11kW
+PVOil Bắc Lý,P. Bắc Lý TP. Đồng Hới,17.489012,106.598901,VinFast DC 60kW
+Khu du lịch Ozo Park,VQG Phong Nha Kẻ Bàng,17.589012,106.289012,Eboost AC 11kW
+Melia Vinpearl Quảng Bình,Quách Xuân Kỳ TP. Đồng Hới,17.470123,106.617890,VinFast DC 30kW
+Bến xe Đồng Hới,P. Đức Ninh Đông TP. Đồng Hới,17.462345,106.601234,VinFast DC 30kW
+Nhà hàng Chang Chang,198 Trần Hưng Đạo TP. Đồng Hới,17.475678,106.613456,VinFast AC 11kW
+PVOil Cha Lo (Cửa khẩu),Xã Dân Hóa H. Minh Hóa,17.701234,105.789012,VinFast DC 30kW
+Chợ Đồng Hới,P. Hải Đình TP. Đồng Hới,17.469012,106.619012,VinFast AC 11kW
+Vincom Plaza Đông Hà,1 Hùng Vương P. 1 TP. Đông Hà,16.812345,107.101234,VinFast DC 30kW
+Mường Thanh Grand Quảng Trị,68 Lê Duẩn P. 2 TP. Đông Hà,16.805678,107.098901,VinFast DC 30kW
+PVOil Đông Hà,Quốc lộ 1A TP. Đông Hà,16.823456,107.112345,VinFast DC 60kW
+Nghĩa trang Liệt sỹ Quốc gia Trường Sơn,Xã Vĩnh Trường H. Gio Linh,16.956789,106.967890,VinFast AC 11kW
+PVOil Vĩnh Linh,TT. Hồ Xá H. Vĩnh Linh,17.067890,107.034567,VinFast DC 60kW
+PVOil Gio Linh,TT. Gio Linh H. Gio Linh,16.923456,107.101234,VinFast DC 60kW
+PVOil Triệu Phong,TT. Ái Tử H. Triệu Phong,16.789012,107.145678,VinFast DC 60kW
+PVOil Hải Lăng,TT. Diên Sanh H. Hải Lăng,16.678901,107.234567,VinFast DC 60kW
+PVOil Cam Lộ,TT. Cam Lộ H. Cam Lộ,16.812345,107.012345,VinFast DC 60kW
+PVOil Đakrông,TT. Krông Klang H. Đakrông,16.656789,106.789012,VinFast DC 60kW
+PVOil Hướng Hóa (Khe Sanh),TT. Khe Sanh H. Hướng Hóa,16.634567,106.734567,VinFast DC 60kW
+Cửa khẩu Lao Bảo,TT. Lao Bảo H. Hướng Hóa,16.612345,106.589012,VinFast DC 60kW
+VinFast Showroom Quảng Trị,Hùng Vương TP. Đông Hà,16.815678,107.104567,VinFast DC 60kW
+Sepon Boutique Resort,Biển Cửa Việt Gio Linh,16.901234,107.167890,VinFast AC 11kW
+Địa đạo Vịnh Mốc,Xã Vĩnh Thạch H. Vĩnh Linh,17.045678,107.123456,VinFast AC 11kW
+Khách sạn Sài Gòn Đông Hà,1 Bùi Thị Xuân TP. Đông Hà,16.808901,107.102345,VinFast DC 30kW
+Thánh địa La Vang,Xã Hải Phú H. Hải Lăng,16.701234,107.189012,VinFast AC 11kW
+Thành Cổ Quảng Trị,P. 2 Thị xã Quảng Trị,16.756789,107.201234,VinFast AC 11kW
+Cầu Hiền Lương - Sông Bến Hải,Xã Hiền Lương Vĩnh Linh,17.001234,107.056789,VinFast AC 11kW
+PVOil Cồn Cỏ,Đảo Cồn Cỏ Quảng Trị,17.156789,107.345678,VinFast AC 11kW
+Trung tâm Văn hóa Tỉnh,P. 1 TP. Đông Hà,16.813456,107.098901,VinFast AC 11kW
+Bến xe Đông Hà,P. Đông Lễ TP. Đông Hà,16.802345,107.112345,VinFast DC 30kW
+PVOil Cửa Việt,TT. Cửa Việt H. Gio Linh,16.890123,107.156789,VinFast DC 30kW
+Chợ Đông Hà,P. 1 TP. Đông Hà,16.816789,107.105678,VinFast AC 11kW
+PVOil Cam Lộ (Cao tốc),Nút giao Cam Lộ - La Sơn,16.789012,106.989012,VinFast DC 150kW
+Vincom Plaza Huế,50A Hùng Vương P. Phú Nhuận TP. Huế,16.467890,107.598901,VinFast DC 30kW
+Vinpearl Hotel Huế,50A Hùng Vương P. Phú Nhuận TP. Huế,16.468901,107.597890,VinFast DC 60kW
+PVOil Phú Bài,P. Phú Bài TX. Hương Thủy,16.389012,107.678901,VinFast DC 150kW
+Laguna Lăng Cô (Angsana/Banyan Tree),Xã Lộc Vĩnh H. Phú Lộc,16.289012,108.012345,Eboost AC 22kW
+PVOil Hương Trà,P. Tứ Hạ TX. Hương Trà,16.534567,107.489012,VinFast DC 60kW
+PVOil Phong Điền,TT. Phong Điền H. Phong Điền,16.589012,107.412345,VinFast DC 60kW
+PVOil Phú Lộc (Lăng Cô),TT. Lăng Cô H. Phú Lộc,16.234567,108.067890,VinFast DC 60kW
+Sân bay Quốc tế Phú Bài,TX. Hương Thủy Huế,16.401234,107.701234,VinFast DC 60kW
+GO! Huế (Big C),P. Phú Hội TP. Huế,16.465678,107.601234,VinFast DC 60kW
+PVOil Quảng Điền,TT. Sịa H. Quảng Điền,16.567890,107.545678,VinFast DC 60kW
+PVOil A Lưới,TT. A Lưới H. A Lưới,16.212345,107.267890,VinFast DC 60kW
+PVOil Phú Vang,TT. Phú Đa H. Phú Vang,16.412345,107.656789,VinFast DC 60kW
+PVOil Nam Đông,TT. Khe Tre H. Nam Đông,16.156789,107.712345,VinFast DC 60kW
+VinFast Showroom Huế,100 Phạm Văn Đồng TP. Huế,16.478901,107.612345,VinFast DC 60kW
+Resort Vedana Lagoon,Xã Phú Lộc H. Phú Lộc,16.345678,107.890123,Eboost AC 11kW
+Khu nghỉ dưỡng Kawara My An Onsen,Xã Phú Dương H. Phú Vang,16.501234,107.634567,VinFast AC 11kW
+Khách sạn Indochine Palace,105A Hùng Vương TP. Huế,16.463456,107.594567,VinFast DC 30kW
+Lăng Tự Đức (Bãi xe),P. Thủy Xuân TP. Huế,16.434567,107.567890,VinFast AC 11kW
+Chùa Thiên Mụ (Bãi xe),P. Hương Long TP. Huế,16.456789,107.545678,VinFast AC 11kW
+Alba Wellness Resort,Xã Phong Sơn H. Phong Điền,16.523456,107.423456,VinFast AC 11kW
+Bệnh viện Trung ương Huế,16 Lê Lợi TP. Huế,16.468901,107.591234,VinFast DC 30kW
+Đại nội Huế (Cửa Hiển Nhơn),TP. Huế,16.471234,107.581234,VinFast AC 11kW
+Bến xe Phía Nam Huế,P. An Đông TP. Huế,16.445678,107.612345,VinFast DC 30kW
+PVOil La Sơn (Cao tốc),Nút giao La Sơn Phú Lộc,16.256789,107.812345,VinFast DC 150kW
+Sân Golf Laguna Lăng Cô,Xã Lộc Vĩnh H. Phú Lộc,16.290123,108.014567,VinFast AC 11kW
+Vincom Center Metropolis,29 Liễu Giai P. Ngọc Khánh Q. Ba Đình Hà Nội,21.0321,105.8154,AC & DC (Hầm B3/B4)
+Big C Thăng Long (GO!),222 Trần Duy Hưng P. Trung Hòa Q. Cầu Giấy Hà Nội,21.0075,105.7962,DC Sạc Nhanh
+Aeon Mall Long Biên,75 Đường Cổ Linh Q. Long Biên Hà Nội,21.0274,105.8997,Sạc NL Mặt Trời
+VinFast Thăng Long,68 Trịnh Văn Bô P. Phương Canh Q. Nam Từ Liêm Hà Nội,21.0348,105.7412,Trung tâm 3S
+Dreamland Bonanza,23 Phố Duy Tân P. Dịch Vọng Hậu Q. Cầu Giấy Hà Nội,21.0291,105.7834,DC 20kW (Hầm B2)
+Royal City,72A Nguyễn Trãi P. Thượng Đình Q. Thanh Xuân Hà Nội,21.0029,105.8156,Hầm B3-B5
+VinFast Hà Đông,948 Quang Trung P. Yên Nghĩa Q. Hà Đông Hà Nội,20.9542,105.7563,Trục QL6
+Khách sạn Phú Sơn,Đường Phúc Sơn P. Vũ Ninh TP. Bắc Ninh,21.1925,106.0722,DC 30kW & AC 11kW
+Phoenix Tower,26 Lý Thái Tổ P. Đại Phúc TP. Bắc Ninh,21.1795,106.0658,AC 11kW (Hầm)
+Vincom Plaza Lý Thái Tổ,Ngã 6 Lý Thái Tổ P. Đại Phúc TP. Bắc Ninh,21.1802,106.0625,DC 60kW/30kW
+Chung cư Lotus Central,30 Lý Thái Tổ P. Ninh Xá TP. Bắc Ninh,21.1780,106.0632,20kW & 3.5kW
+NQ Hà Văn Long,206A Âu Cơ P. Kinh Bắc TP. Bắc Ninh,21.1850,106.0550,AC 11kW
+NQ Phạm Văn Trưởng,80 Ngô Quyền P. Kinh Bắc TP. Bắc Ninh,21.1885,106.0582,AC 11kW
+Vincom Plaza Thanh Hóa,27 Trần Phú P. Điện Biên TP. Thanh Hóa,19.8065,105.7768,Trung tâm TP
+Petrolimex Số 10,Phường Nam Ngạn TP. Thanh Hóa,19.8205,105.7850,DC 60kW (Trạm xăng)
+Khách sạn Lam Kinh,Đại lộ Lê Lợi P. Đông Hương TP. Thanh Hóa,19.8102,105.7955,DC 120kW Superhub
+Vinhomes Star City,9 Hàm Nghi P. Đông Hương TP. Thanh Hóa,19.8150,105.7980,DC 60kW (20 cổng)
+PVOIL Bà Triệu,Đường Bà Triệu TP. Thanh Hóa,19.8005,105.7702,DC Sạc Nhanh
+VinFast Chevrolet Vinh,Đường 72m P. Hà Huy Tập TP. Vinh Nghệ An,18.6925,105.6750,DC 250kW Siêu tốc
+VP Viettel Nghệ An,Đại lộ Lenin TP. Vinh Nghệ An,18.6850,105.6820,DC 60kW
+KS Sài Gòn Kim Liên,25 Quang Trung P. Quang Trung TP. Vinh Nghệ An,18.6735,105.6780,60kW & 20kW
+Vinh Lotus Residence,Phường Quang Trung TP. Vinh Nghệ An,18.6750,105.6765,Chung cư cao tầng
+NQ An Thắng,10 Hải Thượng Lãn Ông P. Hưng Lộc TP. Vinh Nghệ An,18.6880,105.6950,DC 120kW Tư nhân
+PVOIL Hưng Lộc,10 Hải Thượng Lãn Ông Xã Hưng Lộc TP. Vinh Nghệ An,18.6882,105.6955,DC 120kW
+Depot GSM Vinh,Đường Xô Viết Nghệ Tĩnh Xã Nghi Phú TP. Vinh Nghệ An,18.7050,105.6850,Hub Taxi Xanh SM
+VinFast - Vincom Plaza Đà Nẵng,910A Ngô Quyền An Hải Bắc Sơn Trà Đà Nẵng,16.0714,108.2305,DC 60kW AC 11kW
+VinFast - Vinmec Đà Nẵng,Đường 30 Tháng 4 Hòa Cường Bắc Hải Châu,16.0350,108.2200,DC 60kW AC 11kW
+VinFast - PVOIL Miền Trung Lê Văn Hiến,Đường Lê Văn Hiến Q. Ngũ Hành Sơn,16.0150,108.2450,DC 60kW
+VinFast - CHXD Hòa Khánh Số 08,KCN Hòa Khánh Q. Liên Chiểu,16.0850,108.1500,DC 60kW
+Marriott Resort & Spa Đà Nẵng,23 Trường Sa Hòa Hải Ngũ Hành Sơn,15.9980,108.2650,AC 22kW
+VinFast - NQ Công Ty HMT,152 Duy Tân Q. Hải Châu,16.0500,108.2150,DC 60kW
+VinFast - Showroom VinFast Hải Châu,115 Nguyễn Văn Linh Nam Dương Hải Châu,16.0605,108.2180,DC 180kW
+VinFast - CHXD PVOIL Số 09 Liên Chiểu,Nguyễn Lương Bằng Hòa Khánh Bắc Liên Chiểu,16.0900,108.1400,DC 60kW
+VinFast - NQ Phan Đức Tú,A6 Phú Gia Compound 144 Ông Ích Khiêm,16.0750,108.2100,AC 7.4kW
+VinFast - NQ Nguyễn Công Cường,40/2 Nguyễn Thiện Kế Sơn Trà,16.0680,108.2350,AC 7.4kW
+VinFast - NQ Ngô Thị Vân Anh,613 Nguyễn Tất Thành Thanh Khê,16.0780,108.1900,AC 11kW
+VinFast - Bãi xe 117 Trần Quý Khoách,117 Trần Quý Khoách Hòa Minh Liên Chiểu,16.0800,108.1600,DC 30kW
+VinFast - M696+RFG Nguyễn Thị Minh Khai,Nguyễn Thị Minh Khai TT. Đông Phú Quế Sơn,15.6000,108.2000,DC 60kW
+VinFast - CHXD PVOIL Kỳ Lý,Quốc lộ 1A Xã Tam Đàn Phú Ninh,15.6200,108.4500,DC 180kW/60kW
+VinFast - NQ Nguyễn Lê Hương,493/6 Phan Bội Châu P. Tân Thạnh Tam Kỳ,15.5700,108.4700,AC 7.4kW
+VinFast - NQ Ngô Anh Tuấn,42 Nguyễn Đình Chiểu P. An Mỹ Tam Kỳ,15.5650,108.4800,AC 7.4kW
+VinFast - NQ HKD Nguyễn Anh Tuấn,Đường ĐT 614 Quảng Nam,15.5800,108.4000,DC 60kW
+VinFast - CHXD Số 3 PETEC Quảng Nam,158 Nguyễn Tất Thành Hội An,15.8800,108.3300,DC 60kW
+VinFast - Vinpearl Resort & Golf Nam Hội An,Xã Bình Dương Huyện Thăng Bình,15.7700,108.4300,DC 120kW/AC 22kW
+VinFast - Showroom VinFast Quảng Nam,308 Hùng Vương P. An Mỹ Tam Kỳ,15.5600,108.4800,DC 60kW
+VinFast - CHXD Petrolimex Số 18,QL1A Bình Nguyên Thăng Bình,15.7000,108.4000,DC 180kW
+VinFast - VinWonders Nam Hội An,Bình Minh Thăng Bình,15.7600,108.4200,DC 60kW
+VinFast - CHXD PVOIL Nghĩa Chánh,QL1A Đường Bà Triệu TP. Quảng Ngãi,15.1150,108.8050,DC 60kW
+VinFast - CHXD PVOIL Trần Phú,Đường Hai Bà Trưng TP. Quảng Ngãi,15.1200,108.7900,DC 60kW
+VinFast - NQ FAST+ HKD Lê Hiếu,472 Phan Đình Phùng TP. Quảng Ngãi,15.1250,108.7950,DC 60kW
+VinFast - CHXD PVOIL Liên Hiệp,QL24B Thôn Liên Hiệp P. Trương Quang Trọng,15.1400,108.7800,DC 60kW
+VinFast - Vincom Plaza Quảng Ngãi (Hầm B1),26 Lê Thánh Tôn TP. Quảng Ngãi,15.1220,108.8020,DC 80kW
+VinFast - Khách sạn Cẩm Thành,22 Quang Trung P. Nghĩa Lộ TP. Quảng Ngãi,15.1180,108.8000,AC 22kW
+VinFast - Cửa hàng xăng dầu Petrolimex Đ. Đông 2,Thôn Đại An Nghĩa Hành,15.0500,108.7500,DC 60kW
+VinFast - CHXD PVOIL Bình Sơn,QL1A Bình Sơn,15.3000,108.7000,DC 60kW
+VinFast - Showroom VinFast Quảng Ngãi,02 Lê Thánh Tôn Nghĩa Chánh,15.1200,108.8050,DC 30kW
+VinFast - Bãi xe Khách sạn Trung tâm,TP. Quảng Ngãi,15.1200,108.8000,AC 11kW
+VinFast - Go! Quy Nhơn (Kim Cúc Plaza),Khu đô thị xanh Vũng Chua P. Ghềnh Ráng Quy Nhơn,13.7545,109.2079,DC 60kW
+VinFast - CHXD PVOIL Số 2 Bình Định,Km34+600 QL19 Thôn 2 Xã Tây Sơn,13.9100,108.9500,DC 60kW
+VinFast - CHXD PVOIL Đập Đá (Số 6),Thôn An Long 2 Xã Canh Vinh Vân Canh,13.6800,109.0500,DC 60kW
+VinFast - CHXD PVOIL Số 4,92 Đào Tấn Xã Tuy Phước H. Tuy Phước,13.8200,109.1500,DC 60kW
+VinFast - CHXD PVOIL Số 3,Thôn Hưng Nghĩa Xã Tuy Phước,13.8100,109.1600,DC 60kW
+VinFast - CHXD PVOIL Số 5,Cụm CN Phước An Xã Phước An,13.8300,109.1200,DC 60kW
+VinFast - W4G3+H33 Nhơn An,Xã Nhơn An TX. An Nhơn,13.9260,109.1035,DC 60kW
+VinFast - CHXD Petrolimex Số 18,Ngã 3 Phú Tài Quy Nhơn,13.7700,109.1500,DC 180kW
+VinFast - FLC Quy Nhơn,Nhơn Lý Quy Nhơn,13.9800,109.2700,AC 22kW/DC 30kW
+VinFast - Showroom VinFast Bình Định,Tây Sơn Quy Nhơn,13.7600,109.2100,DC 60kW
+VinFast - CHXD Phương Linh,QL1A Hoài Nhơn,14.4500,109.0000,DC 60kW
+VinFast - Vincom Plaza Tuy Hòa,Ngã 4 Hùng Vương - Trần Phú P. 7 TP. Tuy Hòa,13.0950,109.3050,DC 60kW/AC 11kW
+VinFast - Khách sạn Kaya,238 Đại Lộ Hùng Vương P. 7 TP. Tuy Hòa,13.0900,109.3000,AC 11kW/DC 30kW
+VinFast - CHXD PVOIL An Phú,KM 1322+350 QL1A TP. Tuy Hòa,13.1500,109.2800,DC 120kW/60kW
+VinFast - CHXD Số 2 Phước Mỹ,Thôn Thanh Long Xã Phước Mỹ TX. Sông Cầu,13.5000,109.2000,DC 120kW/60kW
+VinFast - NQ Hồ Phương Nam,Lô A92 KP Hưng Phú P.5 Tuy Hòa,13.0800,109.3100,AC 11kW
+VinFast - Văn phòng Viettel Phú Yên,TP. Tuy Hòa,13.0900,109.3100,DC 60kW
+VinFast - CHXD PVOIL Sông Cầu,QL1D Xuân Hải Sông Cầu,13.5500,109.2200,DC 60kW
+VinFast - Trạm dừng nghỉ AStop,QL1A Xuân Lộc Sông Cầu,13.6000,109.1800,DC 180kW
+VinFast - Showroom VinFast Phú Yên,Đại lộ Hùng Vương Tuy Hòa,13.1000,109.3000,DC 30kW
+VinFast - NQ Khách sạn Sala,Độc Lập P.7 Tuy Hòa,13.0950,109.3100,AC 22kW
+VinFast - Vincom Plaza Trần Phú,78-80 Trần Phú Lộc Thọ Nha Trang,12.2350,109.1960,DC 60kW
+VinFast - Vincom Plaza Thái Nguyên,60 Thái Nguyên Phương Sài Nha Trang,12.2500,109.1850,DC 60kW
+VinFast - Vincom+ Ninh Hòa,Đường 2/4 P. Ninh Hiệp TX. Ninh Hòa,12.4800,109.1200,DC 30kW
+VinFast - Vincom Cam Ranh,2069 Đại lộ Hùng Vương Cam Ranh,11.9200,109.1500,DC 60kW/AC 11kW
+VinFast - Cảng Vinpearl Nhà Ga 1,Vĩnh Nguyên Nha Trang,12.2100,109.2100,DC 150kW
+VinFast - Depot GSM Nha Trang,Vĩnh Nguyên Nha Trang,12.2150,109.2050,DC 60kW/11kW
+VinFast - MM Mega Market Nha Trang,Đường 23/10 Vĩnh Trung Nha Trang,12.2450,109.1700,DC 60kW
+VinFast - CHXD Petrolimex Số 36,18F Thủy Xưởng Phương Sơn Nha Trang,12.2500,109.1800,DC 60kW
+VinFast - CHXD Phước Quang,QL26 TX. Ninh Hòa,12.4500,109.1000,DC 60kW
+VinFast - Bãi đỗ xe tư nhân Phước Lâm,Thôn Phước Lâm Ninh Xuân Ninh Hòa,12.4600,109.0800,AC 11kW
+VinFast - Bãi đỗ xe Minh Anh,Cao tốc 01 Xã Vĩnh Trung Nha Trang,12.2400,109.1600,DC 60kW
+VinFast - NQ Công ty Hải My,Trần Phú Vĩnh Nguyên Nha Trang,12.2200,109.2000,AC 22kW
+VinFast - PVOIL Ninh Phước (Ninh Thuận),QL1A Km1562 Xã Bình Quý H. Ninh Phước,11.5400,108.9533,DC 60kW
+VinFast - Vincom Plaza Phan Rang,122 Đường 16/4 P. Mỹ Hải Phan Rang-Tháp Chàm,11.5600,109.0000,DC 250kW/30kW
+VinFast - Vincom+ Ninh Thuận,122 Đường 16/4 Phan Rang,11.5600,109.0000,DC 60kW
+VinFast - NQ HKD Nắng Vàng,Thôn Long Bình 1 Xã An Hải Ninh Phước,11.5300,109.0200,DC 60kW/20kW
+VinFast - NQ Phan Thanh Hoàng,Xã Phước Hữu Ninh Phước,11.5200,108.9800,AC 7.4kW
+VinFast - Trạm dừng chân Thiên Thảo,QL1A Thuận Hòa Phước Thuận Ninh Phước,11.5500,108.9600,DC 30kW
+VinFast - PVOIL Sông Phan (Bình Thuận),QL1A Km1745 Xã Sông Phan Hàm Tân,10.8500,107.8500,DC 60kW
+VinFast - PVOIL Tân Thuận,ĐT 712 Thôn Hiệp Lễ Hàm Thuận Nam,10.6800,107.8000,DC 60kW
+VinFast - TTC World Tà Cú,TT. Thuận Nam Hàm Thuận Nam,10.8200,107.8800,DC 60kW
+VinFast - PVOIL Vũng Tàu Số 27,Xã Bình Châu (Giáp ranh),10.6000,107.5000,DC 60kW
+VinFast - NQ Fast+ Võ Thị Yến,59 Nguyễn Bỉnh Khiêm P. Phú Thủy Phan Thiết,10.9300,108.1100,AC 11kW
+VinFast - Bãi xe Châu Văn Liêm,47 Châu Văn Liêm P. Phú Thủy Phan Thiết,10.9350,108.1050,DC 60kW
+VinFast - PVOIL BT Số 5B,Trần Quý Cáp P. Đức Long Phan Thiết,10.9200,108.0800,DC 120kW/60kW
+VinFast - Bãi đỗ xe Hàm Thắng,Phan Huy Ích Xã Hàm Thắng Hàm Thuận Bắc,10.9500,108.1000,DC 60kW
+VinFast - Vincom Plaza Kon Tum,2 Phan Đình Phùng P. Quyết Thắng Kon Tum,14.3500,108.0000,DC 250kW/60kW
+VinFast - PVOIL Trung Tín,ĐT 675 TP. Kon Tum,14.3800,107.9500,DC 60kW
+VinFast - PVOIL MT Plei Kần 01,Thôn 4 Huyện Ngọc Hồi Kon Tum,14.6500,107.6000,DC 180kW/60kW
+VinFast - Trạm dừng nghỉ Đồi Sao Mai,Xã Hòa Bình Kon Tum,14.3000,107.9800,DC 150kW/60kW
+VinFast - NQ Đặng Thị Thu Thủy,128 Mai Hắc Đế P. Duy Tân Kon Tum,14.3600,107.9900,AC 11kW
+VinFast - NQ Hoàng Minh Tân,336 Trần Phú P. Quang Trung Kon Tum,14.3400,108.0100,AC 11kW
+VinFast - PVOIL Đăk Mar,QL14E Xã Đắk Mar Đắk Hà,14.4800,107.9000,DC 60kW
+VinFast - Khách sạn T&T Măng Đen,Thôn Măng Đen Xã Đắk Long Kon Plông,14.6000,108.2800,DC 60kW
+VinFast - NQ Phan Thế Vinh,Thôn 9 TT. Đắk Rve Kon Rẫy,14.4500,108.1500,AC 11kW
+VinFast - NQ Cty Sanh Kim Gia Lai,396 Lý Thái Tổ P. Yên Đỗ Pleiku Gia Lai,13.9800,108.0000,DC 120kW
+VinFast - Viettel Gia Lai,TP. Pleiku Gia Lai,13.9700,108.0100,DC 20kW
+VinFast - PVOIL Chư Sê,QL25 Thôn 1 Xã La Blang Chư Sê,13.6000,108.1000,DC 60kW
+VinFast - PVOIL Chư Pưh,QL14 Thôn Plei Dư Xã Ia Hrú,13.5000,108.0500,DC 60kW
+VinFast - PVOIL An Khê,TX. An Khê Gia Lai,13.9500,108.6500,DC 60kW
+VinFast - NQ Nguyễn Văn Đang,Thôn 1 Pờ Tó Ia Pa,13.3000,108.5000,AC 11kW
+VinFast - Chư Đang Ya,Chư Păh Gia Lai,14.0854,108.0387,DC
+VinFast - Khu Tiểu thủ CN Diên Phú,Pleiku Gia Lai,13.9450,108.0000,DC
+VinFast - TT Đăng kiểm 4705D,Thôn 15 H. Krông Búk Đắk Lắk,12.8500,108.2000,DC 250kW/60kW
+VinFast - CHXD Buôn Hồ,Km 1740+900 Đường HCM TX. Buôn Hồ,12.9000,108.2500,DC 60kW
+VinFast - PVOIL Số 13,QL26 Thôn 4 Xã Ea Pil M'Drắk,12.7000,108.7000,DC 60kW
+VinFast - Trạm dừng nghỉ Đắk Nuê,Thôn Yên Thành 1 Lắk Đắk Lắk,12.4000,108.1500,DC 120kW/80kW
+VinFast - NQ Đặng Thị Nga,186 Giải Phóng Buôn Ma Thuột,12.6800,108.0500,DC 30kW
+VinFast - PVOIL VT Số 20,ĐT 682 Thôn Đức Lễ Đắk Mil Đắk Nông,12.4500,107.6000,DC 250kW/60kW
+VinFast - Bưu cục cấp 1 Đắk Nông,25 Huỳnh Thúc Kháng Gia Nghĩa,11.9900,107.6900,DC 30kW
+VinFast - NQ Cao Nguyên Xanh Smart,608 Nguyễn Tất Thành Gia Nghĩa,11.9800,107.6800,DC 120kW/60kW
+VinFast - PVOIL Saigon Petroleum Vân Nam,Tổ dân phố 8 Gia Nghĩa,12.0000,107.7000,DC 60kW
+VinFast - NQ Cty TNHH Trạm Sạc KĐC,85 Nguyễn Chí Thanh Đắk Mil,12.4400,107.6200,DC 120kW/60kW
+VinFast - Trạm sạc Bến xe Đắk Song,TT. Đức An Đắk Song Đắk Nông,12.2500,107.5500,DC 120kW
+VinFast - NQ Đoàn Văn Sỹ,Tổ 3 TT. Đức An Đắk Song,12.2400,107.5600,AC 11kW
+VinFast - Vincom Plaza Bảo Lộc,83 Lê Hồng Phong P.1 Bảo Lộc,11.5450,107.8100,DC 60kW/30kW
+VinFast - Bãi xe Nhà hàng Sáu Lục,Xã Đạ Rsal Huyện Đam Rông,11.9000,108.1000,DC 180kW/60kW
+VinFast - Go! Đà Lạt,Quảng trường Lâm Viên Đà Lạt,11.9350,108.4450,DC
+VinFast - NQ Hữu Chánh,42/3 Hải Thượng Lãn Ông P.1 Bảo Lộc,11.5400,107.8050,AC 22kW
+VinFast - Vincom Mega Mall Thảo Điền,161 Xa Lộ Hà Nội TP. Thủ Đức,10.8050,106.7450,DC 60kW (54 cổng)
+VinFast - Vincom Center Đồng Khởi,72 Lê Thánh Tôn Q.1,10.7780,106.7020,DC 60kW/30kW
+VinFast - PVOIL Phú Hữu,579 Võ Chí Công TP. Thủ Đức,10.8100,106.8000,DC 180kW
+VinFast - Vinhomes Grand Park (Khu 10),512 Nguyễn Xiển Long Thạnh Mỹ Thủ Đức,10.8350,106.8350,DC 60kW (54 cổng)
+VinFast - VP3C+972 Hiệp Bình Phước,Hiệp Bình Phước Thủ Đức,10.8531,106.7210,DC
+VinFast - 15 Cộng Hòa,15 Cộng Hòa P.4 Tân Bình,10.8008,106.6581,DC
+VinFast - 9 Đinh Tiên Hoàng,Đa Kao Quận 1,10.7878,106.7001,DC
+VinFast - 71 Trần Trọng Cung,Tân Thuận Đông Quận 7,10.7436,106.7300,DC
+VinFast - 1331/78 Lê Đức Thọ,P.14 Gò Vấp,10.8578,106.6475,DC
+VinFast - Vincom Đồng Khởi,72 Lê Thánh Tôn Bến Nghé Q.1,10.7761,106.7020,DC
+VinFast - Vincom 3/2,3C Đường 3/2 P.11 Q.10,10.7761,106.6780,DC
+VinFast - Vincom Saigonres,188 Nguyễn Xí P.26 Bình Thạnh,10.8100,106.7050,DC
+VinFast - Vincom Phan Văn Trị,12 Phan Văn Trị P.7 Gò Vấp,10.8250,106.6900,DC
+VinFast - Vincom Cộng Hòa,15-17 Cộng Hòa Tân Bình,10.8006,106.6580,DC
+VinFast - The Adora Center,431 Hoàng Văn Thụ Tân Bình,10.7950,106.6550,DC 60kW
+VinFast - PVOIL Số 58,KP 1B Thuận An (Giáp ranh),10.9200,106.7000,DC 60kW
+VinFast - PVOIL Số 62,191 Hưng Phước Hưng Định Thuận An,10.9400,106.7100,DC 180kW/60kW
+VinFast - Go! Dĩ An,QL1K Đông Hòa Dĩ An,10.8900,106.7700,DC 30kW
+VinFast - Vincom Dĩ An,3 ĐT743B Dĩ An Bình Dương,10.9000,106.7800,DC 250kW
+VinFast - Bãi xe Auto Tuấn Phong,87/2 Bờ Bao Tân Thắng Tân Phú,10.7950,106.6150,DC 60kW
+VinFast - Showroom VinFast Vũng Tàu,55 Đường 30/4 P. Rạch Dừa Vũng Tàu,10.3700,107.1000,DC 180kW/30kW
+VinFast - IBIS Styles Vũng Tàu,117 Thùy Vân P. Thắng Tam,10.3400,107.0800,DC 250kW/60kW
+VinFast - PVOIL Số 3 Vũng Tàu,Nguyễn Thiện Thuật P. Thắng Nhất,10.3800,107.1100,DC 60kW
+VinFast - PVOIL Xuyên Mộc (Số 8),QL55 Xã Phước Thuận Xuyên Mộc,10.5000,107.4500,DC 180kW
+VinFast - PVOIL Số 23 Phú Mỹ,Đường Hội Bài - Châu Pha Tóc Tiên,10.5500,107.0800,DC 180kW
+VinFast - PVOIL Số 07 Phú Mỹ,QL51 P. Mỹ Xuân Phú Mỹ,10.6000,107.0500,DC 180kW
+VinFast - GO! Bà Rịa,Lê Thành Duy P. Phước Hiệp Bà Rịa,10.4900,107.1700,DC 30kW
+VinFast - PVOIL Số 06 Bà Rịa,QL51 P. Kim Dinh Bà Rịa,10.4700,107.1500,DC 180kW
+VinFast - Bãi xe Phạm Mẫn,Đất Đỏ BRVT,10.4500,107.2700,DC 60kW
+VinFast - CAFE HUFU,QL55 TT. Đất Đỏ,10.4600,107.2800,DC 120kW/60kW
+VinFast - Bãi xe Minh Anh 2,ĐT 52 Xã Hòa Long Bà Rịa,10.5200,107.1900,DC 60kW
+VinFast - Bãi xe Marina Bay,115 Trần Phú P.5 Vũng Tàu,10.3600,107.0600,DC 60kW
+VinFast - PVOIL Số 58,KP 1B Thuận An Bình Dương,10.920,106.700,DC 60kW
+VinFast - PVOIL Số 62,191 Hưng Phước Thuận An Bình Dương,10.940,106.710,DC 180kW
+VinFast - Vincom Plaza Dĩ An,3 ĐT743B Dĩ An Bình Dương,10.900,106.780,DC 250kW
+VinFast - Vincom Plaza Biên Hòa,1096 Phạm Văn Thuận Đồng Nai,10.950,106.820,DC 250kW
+VinFast - Big C Đồng Nai,833 Xa Lộ Hà Nội Đồng Nai,10.930,106.850,DC 30kW
+VinFast - PVOIL Số 32,Hùng Vương Nhơn Trạch Đồng Nai,10.700,106.880,DC 60kW
+VinFast - Vincom Tây Ninh,444 Đường 30/4 P.3 Tây Ninh,11.310,106.100,DC 30kW
+VinFast - PVOIL Số 1 Tây Ninh,QL22B Long Thành Nam Tây Ninh,11.280,106.120,DC 60kW
+VinFast - PVOIL Số 9 Tây Ninh,132 Tỉnh Lộ 784 Tây Ninh,11.330,106.130,DC
+VinFast - GSM Bình Phước,P. Tân Đồng Đồng Xoài Bình Phước,11.530,106.900,DC 60kW
+VinFast - Bãi xe Tân Phước,ĐT 753 Đồng Phú Bình Phước,11.550,106.950,DC 60kW
+VinFast - NQ Hồng Thanh Vân,605 Nguyễn Huệ Đồng Xoài Bình Phước,11.540,106.910,AC 7.4kW
+VinFast - Bến xe Đồng Nai,P. Bình Đa Biên Hòa Đồng Nai,10.940,106.840,DC 180kW
+VinFast - PVOIL Sáu Sấn,Minh Thạnh Dầu Tiếng Bình Dương,11.250,106.400,DC 60kW
+VinFast - 1a Lộ Vòng Cung,An Bình Ninh Kiều,10.0080,105.7495,DC
+VinFast - Bãi xe TTTM GO Cần Thơ,Lô 1 Hưng Phú Cái Răng,10.0200,105.7700,DC
+VinFast - 58 Đường 3/2,Xuân Khánh Ninh Kiều,10.0142,105.7582,DC
+VinFast - 2Q62+2HW An Bình,Ninh Kiều Cần Thơ,10.0102,105.7516,DC
+VinFast - 222 QL91B,Long Tuyền Bình Thủy,10.0444,105.7350,DC
+VinFast - Vincom Plaza Hùng Vương,2 Hùng Vương Ninh Kiều,10.0400,105.7800,DC 60kW
+VinFast - Vincom Plaza Xuân Khánh,209 Đường 30/4 Ninh Kiều,10.0250,105.7700,DC 60kW
+VinFast - Vinmec Cần Thơ,156 Đường 3/2 Ninh Kiều,10.0300,105.7600,DC 60kW
+VinFast - Showroom VinFast Cần Thơ,274 Đường 30/4 Hưng Lợi,10.0200,105.7650,DC 30kW
+VinFast - CHXD Dương Trí 39,Vĩnh Trinh Vĩnh Thạnh,10.2000,105.5000,DC 180kW
+VinFast - Vincom Long An,Hùng Vương P.2 Tân An Long An,10.535,106.415,DC 180kW
+VinFast - PVOIL Bến Lức,195 QL1A Bến Lức Long An,10.630,106.480,DC 180kW
+VinFast - Vincom Mỹ Tho,1A Hùng Vương P.1 Tiền Giang,10.355,106.365,DC 60kW
+VinFast - PVOIL Số 79,Ấp 1 Tân Phước Tiền Giang,10.450,106.250,DC 180kW
+VinFast - PVOIL Số 52,QL1A Cai Lậy Tiền Giang,10.410,106.120,DC
+VinFast - Go! Bến Tre,QL60 Võ Nguyên Giáp Bến Tre,10.250,106.350,DC
+VinFast - Depot GSM Bến Tre,123 Đồng Văn Cống Bến Tre,10.230,106.370,DC 80kW
+VinFast - PVOIL Số 38,QL60 Châu Thành Bến Tre,10.280,106.320,DC 180kW
+VinFast - PVOIL Châu Thành B,Tiên Thủy Châu Thành Bến Tre,10.270,106.300,DC
+VinFast - PVOIL An Thạnh,QL60 Mỏ Cày Nam Bến Tre,10.150,106.360,DC
+VinFast - Vincom Vĩnh Long,55 Phạm Thái Bường Vĩnh Long,10.250,105.970,DC 250kW
+VinFast - PVOIL Số 33,Thanh Đức Long Hồ Vĩnh Long,10.240,105.990,DC 180kW
+VinFast - PVOIL Số 44,QL53 Cầu Ngang Trà Vinh,9.850,106.400,DC 60kW
+VinFast - PVOIL Trà Vinh (Bạch Đằng),P.4 TP. Trà Vinh Trà Vinh,9.940,106.340,DC 60kW
+VinFast - Vincom Sóc Trăng,Lý Tự Trọng P.2 Sóc Trăng,9.600,105.970,DC 60kW
+VinFast - Bãi xe Hưng Cơ,1 Đặng Văn Viễn P.8 Sóc Trăng,9.590,105.960,DC 60kW
+VinFast - Vincom Bạc Liêu,15 Trần Phú P.3 Bạc Liêu,9.290,105.720,DC 250kW
+VinFast - PVOIL Số 31,Tỉnh lộ 38 TP. Bạc Liêu Bạc Liêu,9.250,105.750,DC 180kW
+VinFast - Vincom Cà Mau,Lê Duẩn P.1 Cà Mau,9.180,105.150,DC 60kW
+VinFast - PVOIL Số 10,ĐT 986A P.1 TP. Cà Mau Cà Mau,9.170,105.140,DC 60kW
+VinFast - PVOIL Số 46,P.7 TP. Cà Mau Cà Mau,9.180,105.160,DC 180kW
+VinFast - PVOIL Giá Rai,186 Khóm 4 TX. Giá Rai Bạc Liêu,9.270,105.650,DC 50
+VinFast - PVOIL Trần Đề,TT. Định An 51 Sóc Trăng,9.450,106.100,DC 180kW
+VinFast - Vincom An Giang,1242 Trần Hưng Đạo An Giang,10.370,105.440,DC 60kW
+VinFast - PVOIL Số 66,222 Trần Hưng Đạo An Giang,10.350,105.450,DC 180kW
+VinFast - Vincom Kiên Giang,Lô A12 Cô Bắc Rạch Giá Kiên Giang,10.010,105.080,DC 60kW
+VinFast - Vinpearl Phú Quốc,Gành Dầu Phú Quốc Kiên Giang,10.330,103.860,DC 30kW
+VinFast - PVOIL Số 7,QL61 Ấp 7 Vị Thanh Hậu Giang,9.780,105.460,DC 180kW
+VinFast - Vincom Cao Lãnh,2 Đường 30/4 P.1 Đồng Tháp,10.460,105.640,DC 30kW
