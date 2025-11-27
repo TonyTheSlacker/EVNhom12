@@ -19,4 +19,9 @@ Dự án mô phỏng, phân tích hoặc quản lý xe ô tô điện bằng Pyt
 
 ## Tác giả
 
-- HCMUE - COMP1314-AI
+- Châu Hoàn Thiện - 49.01.103.077
+- Châu Vĩ Khôn - 45.01.104.116
+- Diệp Quang Huy - 49.01.104.050
+- Liêu Lâm Tài - 48.01.104.116
+- Lê Việt Hoàng Thảo - 47.01.104.196
+
