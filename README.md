@@ -4,13 +4,13 @@ Dự án mô phỏng, phân tích hoặc quản lý xe ô tô điện bằng Pyt
 
 ## Cấu trúc dự án
 
-- `file.py`: Logic chính
-- `main.py`: Điểm khởi chạy
-- `models.py`: Định nghĩa lớp đối tượng
+- `file.py`: Logic chính của chương trình
+- `main.py`: Điểm khởi chạy ứng dụng
+- `models.py`: Định nghĩa lớp đối tượng Car
 - `utils.py`: Hàm tiện ích
-- `requirements.txt`: Thư viện cần thiết
-- `test_file.py`: Kiểm thử
-- `data/`: Dữ liệu liên quan
+- `requirements.txt`: Danh sách thư viện cần thiết
+- `test_file.py`: Kiểm thử chức năng
+- `data/`: Thư mục chứa dữ liệu liên quan (BOT.csv, charging_stations.csv, ...)
 
 ## Hướng dẫn sử dụng
 
