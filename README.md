@@ -1,6 +1,6 @@
 # Dự án Xe Ô Tô Điện
 
-Dự án mô phỏng, phân tích hoặc quản lý xe ô tô điện bằng Python.
+Dự án mô phỏng đường đi của xe điện, dữ liệu từ ứng dụng trạm sạc EV
 
 ## Cấu trúc dự án
 
@@ -17,7 +17,7 @@ Dự án mô phỏng, phân tích hoặc quản lý xe ô tô điện bằng Pyt
 1. Cài đặt thư viện: 'pip install pandas numpy'
 2. Chạy chương trình: `python main.py`
 
-## Tác giả
+## Nhóm Sinh Viên
 
 - Châu Hoàn Thiện - 49.01.103.077
 - Châu Vĩ Khôn - 45.01.104.116
