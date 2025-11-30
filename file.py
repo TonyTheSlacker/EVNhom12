@@ -267,18 +267,13 @@ def astar_charging_stations(df_charge: pd.DataFrame, start: str, end: str, batte
             dist_to_end = haversine(lat2, lng2, end_lat, end_lng) * ROAD_FACTOR
             candidates.append((dist_to_end, next_idx, dist_km_road))
         
-        candidates.sort()
-
-        # Chỉ xem xét 10 trạm gần nhất (giảm tải tìm kiếm)
-        for _, next_idx, dist_km in candidates[:10]:
+        for _, next_idx, dist_km in heapq.nsmallest(10, candidates):
             battery_after_travel = battery - dist_km
-            
             if battery_after_travel < 0:
                 # Cần sạc: Sạc đến 90% pin max hoặc đủ để đi trạm kế tiếp + 1km
                 max_charge = int(battery_max * 0.9)
                 charge_to = max(max_charge, int(dist_km + 1)) 
                 charge_to = min(charge_to, battery_max) # Không sạc vượt quá Max
-                
                 charge_amount = charge_to - battery
                 new_battery = charge_to - dist_km
                 new_charge_log = charge_log + [(df_charge.loc[current, 'name'], new_battery, charge_amount, lat1, lng1)]
@@ -288,14 +283,11 @@ def astar_charging_stations(df_charge: pd.DataFrame, start: str, end: str, batte
                 charge_amount = 0
                 new_battery = battery_after_travel
                 new_charge_log = charge_log + [(df_charge.loc[current, 'name'], new_battery, charge_amount, lat1, lng1)]
-
             if new_battery < 0:
                 continue # Nếu sạc xong vẫn không đủ đi, bỏ qua
-                
             # Thêm vào heap (A*): f_score = total_dist + dist_km + heuristic(next_idx)
             new_total_dist = total_dist + dist_km # Dùng dist_km_road
             new_f_score = new_total_dist + heuristic(next_idx)
-
             # Chỉ ghi lại trạng thái của trạm kế tiếp
             heapq.heappush(heap, (new_f_score, new_total_dist, next_idx, new_battery, path + [next_idx], new_charge_log))
             
