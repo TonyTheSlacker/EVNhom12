@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f4baeb11c918446e0c9e8dbca46ed6cc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f4baeb11c918446e0c9e8dbca46ed6cc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f4baeb11c918446e0c9e8dbca46ed6cc = L.map(
+                "map_f4baeb11c918446e0c9e8dbca46ed6cc",
+                {
+                    center: [20.825, 105.351],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8b69094d595f5829b5389491b68e543f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8b69094d595f5829b5389491b68e543f.addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var poly_line_0090257db88e8f0a1a50f35c2e3e15d0 = L.polyline(
+                [[20.825, 105.351], [20.825869749770696, 105.35107579543782], [19.8005, 105.7702], [17.912345, 106.46789], [16.212345, 107.26789], [14.38, 107.95], [12.45, 107.6], [10.771, 106.701]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var marker_44c068c0a4e218f4c56d5e4af566b299 = L.marker(
+                [20.825, 105.351],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_b2d0c37ec4d6fea34c855a390aa21761 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_713badfa425141e3ed13e9e24a87e219 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8a0288c67d23c2875e15b9998764bd2 = $(`<div id="html_b8a0288c67d23c2875e15b9998764bd2" style="width: 100.0%; height: 100.0%;">Điểm BẮT ĐẦU</div>`)[0];
+                popup_713badfa425141e3ed13e9e24a87e219.setContent(html_b8a0288c67d23c2875e15b9998764bd2);
+            
+        
+
+        marker_44c068c0a4e218f4c56d5e4af566b299.bindPopup(popup_713badfa425141e3ed13e9e24a87e219)
+        ;
+
+        
+    
+    
+                marker_44c068c0a4e218f4c56d5e4af566b299.setIcon(icon_b2d0c37ec4d6fea34c855a390aa21761);
+            
+    
+            var marker_0808f01490d531c08d4cf825af176a81 = L.marker(
+                [20.825869749770696, 105.35107579543782],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_b3c7a80b5a859fd60c4835b18d8dc4a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acb0946a269454c03f6447b99fb0379f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac1038c3b5e9ed8913f716141c5d3cb4 = $(`<div id="html_ac1038c3b5e9ed8913f716141c5d3cb4" style="width: 100.0%; height: 100.0%;">Trạm Sạc: Vincom Plaza Hòa Bình</div>`)[0];
+                popup_acb0946a269454c03f6447b99fb0379f.setContent(html_ac1038c3b5e9ed8913f716141c5d3cb4);
+            
+        
+
+        marker_0808f01490d531c08d4cf825af176a81.bindPopup(popup_acb0946a269454c03f6447b99fb0379f)
+        ;
+
+        
+    
+    
+                marker_0808f01490d531c08d4cf825af176a81.setIcon(icon_b3c7a80b5a859fd60c4835b18d8dc4a1);
+            
+    
+            var marker_0bc28f417647694b4db3387b8996cfcd = L.marker(
+                [19.8005, 105.7702],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_6e9ca8085c1e7057c1ebc1b20c7bef3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72cc7ef2e67d7975c3596b4fe70712c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_089782f5f9afd7d978f5cc9e6419022d = $(`<div id="html_089782f5f9afd7d978f5cc9e6419022d" style="width: 100.0%; height: 100.0%;">Trạm Sạc: PVOIL Bà Triệu</div>`)[0];
+                popup_72cc7ef2e67d7975c3596b4fe70712c7.setContent(html_089782f5f9afd7d978f5cc9e6419022d);
+            
+        
+
+        marker_0bc28f417647694b4db3387b8996cfcd.bindPopup(popup_72cc7ef2e67d7975c3596b4fe70712c7)
+        ;
+
+        
+    
+    
+                marker_0bc28f417647694b4db3387b8996cfcd.setIcon(icon_6e9ca8085c1e7057c1ebc1b20c7bef3c);
+            
+    
+            var marker_7427c6cbaa1e604650c5c7036c2dcebd = L.marker(
+                [17.912345, 106.46789],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_70af6bc6526c847444342508d662c4a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4cb58699b4cdd08f8f5d8d0da0271384 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b13c774ee7b8219420aeb6183be2188 = $(`<div id="html_0b13c774ee7b8219420aeb6183be2188" style="width: 100.0%; height: 100.0%;">Trạm Sạc: Vũng Chùa - Đảo Yến</div>`)[0];
+                popup_4cb58699b4cdd08f8f5d8d0da0271384.setContent(html_0b13c774ee7b8219420aeb6183be2188);
+            
+        
+
+        marker_7427c6cbaa1e604650c5c7036c2dcebd.bindPopup(popup_4cb58699b4cdd08f8f5d8d0da0271384)
+        ;
+
+        
+    
+    
+                marker_7427c6cbaa1e604650c5c7036c2dcebd.setIcon(icon_70af6bc6526c847444342508d662c4a0);
+            
+    
+            var marker_fb317a3049e25c07eeabab0ec198e1f5 = L.marker(
+                [16.212345, 107.26789],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_40b49894d069147406a3ad33560aa82f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b012ed475b9325e6708f67c6dca274d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3de2c8e85dff945f54dbaace88817b10 = $(`<div id="html_3de2c8e85dff945f54dbaace88817b10" style="width: 100.0%; height: 100.0%;">Trạm Sạc: PVOil A Lưới</div>`)[0];
+                popup_2b012ed475b9325e6708f67c6dca274d.setContent(html_3de2c8e85dff945f54dbaace88817b10);
+            
+        
+
+        marker_fb317a3049e25c07eeabab0ec198e1f5.bindPopup(popup_2b012ed475b9325e6708f67c6dca274d)
+        ;
+
+        
+    
+    
+                marker_fb317a3049e25c07eeabab0ec198e1f5.setIcon(icon_40b49894d069147406a3ad33560aa82f);
+            
+    
+            var marker_f2d2347a8a4409dc9b68e816167e7dc1 = L.marker(
+                [14.38, 107.95],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_78741ec8dd89ee6a3515e43af3d6e9f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_747a7b83c6fb09f783f47acc45d8286c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5da9f500486bf214004a9a21e0fba921 = $(`<div id="html_5da9f500486bf214004a9a21e0fba921" style="width: 100.0%; height: 100.0%;">Trạm Sạc: VinFast - PVOIL Trung Tín</div>`)[0];
+                popup_747a7b83c6fb09f783f47acc45d8286c.setContent(html_5da9f500486bf214004a9a21e0fba921);
+            
+        
+
+        marker_f2d2347a8a4409dc9b68e816167e7dc1.bindPopup(popup_747a7b83c6fb09f783f47acc45d8286c)
+        ;
+
+        
+    
+    
+                marker_f2d2347a8a4409dc9b68e816167e7dc1.setIcon(icon_78741ec8dd89ee6a3515e43af3d6e9f5);
+            
+    
+            var marker_cfa804252e0fdffa1f310b0bc71b197e = L.marker(
+                [12.45, 107.6],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_2305065ebc9fb797dcec028f2bddd9b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_962b081d59afaa73a36d121842c3beb3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7131b83a1a47740c58dc76a0129d605 = $(`<div id="html_c7131b83a1a47740c58dc76a0129d605" style="width: 100.0%; height: 100.0%;">Trạm Sạc: VinFast - PVOIL VT Số 20</div>`)[0];
+                popup_962b081d59afaa73a36d121842c3beb3.setContent(html_c7131b83a1a47740c58dc76a0129d605);
+            
+        
+
+        marker_cfa804252e0fdffa1f310b0bc71b197e.bindPopup(popup_962b081d59afaa73a36d121842c3beb3)
+        ;
+
+        
+    
+    
+                marker_cfa804252e0fdffa1f310b0bc71b197e.setIcon(icon_2305065ebc9fb797dcec028f2bddd9b7);
+            
+    
+            var marker_2c534ffdcadcc8e0c129735f381a7391 = L.marker(
+                [10.771, 106.701],
+                {
+}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+            var icon_21086522a71b92225cc7b806af8211cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50755ac911eab0b742175ec0fe935408 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6283c6aa5eda498754c3002ce07cefb = $(`<div id="html_c6283c6aa5eda498754c3002ce07cefb" style="width: 100.0%; height: 100.0%;">Điểm KẾT THÚC</div>`)[0];
+                popup_50755ac911eab0b742175ec0fe935408.setContent(html_c6283c6aa5eda498754c3002ce07cefb);
+            
+        
+
+        marker_2c534ffdcadcc8e0c129735f381a7391.bindPopup(popup_50755ac911eab0b742175ec0fe935408)
+        ;
+
+        
+    
+    
+                marker_2c534ffdcadcc8e0c129735f381a7391.setIcon(icon_21086522a71b92225cc7b806af8211cf);
+            
+    
+            var circle_marker_ce2ef436ae5dc746a4da4dfbe983b947 = L.circleMarker(
+                [17.9536, 106.4589],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+        var popup_374c6467277486f1f65020b779339382 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff9cc9f0cee2b9849293c5a737d4768a = $(`<div id="html_ff9cc9f0cee2b9849293c5a737d4768a" style="width: 100.0%; height: 100.0%;">Trạm BOT: Trạm Đèo Ngang - Phí: 35.000 VNĐ</div>`)[0];
+                popup_374c6467277486f1f65020b779339382.setContent(html_ff9cc9f0cee2b9849293c5a737d4768a);
+            
+        
+
+        circle_marker_ce2ef436ae5dc746a4da4dfbe983b947.bindPopup(popup_374c6467277486f1f65020b779339382)
+        ;
+
+        
+    
+    
+            var circle_marker_87b64c97ce2e246bb944d9158ed2324c = L.circleMarker(
+                [10.7333, 106.7],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f4baeb11c918446e0c9e8dbca46ed6cc);
+        
+    
+        var popup_1a59abdd1135d773293b23418b227380 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2df58e4e96abfe2963aeb40c49efdb2a = $(`<div id="html_2df58e4e96abfe2963aeb40c49efdb2a" style="width: 100.0%; height: 100.0%;">Trạm BOT: Trạm Nguyễn Văn Linh - Phí: 15.000 VNĐ</div>`)[0];
+                popup_1a59abdd1135d773293b23418b227380.setContent(html_2df58e4e96abfe2963aeb40c49efdb2a);
+            
+        
+
+        circle_marker_87b64c97ce2e246bb944d9158ed2324c.bindPopup(popup_1a59abdd1135d773293b23418b227380)
+        ;
+
+        
+    
+</script>
+</html>
