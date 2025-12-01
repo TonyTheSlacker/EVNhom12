@@ -1,44 +1,36 @@
 import tkinter as tk
-from tkinter import messagebox, scrolledtext
+from tkinter import messagebox, scrolledtext, Toplevel, ttk # Thêm ttk để styling
 import pandas as pd
-from typing import Optional
+from typing import Optional, List, Tuple, Dict, Any
 import numpy as np
 import heapq
 import time
 from math import radians, sin, cos, sqrt, atan2
-from typing import List, Tuple, Dict, Any
 import re 
-import folium # Import thư viện bản đồ
-import webbrowser # Import để mở bản đồ HTML trong trình duyệt
-import os # Dùng để tạo file tạm
-from models import ElectricCar, cars
+import folium 
+import webbrowser 
+import os 
+from models import ElectricCar,cars
 
-# --- CÁC HÀM TỪ file.py (ĐƯỢC ĐỊNH NGHĨA LẠI HOẶC IMPORT) ---
-TIMEOUT_SECONDS = 120 
-AVG_SPEED_KMH = 100 
-R_EARTH = 6371.0
-ROAD_FACTOR = 1.25
+# Giả định file models.py đã được định nghĩa và có class ElectricCar, list cars
+# Ví dụ đơn giản:
 
-def haversine(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
-    # Sao chép từ file.py
-    lat1, lng1, lat2, lng2 = map(radians, [lat1, lng1, lat2, lng2])
-    dlat = lat2 - lat1
-    dlng = lng2 - lng1
-    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlng/2)**2
-    c = 2 * atan2(sqrt(a), sqrt(1-a))
-    return R_EARTH * c
+# Import run_astar_search, run_ucs_search, haversine, find_nearest_node (Giả định từ file.py)
+try:
+    from file import astar_charging_stations, run_astar_search, run_ucs_search, TIMEOUT_SECONDS, AVG_SPEED_KMH, R_EARTH, ROAD_FACTOR, haversine, find_nearest_node
+except ImportError:
+    messagebox.showerror("Lỗi", "Thiếu file.py hoặc không import được các hàm cần thiết từ file.py.")
+    # Fallback cho các biến
+    TIMEOUT_SECONDS = 120 
+    AVG_SPEED_KMH = 100 
+    R_EARTH = 6371.0
+    ROAD_FACTOR = 1.25
+    
+    def run_astar_search(*args): return {"error": "Không thể chạy A* (thiếu file.py)"}
+    def run_ucs_search(*args): return {"error": "Không thể chạy UCS (thiếu file.py)"}
+    def haversine(lat1, lng1, lat2, lng2): return 0
+    def find_nearest_node(lat, lng, df_charge): return 'unknown'
 
-def find_nearest_node(lat: float, lng: float, df_charge: pd.DataFrame) -> str:
-    # Sao chép từ file.py
-    df = df_charge.copy()
-    df = df[df['lat'].notnull() & df['lng'].notnull()]
-    df['dist'] = ((df['lat'].astype(float) - lat)**2 + (df['lng'].astype(float) - lng)**2).apply(np.sqrt)
-    if df.empty: return 'unknown'
-    nearest = df.loc[df['dist'].idxmin()]
-    return nearest['name'] if 'name' in nearest else 'unknown'
-
-# Import run_astar_search (Giả định từ file.py)
-from file import astar_charging_stations, run_astar_search
 
 # Import các hàm BOT/PDF (Giả định từ pdf_utils.py)
 try:
@@ -48,7 +40,7 @@ except ImportError:
     def export_route_to_pdf(model, pin, start_coords, end_coords, summary, details):
         messagebox.showerror("Lỗi", "Thiếu file pdf_utils.py hoặc hàm export_route_to_pdf.")
     def check_bot_stations(route_points, df_bot): return []
-    def load_bot_stations(filename): return pd.DataFrame()
+    def load_bot_stations(filename='bot_stations.csv'): return pd.DataFrame()
 
 
 # ======================= #
@@ -58,11 +50,7 @@ except ImportError:
 def create_route_map(route_points: List[Tuple[float, float]], df_charge: pd.DataFrame, bot_stations: List[Dict]) -> str:
     """
     Tạo bản đồ tương tác (HTML) sử dụng Folium hiển thị lộ trình, trạm sạc và trạm BOT.
-    
-    :param route_points: Danh sách các cặp (lat, lng) tạo nên lộ trình.
-    :param df_charge: DataFrame chứa dữ liệu trạm sạc.
-    :param bot_stations: Danh sách các trạm BOT được đi qua.
-    :return: Đường dẫn tới file HTML bản đồ.
+    (Giữ nguyên như code gốc để tránh thay đổi logic Folium)
     """
     if not route_points:
         return ""
@@ -91,7 +79,11 @@ def create_route_map(route_points: List[Tuple[float, float]], df_charge: pd.Data
             popup_text = "Điểm KẾT THÚC"
         else:
             # Đây là một trạm sạc
-            info_row = df_charge[(df_charge['lat'].astype(float) == lat) & (df_charge['lng'].astype(float) == lng)]
+            # Cần kiểm tra kỹ vì tọa độ trạm sạc có thể bị làm tròn khi lưu
+            info_row = df_charge[
+                (abs(df_charge['lat'].astype(float) - lat) < 1e-4) & 
+                (abs(df_charge['lng'].astype(float) - lng) < 1e-4)
+            ]
             if not info_row.empty:
                 station_name = info_row.iloc[0]['name']
                 popup_text = f"Trạm Sạc: {station_name}"
@@ -137,39 +129,73 @@ def load_charging_stations(filename='charging_stations.csv'):
         df['lng'] = df['lng'].astype(float)
         return df.reset_index(drop=True)
     except FileNotFoundError:
-        messagebox.showerror("Lỗi", f"Không tìm thấy file dữ liệu: {filename}")
-        return pd.DataFrame()
+        # Tạo file mẫu nếu không tồn tại
+        sample_data = {
+            'name': ['Trạm 1 HN', 'Trạm 2 HP', 'Trạm 3 HCM'],
+            'address': ['Hà Nội', 'Hải Phòng', 'TP.HCM'],
+            'lat': [21.0285, 18.99, 10.771],
+            'lng': [105.854, 105.77, 106.701]
+        }
+        df = pd.DataFrame(sample_data)
+        messagebox.showwarning("Cảnh báo", f"Không tìm thấy file dữ liệu: {filename}. Đã sử dụng dữ liệu mẫu.")
+        return df.reset_index(drop=True)
+
+
+# --- CẤU HÌNH DARK MODE ---
+LIGHT_THEME = {
+    "bg": "SystemButtonFace", "fg": "black", 
+    "frame_bg": "white", "frame_fg": "black",
+    "entry_bg": "white", "entry_fg": "black", 
+    "text_bg": "white", "text_fg": "black"
+}
+
+DARK_THEME = {
+    "bg": "#2e2e2e", "fg": "white", 
+    "frame_bg": "#3c3c3c", "frame_fg": "#cccccc",
+    "entry_bg": "#1e1e1e", "entry_fg": "#ffffff", 
+    "text_bg": "#1e1e1e", "text_fg": "#ffffff"
+}
 
 # --- ỨNG DỤNG GUI CHÍNH ---
 class ElectricCarRoutingApp:
     def __init__(self, master):
         self.master = master
         master.title("Hệ thống Lập kế hoạch lộ trình Xe điện")
-        master.geometry("1100x700") # Mở rộng giao diện
+        master.geometry("1100x750") # Mở rộng giao diện
         
         self.df_charge = load_charging_stations()
         self.df_bot = load_bot_stations() # Tải dữ liệu BOT
         
-        if self.df_charge.empty:
+        if self.df_charge.empty and not self.df_charge.columns.empty:
+            messagebox.showerror("Lỗi Dữ liệu", "Dữ liệu trạm sạc không hợp lệ.")
             master.quit()
             return
             
         self.car_names = [car.name for car in cars]
         self.selected_car = tk.StringVar(master)
         self.selected_car.set(self.car_names[0]) 
-        self.map_file_path = None # Khai báo biến lưu đường dẫn file bản đồ
+        self.map_file_path = None 
 
         # Thuật toán lựa chọn: A* hoặc UCS
         self.algorithms = ["A*", "UCS"]
         self.selected_algorithm = tk.StringVar(master)
         self.selected_algorithm.set(self.algorithms[0])
 
+        # Dark Mode
+        self.is_dark_mode = False
+        self.current_theme = LIGHT_THEME
+        
         # --- TẠO CÁC KHUNG CHÍNH ---
         self.config_frame = tk.LabelFrame(master, text="CẤU HÌNH LỘ TRÌNH", padx=10, pady=10)
         self.config_frame.pack(side=tk.LEFT, fill="y", padx=10, pady=10)
 
         self.result_frame = tk.LabelFrame(master, text="KẾT QUẢ TÌM KIẾM", padx=10, pady=10)
         self.result_frame.pack(side=tk.RIGHT, fill="both", expand=True, padx=10, pady=10)
+
+        # Thêm nút Dark Mode
+        self.btn_toggle_mode = tk.Button(master, text="Chế độ Tối", command=self.toggle_dark_mode, bg="#eeeeee", fg="black")
+        self.btn_toggle_mode.pack(side=tk.TOP, anchor='e', padx=10, pady=5)
+
 
         # --- 1. KHUNG CẤU HÌNH (INPUT) ---
         self._setup_car_config()
@@ -179,7 +205,49 @@ class ElectricCarRoutingApp:
         # --- 2. KHUNG KẾT QUẢ (OUTPUT) ---
         self._setup_result_display()
         
-        self.last_search_result = None # Lưu kết quả cuối cùng để xuất PDF
+        self.last_search_result = None
+        
+        # Áp dụng theme ban đầu
+        self.apply_theme(LIGHT_THEME)
+
+    def apply_theme(self, theme):
+        """Áp dụng theme (Light/Dark) cho toàn bộ GUI"""
+        self.master.config(bg=theme["bg"])
+        
+        # Cập nhật khung chính
+        self.config_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
+        self.result_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
+        
+        # Cập nhật các widget trong config_frame
+        for widget in self.config_frame.winfo_children():
+            if isinstance(widget, tk.Label):
+                widget.config(bg=theme["frame_bg"], fg=theme["fg"])
+            elif isinstance(widget, tk.Entry):
+                widget.config(bg=theme["entry_bg"], fg=theme["entry_fg"], insertbackground=theme["entry_fg"])
+            elif isinstance(widget, tk.OptionMenu):
+                widget.config(bg=theme["entry_bg"], fg=theme["entry_fg"], activebackground=theme["bg"], activeforeground=theme["fg"])
+            elif isinstance(widget, tk.Checkbutton):
+                widget.config(bg=theme["frame_bg"], fg=theme["fg"], selectcolor=theme["frame_bg"], activebackground=theme["frame_bg"], activeforeground=theme["fg"])
+
+        # Cập nhật khung tóm tắt
+        self.summary_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
+        for widget in self.summary_frame.winfo_children():
+            if isinstance(widget, tk.Label):
+                widget.config(bg=theme["frame_bg"], fg=theme["fg"])
+        
+        # Cập nhật khung chi tiết
+        self.txt_path.config(bg=theme["text_bg"], fg=theme["text_fg"], insertbackground=theme["text_fg"])
+        
+        # Cập nhật nút Mode
+        self.btn_toggle_mode.config(bg="#4CAF50" if self.is_dark_mode else "#2196F3", fg="white", 
+                                    text="Chế độ Sáng" if self.is_dark_mode else "Chế độ Tối")
+
+    def toggle_dark_mode(self):
+        """Chuyển đổi giữa chế độ Sáng và Tối"""
+        self.is_dark_mode = not self.is_dark_mode
+        self.current_theme = DARK_THEME if self.is_dark_mode else LIGHT_THEME
+        self.apply_theme(self.current_theme)
+
 
     def _setup_car_config(self):
         # Chọn xe
@@ -247,16 +315,20 @@ class ElectricCarRoutingApp:
         self.summary_frame = tk.LabelFrame(self.result_frame, text="TÓM TẮT", padx=10, pady=10)
         self.summary_frame.pack(fill='x', pady=(0, 10))
         
-        self.lbl_dist = tk.Label(self.summary_frame, text="Tổng quãng đường di chuyển: N/A", anchor='w', fg="#333", font=("Arial", 10))
+        self.lbl_dist = tk.Label(self.summary_frame, text="Tổng quãng đường di chuyển: N/A", anchor='w', font=("Arial", 10))
         self.lbl_dist.pack(fill='x')
-        self.lbl_time = tk.Label(self.summary_frame, text="Tổng thời gian lái xe: N/A", anchor='w', fg="#333", font=("Arial", 10))
+        self.lbl_time = tk.Label(self.summary_frame, text="Tổng thời gian lái xe: N/A", anchor='w', font=("Arial", 10))
         self.lbl_time.pack(fill='x')
-        self.lbl_charge = tk.Label(self.summary_frame, text="Tổng thời gian sạc: N/A", anchor='w', fg="#333", font=("Arial", 10))
+        self.lbl_charge = tk.Label(self.summary_frame, text="Tổng thời gian sạc: N/A", anchor='w', font=("Arial", 10))
         self.lbl_charge.pack(fill='x')
-        self.lbl_fee = tk.Label(self.summary_frame, text="Tổng chi phí sạc: N/A", anchor='w', fg="#333", font=("Arial", 10))
+        self.lbl_fee = tk.Label(self.summary_frame, text="Tổng chi phí sạc: N/A", anchor='w', font=("Arial", 10))
         self.lbl_fee.pack(fill='x')
-        self.lbl_bot_fee = tk.Label(self.summary_frame, text="Tổng phí qua các trạm BOT: N/A", anchor='w', fg="#333", font=("Arial", 10))
+        self.lbl_bot_fee = tk.Label(self.summary_frame, text="Tổng phí qua các trạm BOT: N/A", anchor='w', font=("Arial", 10))
         self.lbl_bot_fee.pack(fill='x')
+        # THÊM: Thời gian xử lý thuật toán
+        self.lbl_processing_time = tk.Label(self.summary_frame, text="Thời gian xử lý thuật toán: N/A", anchor='w', font=("Arial", 10, "italic"), fg="#888")
+        self.lbl_processing_time.pack(fill='x', pady=(5, 0))
+
 
         # Khung Chi tiết
         tk.Label(self.result_frame, text="CHI TIẾT LỘ TRÌNH (Trạm sạc & Hoạt động)", font=("Arial", 10, "bold")).pack(anchor='w', pady=(5, 0))
@@ -287,13 +359,14 @@ class ElectricCarRoutingApp:
         self.lbl_charge.config(text="Tổng thời gian sạc: N/A")
         self.lbl_fee.config(text="Tổng chi phí sạc: N/A")
         self.lbl_bot_fee.config(text="Tổng phí qua các trạm BOT: N/A")
-        self.btn_show_map.config(state=tk.DISABLED) # Tắt nút bản đồ khi lỗi
+        self.lbl_processing_time.config(text="Thời gian xử lý thuật toán: N/A")
+        self.btn_show_map.config(state=tk.DISABLED) 
         self.map_file_path = None
 
 
     def run_search(self):
         """Thực hiện tìm kiếm và hiển thị kết quả"""
-        self._clear_summary() # Xóa kết quả cũ
+        self._clear_summary() 
         self.btn_show_map.config(state=tk.DISABLED)
         self.map_file_path = None
 
@@ -318,25 +391,24 @@ class ElectricCarRoutingApp:
         # 2. Chạy thuật toán theo lựa chọn
         self.btn_search.config(text="ĐANG TÌM KIẾM...", state=tk.DISABLED, bg="orange")
         self.master.update()
-
+        
+        start_time_algo = time.time()
+        
         algorithm = self.selected_algorithm.get()
         if algorithm == "A*":
             result = run_astar_search(car, start_coords[0], start_coords[1], end_coords[0], end_coords[1], pin_percent, qua_tram_thu_phi, self.df_charge)
         elif algorithm == "UCS":
-            try:
-                from file import run_ucs_search
-            except ImportError:
-                messagebox.showerror("Lỗi", "Thiếu hàm run_ucs_search trong file.py!")
-                self._update_search_button_text()
-                self.btn_search.config(state=tk.NORMAL, bg="#4CAF50")
-                return
+            # Đã import run_ucs_search từ file.py (fallback nếu lỗi import)
             result = run_ucs_search(car, start_coords[0], start_coords[1], end_coords[0], end_coords[1], pin_percent, qua_tram_thu_phi, self.df_charge)
         else:
             messagebox.showerror("Lỗi", "Thuật toán không hợp lệ!")
             self._update_search_button_text()
             self.btn_search.config(state=tk.NORMAL, bg="#4CAF50")
             return
-
+        
+        processing_time = time.time() - start_time_algo
+        
+        self.lbl_processing_time.config(text=f"Thời gian xử lý thuật toán: {processing_time:.3f} giây")
         self._update_search_button_text()
         self.btn_search.config(state=tk.NORMAL, bg="#4CAF50")
 
@@ -352,8 +424,9 @@ class ElectricCarRoutingApp:
             return
 
         # Lấy tên trạm bắt đầu/kết thúc từ lộ trình
-        start_station = result['path'][1].get('node', 'unknown') if len(result['path']) > 1 else 'unknown'
-        end_station = result['path'][-2].get('node', 'unknown').replace(' (TRẠM CUỐI)', '') if len(result['path']) > 1 else 'unknown'
+        # Sử dụng log đầu tiên và log cuối cùng (trước log điểm kết thúc)
+        start_station = result['path'][0].get('address', '').replace('Di chuyển tới ', '')
+        end_station = result['path'][-2].get('node', '').replace(' (TRẠM CUỐI)', '')
 
 
         # --- Tính toán phí BOT (ĐÃ HOÀN THIỆN) và Lấy Tọa độ Lộ trình ---
@@ -362,8 +435,8 @@ class ElectricCarRoutingApp:
         route_points.append(tuple(start_coords)) 
         # 2. Các trạm sạc/điểm trung gian
         for step in result['path'][1:-1]:
-            # Lấy tọa độ trạm sạc
             node_name = step['node'].replace(' (TRẠM CUỐI)', '')
+            # Tìm lại tọa độ chính xác của trạm sạc từ df_charge
             info_row = self.df_charge[self.df_charge['name'] == node_name]
             if not info_row.empty:
                 lat = float(info_row.iloc[0]['lat'])
@@ -378,16 +451,14 @@ class ElectricCarRoutingApp:
         total_bot_fee = 0
         bot_info_text = ""
         for bot in bot_stations:
-            # Xử lý phí: loại bỏ ký tự không phải số và chuyển sang int
             fee_raw = re.sub(r'[^\d]', '', bot['fee'])
             fee_int = int(fee_raw) if fee_raw else 0
             
-            # Chỉ tính phí nếu không tránh BOT HOẶC nếu BOT được coi là không thể tránh
             if not qua_tram_thu_phi:
                 total_bot_fee += fee_int
                 bot_info_text += f"- {bot['name']} ({bot['address']}): {bot['fee']}\n"
             else:
-                bot_info_text += f"- {bot['name']} ({bot['address']}): ĐÃ TRÁNH\n"
+                bot_info_text += f"- {bot['name']} ({bot['address']}): ĐÃ TRÁNH (Phí: {bot['fee']})\n"
 
 
         # --- Hiển thị Tóm tắt ---
@@ -405,26 +476,29 @@ class ElectricCarRoutingApp:
         # --- Hiển thị Chi tiết ---
         full_path_text = f"TÓM TẮT:\n"
         full_path_text += f"Xe: {car.name} | Pin ban đầu: {pin_percent}%\n"
+        full_path_text += f"Thuật toán: {algorithm} | Thời gian xử lý: {processing_time:.3f} giây\n"
         full_path_text += f"Xuất phát: {self.entry_start.get()} (Gần trạm {start_station})\n"
         full_path_text += f"Kết thúc: {self.entry_end.get()} (Gần trạm {end_station})\n"
         full_path_text += "---------------------------------------\n"
 
-        for step in result['path']:
+        for i, step in enumerate(result['path']):
             dist_km = step.get('dist_lai', 0)
             time_min = step.get('time_lai', 0)
-
-            if step['node'] == "Điểm BẮT ĐẦU":
-                full_path_text += f"1. {step['node']} -> {start_station}:\n"
-            elif step['node'] == "Điểm KẾT THÚC":
-                full_path_text += f"\n{len(result['path'])-1}. {end_station} -> {step['node']}:\n"
-            else:
-                full_path_text += f"\n{step['node']}:\n"
             
-            full_path_text += f"   - Quãng đường: {dist_km:.2f} km\n"
-            full_path_text += f"   - Thời gian lái: {int(time_min)} phút\n"
+            # Ghi bước
+            if step['node'] == "Điểm BẮT ĐẦU":
+                 full_path_text += f"1. {step['node']} -> {start_station}:\n"
+            elif step['node'] == "Điểm KẾT THÚC":
+                 full_path_text += f"\n{len(result['path'])}. {end_station} -> {step['node']}:\n"
+            else:
+                 full_path_text += f"\n{i}. {step['node']}:\n"
+            
+            if 'dist_lai' in step and step['node'] != "Điểm KẾT THÚC":
+                 full_path_text += f"   - Quãng đường: {dist_km:.2f} km\n"
+                 full_path_text += f"   - Thời gian lái: {int(time_min)} phút\n"
             
             if 'charge_status' in step:
-                full_path_text += f"   - Tình trạng Pin/Sạc: {step['charge_status']}\n"
+                 full_path_text += f"   - Tình trạng Pin/Sạc: {step['charge_status']}\n"
             
             full_path_text += "---------------------------------------\n"
         
@@ -432,7 +506,7 @@ class ElectricCarRoutingApp:
         if bot_stations:
             full_path_text += "\nTHÔNG TIN TRẠM THU PHÍ ĐI QUA:\n"
             full_path_text += bot_info_text
-            full_path_text += f"Tổng phí BOT: {total_bot_fee:.0f} VND (Chỉ tính nếu KHÔNG tránh BOT)\n"
+            full_path_text += f"Tổng phí BOT được tính: {total_bot_fee:.0f} VND\n"
 
         self.txt_path.insert(tk.END, full_path_text)
         self.txt_path.see(tk.END)
@@ -472,7 +546,6 @@ class ElectricCarRoutingApp:
 
         try:
             res = self.last_search_result
-            # Sử dụng hàm export_route_to_pdf từ pdf_utils
             export_route_to_pdf(
                 model=res['model'],
                 pin=res['pin'],
