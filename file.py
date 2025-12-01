@@ -299,16 +299,14 @@ def astar_charging_stations(df_charge: pd.DataFrame, start: str, end: str, batte
         for _, next_idx, dist_km in heapq.nsmallest(10, candidates):
             battery_after_travel = battery - dist_km
             
-            charge_to = battery
-            charge_amount = 0
-            
             if battery_after_travel < 0:
-                # Cần sạc: Sạc đến 90% pin max hoặc đủ để đi trạm kế tiếp + 1km
-                max_charge = int(battery_max * 0.9)
-                charge_to = max(max_charge, int(dist_km + 1)) 
-                charge_to = min(charge_to, battery_max) 
+                # Sạc vừa đủ để đi đến trạm kế tiếp (cộng thêm 1km dự phòng)
+                charge_to = int(dist_km + 1)
+                charge_to = min(charge_to, battery_max)
                 charge_amount = charge_to - battery
-                
+            else:
+                charge_to = battery
+                charge_amount = 0
             new_battery = charge_to - dist_km
             
             if new_battery < 0:
@@ -393,28 +391,39 @@ def run_astar_search(car: Any, lat_start: float, lng_start: float, lat_end: floa
         battery_before_charge = new_battery + dist_lai # Pin trước khi sạc (nếu có)
         
         percent = int(new_battery / battery_max * 100)
-        
         charge_info = ""
         fee = 0
         if charge_amount > 0:
-            charge_time = charge_amount / 2 
-            
-            # Logic tính phí sạc giả định
-            if battery_before_charge > battery_max * 0.8:
-                if charge_time <= 30:
-                    fee = charge_time * 1000
-                elif charge_time <= 60:
-                    fee = 30 * 1000 + (charge_time - 30) * 2000
-                else:
-                    fee = 30 * 1000 + 30 * 2000 + (charge_time - 60) * 3000
-                
-                total_time_sac += charge_time
-                total_fee += fee
-                
-                charge_info = f"SẠC {charge_amount:.0f} km. Pin tới: {new_battery:.0f} km ({percent}%). Thời gian sạc: {charge_time:.1f} phút. Phí: {fee:.0f} VND."
+            charge_time = charge_amount / 2
+            # Tính phần trăm pin trước khi sạc và sau khi sạc
+            percent_before = int(battery_before_charge / battery_max * 100)
+            percent_after = int((battery_before_charge + charge_amount) / battery_max * 100)
+            # Miễn phí phần sạc từ 0-80%
+            free_percent = min(80, percent_after) - percent_before
+            free_percent = max(free_percent, 0)
+            paid_percent = percent_after - max(percent_before, 80)
+            paid_percent = max(paid_percent, 0)
+            # Tính số phút sạc miễn phí và tính phí
+            total_percent = percent_after - percent_before
+            if total_percent > 0:
+                free_time = charge_time * (free_percent / total_percent) if total_percent > 0 else 0
+                paid_time = charge_time * (paid_percent / total_percent) if total_percent > 0 else 0
             else:
-                # Sạc khi pin còn thấp (Miễn phí)
-                total_time_sac += charge_time
+                free_time = 0
+                paid_time = 0
+            # Tính phí cho phần paid_time
+            if paid_time > 0:
+                if paid_time <= 30:
+                    fee = paid_time * 1000
+                elif paid_time <= 60:
+                    fee = 30 * 1000 + (paid_time - 30) * 2000
+                else:
+                    fee = 30 * 1000 + 30 * 2000 + (paid_time - 60) * 3000
+            total_time_sac += charge_time
+            total_fee += fee
+            if paid_time > 0:
+                charge_info = f"SẠC {charge_amount:.0f} km. Pin tới: {new_battery:.0f} km ({percent}%). Thời gian sạc: {charge_time:.1f} phút. Miễn phí: {free_time:.1f} phút. Phí: {fee:.0f} VND."
+            else:
                 charge_info = f"SẠC {charge_amount:.0f} km. Pin tới: {new_battery:.0f} km ({percent}%). Thời gian sạc: {charge_time:.1f} phút. Miễn phí sạc."
         
         
