@@ -6,7 +6,7 @@ import time
 from math import radians, sin, cos, sqrt, atan2
 
 # --- CẤU HÌNH ---
-TIMEOUT_SECONDS = 60 # Giới hạn thời gian tìm kiếm
+TIMEOUT_SECONDS = 600 # Giới hạn thời gian tìm kiếm
 AVG_SPEED_KMH = 60 # Tốc độ di chuyển trung bình (dùng để tính thời gian lái xe)
 R_EARTH = 6371.0 # Bán kính Trái Đất (km)
 ROAD_FACTOR = 1.25 # HỆ SỐ ƯỚC TÍNH ĐƯỜNG BỘ: 1.25 x Đường chim bay = Quãng đường thực tế
