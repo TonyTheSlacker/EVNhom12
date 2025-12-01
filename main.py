@@ -3,6 +3,8 @@ from tkinter import messagebox, scrolledtext, Toplevel, ttk # Thêm ttk để st
 import pandas as pd
 from typing import Optional, List, Tuple, Dict, Any
 import numpy as np
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
 import heapq
 import time
 from math import radians, sin, cos, sqrt, atan2
@@ -12,10 +14,6 @@ import webbrowser
 import os 
 from models import ElectricCar,cars
 
-# Giả định file models.py đã được định nghĩa và có class ElectricCar, list cars
-# Ví dụ đơn giản:
-
-# Import run_astar_search, run_ucs_search, haversine, find_nearest_node (Giả định từ file.py)
 try:
     from file import astar_charging_stations, run_astar_search, run_ucs_search, TIMEOUT_SECONDS, AVG_SPEED_KMH, R_EARTH, ROAD_FACTOR, haversine, find_nearest_node
 except ImportError:
@@ -161,7 +159,7 @@ class ElectricCarRoutingApp:
     def __init__(self, master):
         self.master = master
         master.title("Hệ thống Lập kế hoạch lộ trình Xe điện")
-        master.geometry("1100x750") # Mở rộng giao diện
+        master.state('zoomed')  # Mở rộng tối đa nhưng vẫn có nút đóng/min/max
         
         self.df_charge = load_charging_stations()
         self.df_bot = load_bot_stations() # Tải dữ liệu BOT
@@ -182,9 +180,11 @@ class ElectricCarRoutingApp:
         self.selected_algorithm.set(self.algorithms[0])
 
         # Dark Mode
-        self.is_dark_mode = False
-        self.current_theme = LIGHT_THEME
+        self.is_dark_mode = True
+        self.current_theme = DARK_THEME
         
+        # Geocoder cho reverse geocoding
+        self.geolocator = Nominatim(user_agent="ev_route_app")
         # --- TẠO CÁC KHUNG CHÍNH ---
         self.config_frame = tk.LabelFrame(master, text="CẤU HÌNH LỘ TRÌNH", padx=10, pady=10)
         self.config_frame.pack(side=tk.LEFT, fill="y", padx=10, pady=10)
@@ -192,9 +192,21 @@ class ElectricCarRoutingApp:
         self.result_frame = tk.LabelFrame(master, text="KẾT QUẢ TÌM KIẾM", padx=10, pady=10)
         self.result_frame.pack(side=tk.RIGHT, fill="both", expand=True, padx=10, pady=10)
 
-        # Thêm nút Dark Mode
-        self.btn_toggle_mode = tk.Button(master, text="Chế độ Tối", command=self.toggle_dark_mode, bg="#eeeeee", fg="black")
-        self.btn_toggle_mode.pack(side=tk.TOP, anchor='e', padx=10, pady=5)
+        # Thêm nút Dark Mode (icon), đặt ở góc trái dưới và phóng to icon
+
+        # Sử dụng emoji Unicode cho icon chế độ tối/sáng, font to cho đẹp
+        self.btn_toggle_mode = tk.Button(
+            master,
+            text="🌙" if self.is_dark_mode else "☀️",
+            font=("Segoe UI Emoji", 22),  # Giảm 20% kích thước
+            command=self.toggle_dark_mode,
+            bg="#222",
+            fg="#fff",
+            bd=0,
+            activebackground="#333",
+            activeforeground="#fff"
+        )
+        self.btn_toggle_mode.place(relx=0.0, rely=1.0, anchor='sw', x=10, y=-10)
 
 
         # --- 1. KHUNG CẤU HÌNH (INPUT) ---
@@ -208,17 +220,15 @@ class ElectricCarRoutingApp:
         self.last_search_result = None
         
         # Áp dụng theme ban đầu
-        self.apply_theme(LIGHT_THEME)
+        self.apply_theme(DARK_THEME)
 
     def apply_theme(self, theme):
         """Áp dụng theme (Light/Dark) cho toàn bộ GUI"""
         self.master.config(bg=theme["bg"])
-        
-        # Cập nhật khung chính
+        self.update_start_address()
+        self.update_end_address()
         self.config_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
         self.result_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
-        
-        # Cập nhật các widget trong config_frame
         for widget in self.config_frame.winfo_children():
             if isinstance(widget, tk.Label):
                 widget.config(bg=theme["frame_bg"], fg=theme["fg"])
@@ -228,19 +238,13 @@ class ElectricCarRoutingApp:
                 widget.config(bg=theme["entry_bg"], fg=theme["entry_fg"], activebackground=theme["bg"], activeforeground=theme["fg"])
             elif isinstance(widget, tk.Checkbutton):
                 widget.config(bg=theme["frame_bg"], fg=theme["fg"], selectcolor=theme["frame_bg"], activebackground=theme["frame_bg"], activeforeground=theme["fg"])
-
-        # Cập nhật khung tóm tắt
         self.summary_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
         for widget in self.summary_frame.winfo_children():
             if isinstance(widget, tk.Label):
                 widget.config(bg=theme["frame_bg"], fg=theme["fg"])
-        
-        # Cập nhật khung chi tiết
         self.txt_path.config(bg=theme["text_bg"], fg=theme["text_fg"], insertbackground=theme["text_fg"])
-        
-        # Cập nhật nút Mode
-        self.btn_toggle_mode.config(bg="#4CAF50" if self.is_dark_mode else "#2196F3", fg="white", 
-                                    text="Chế độ Sáng" if self.is_dark_mode else "Chế độ Tối")
+        # Cập nhật icon emoji cho nút darkmode
+        self.btn_toggle_mode.config(text="🌙" if self.is_dark_mode else "☀️")
 
     def toggle_dark_mode(self):
         """Chuyển đổi giữa chế độ Sáng và Tối"""
@@ -267,15 +271,32 @@ class ElectricCarRoutingApp:
         # Input Tọa độ
         tk.Label(self.config_frame, text="2. Tọa độ (Vĩ độ, Kinh độ - VD: 10.76,106.69)", font=("Arial", 10, "bold")).pack(anchor='w', pady=(10, 0))
         
+
         tk.Label(self.config_frame, text="Bắt đầu:").pack(anchor='w')
         self.entry_start = tk.Entry(self.config_frame, width=35)
         self.entry_start.insert(0, "20.825,105.351") # Giá trị mặc định: Hòa Bình
         self.entry_start.pack(fill='x', pady=2)
 
+        # Label hiển thị địa chỉ điểm bắt đầu
+        self.lbl_start_address = tk.Label(self.config_frame, text="Địa chỉ: ...", fg="#888", wraplength=300, anchor='w', justify='left')
+        self.lbl_start_address.pack(fill='x', pady=(0, 5))
+
+        # Nút switch (⇄) để đảo vị trí bắt đầu/kết thúc
+        self.btn_switch_coords = tk.Button(self.config_frame, text="⇄", font=("Arial", 12, "bold"), width=3, command=self.switch_coords)
+        self.btn_switch_coords.pack(pady=2)
+
         tk.Label(self.config_frame, text="Kết thúc:").pack(anchor='w')
         self.entry_end = tk.Entry(self.config_frame, width=35)
         self.entry_end.insert(0, "10.771,106.701") # Giá trị mặc định: TP.HCM
         self.entry_end.pack(fill='x', pady=2)
+
+        # Label hiển thị địa chỉ điểm kết thúc
+        self.lbl_end_address = tk.Label(self.config_frame, text="Địa chỉ: ...", fg="#888", wraplength=300, anchor='w', justify='left')
+        self.lbl_end_address.pack(fill='x', pady=(0, 5))
+
+        # Gắn sự kiện cập nhật địa chỉ khi nhập tọa độ (chỉ gọi khi FocusOut để tránh gọi liên tục)
+        self.entry_start.bind('<FocusOut>', lambda e: self.update_start_address())
+        self.entry_end.bind('<FocusOut>', lambda e: self.update_end_address())
 
         # Pin khởi hành
         tk.Label(self.config_frame, text="3. Pin khởi hành (0-100%):", font=("Arial", 10, "bold")).pack(anchor='w', pady=(10, 0))
@@ -285,8 +306,56 @@ class ElectricCarRoutingApp:
 
         # Tránh trạm thu phí
         self.qua_tram_thu_phi_var = tk.BooleanVar(self.master, value=False)
-        tk.Checkbutton(self.config_frame, text="Tránh trạm thu phí BOT", variable=self.qua_tram_thu_phi_var).pack(anchor='w', pady=5)
+        self.chk_bot = tk.Checkbutton(self.config_frame, text="Tránh trạm thu phí BOT", variable=self.qua_tram_thu_phi_var)
+        self.chk_bot.pack(anchor='w', pady=5)
 
+    def switch_coords(self):
+        start_val = self.entry_start.get()
+        end_val = self.entry_end.get()
+        self.entry_start.delete(0, tk.END)
+        self.entry_start.insert(0, end_val)
+        self.entry_end.delete(0, tk.END)
+        self.entry_end.insert(0, start_val)
+        self.update_start_address()
+        self.update_end_address()
+
+    # Thêm cache cho geocoding
+    geocode_cache = {}
+
+    def reverse_geocode(self, lat, lng):
+        key = f"{lat:.6f},{lng:.6f}"
+        if key in self.geocode_cache:
+            return self.geocode_cache[key]
+        try:
+            location = self.geolocator.reverse((lat, lng), exactly_one=True, timeout=5)
+            if location and location.address:
+                self.geocode_cache[key] = location.address
+                return location.address
+            else:
+                self.geocode_cache[key] = "Không tìm thấy địa chỉ phù hợp."
+                return "Không tìm thấy địa chỉ phù hợp."
+        except GeocoderTimedOut:
+            return "Lỗi timeout khi lấy địa chỉ."
+        except Exception:
+            return "Không xác định được địa chỉ."
+
+    def update_start_address(self):
+        value = self.entry_start.get()
+        try:
+            lat, lng = [float(x.strip()) for x in value.split(',')]
+            address = self.reverse_geocode(lat, lng)
+            self.lbl_start_address.config(text=f"Địa chỉ: {address}")
+        except Exception:
+            self.lbl_start_address.config(text="Địa chỉ: Không hợp lệ hoặc không xác định.")
+
+    def update_end_address(self):
+        value = self.entry_end.get()
+        try:
+            lat, lng = [float(x.strip()) for x in value.split(',')]
+            address = self.reverse_geocode(lat, lng)
+            self.lbl_end_address.config(text=f"Địa chỉ: {address}")
+        except Exception:
+            self.lbl_end_address.config(text="Địa chỉ: Không hợp lệ hoặc không xác định.")
     def _setup_buttons(self):
         self.btn_search = tk.Button(self.config_frame, text="TÌM LỘ TRÌNH TỐI ƯU", command=self.run_search, bg="#4CAF50", fg="white", font=("Arial", 11, "bold"))
         self.btn_search.pack(fill='x', pady=15)
@@ -329,12 +398,10 @@ class ElectricCarRoutingApp:
         self.lbl_processing_time = tk.Label(self.summary_frame, text="Thời gian xử lý thuật toán: N/A", anchor='w', font=("Arial", 10, "italic"), fg="#888")
         self.lbl_processing_time.pack(fill='x', pady=(5, 0))
 
-
         # Khung Chi tiết
         tk.Label(self.result_frame, text="CHI TIẾT LỘ TRÌNH (Trạm sạc & Hoạt động)", font=("Arial", 10, "bold")).pack(anchor='w', pady=(5, 0))
         self.txt_path = scrolledtext.ScrolledText(self.result_frame, width=50, height=20, font=("Consolas", 9), state='disabled')
         self.txt_path.pack(fill='both', expand=True)
-        
 
     def _get_selected_car(self) -> Optional[ElectricCar]:
         """Tìm đối tượng xe được chọn"""
@@ -362,7 +429,6 @@ class ElectricCarRoutingApp:
         self.lbl_processing_time.config(text="Thời gian xử lý thuật toán: N/A")
         self.btn_show_map.config(state=tk.DISABLED) 
         self.map_file_path = None
-
 
     def run_search(self):
         """Thực hiện tìm kiếm và hiển thị kết quả"""
@@ -460,7 +526,6 @@ class ElectricCarRoutingApp:
             else:
                 bot_info_text += f"- {bot['name']} ({bot['address']}): ĐÃ TRÁNH (Phí: {bot['fee']})\n"
 
-
         # --- Hiển thị Tóm tắt ---
         self.lbl_dist.config(text=f"Tổng quãng đường di chuyển: {result['total_dist']:.2f} km")
         time_lai_hour = result['total_time_lai'] // 60
@@ -521,7 +586,6 @@ class ElectricCarRoutingApp:
         except Exception as e:
             messagebox.showwarning("Cảnh báo Bản đồ", f"Không thể tạo bản đồ (thiếu thư viện folium?): {e}")
 
-
         # Lưu lại dữ liệu kết quả để xuất PDF
         summary_text = f"Tổng quãng đường di chuyển: {result['total_dist']:.2f} km\n"
         summary_text += f"Tổng thời gian lái xe: {int(time_lai_hour)} giờ {int(time_lai_min)} phút\n"
@@ -565,7 +629,6 @@ class ElectricCarRoutingApp:
             webbrowser.open_new_tab(f'file://{os.path.realpath(self.map_file_path)}')
         else:
             messagebox.showwarning("Cảnh báo", "Không tìm thấy file bản đồ. Vui lòng chạy tìm kiếm lộ trình trước.")
-
 
 if __name__ == "__main__":
     try:
