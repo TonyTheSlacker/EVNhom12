@@ -41,13 +41,18 @@
 ## Hướng dẫn sử dụng
 
 1. Cài đặt các thư viện cần thiết:
+   ```bash
+   pip install -r requirements.txt
    ```
+   Hoặc cài đặt thủ công:
+   ```bash
    pip install pandas numpy matplotlib geopy folium fpdf
    ```
 2. Chuẩn bị dữ liệu:
    - Đảm bảo có file `charging_stations.csv` và `BOT.csv` trong thư mục dự án.
+   - Xem file `DATA_FORMAT.md` để biết chi tiết định dạng dữ liệu CSV.
 3. Chạy chương trình:
-   ```
+   ```bash
    python main.py
    ```
 4. Sử dụng giao diện để nhập thông tin, chọn xe, thuật toán, và xuất kết quả.
@@ -55,8 +60,12 @@
 ## Kiểm thử
 
 - Chạy kiểm thử đơn vị:
-  ```
+  ```bash
   python test_file.py
+  ```
+- Chạy kiểm thử chi tiết:
+  ```bash
+  python test_file.py -v
   ```
 
 ## Tác giả & Đóng góp

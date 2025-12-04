@@ -227,22 +227,38 @@ class ElectricCarRoutingApp:
         self.master.config(bg=theme["bg"])
         self.config_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
         self.result_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
-        for widget in self.config_frame.winfo_children():
-            if isinstance(widget, tk.Label):
-                widget.config(bg=theme["frame_bg"], fg=theme["fg"])
-            elif isinstance(widget, tk.Entry):
-                widget.config(bg=theme["entry_bg"], fg=theme["entry_fg"], insertbackground=theme["entry_fg"])
-            elif isinstance(widget, tk.OptionMenu):
-                widget.config(bg=theme["entry_bg"], fg=theme["entry_fg"], activebackground=theme["bg"], activeforeground=theme["fg"])
-            elif isinstance(widget, tk.Checkbutton):
-                widget.config(bg=theme["frame_bg"], fg=theme["fg"], selectcolor=theme["frame_bg"], activebackground=theme["frame_bg"], activeforeground=theme["fg"])
+        
+        # Apply theme to all widgets recursively
+        self._apply_theme_recursive(self.config_frame, theme)
+        self._apply_theme_recursive(self.result_frame, theme)
+        
+        # Specific widgets
         self.summary_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
-        for widget in self.summary_frame.winfo_children():
-            if isinstance(widget, tk.Label):
-                widget.config(bg=theme["frame_bg"], fg=theme["fg"])
         self.txt_path.config(bg=theme["text_bg"], fg=theme["text_fg"], insertbackground=theme["text_fg"])
-        # Cập nhật icon emoji cho nút darkmode
+        
+        # Update darkmode button icon
         self.btn_toggle_mode.config(text="🌙" if self.is_dark_mode else "☀️")
+    
+    def _apply_theme_recursive(self, widget, theme):
+        """Recursively apply theme to all child widgets"""
+        for child in widget.winfo_children():
+            if isinstance(child, tk.LabelFrame):
+                child.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
+            elif isinstance(child, tk.Label):
+                child.config(bg=theme["frame_bg"], fg=theme["fg"])
+            elif isinstance(child, tk.Entry):
+                child.config(bg=theme["entry_bg"], fg=theme["entry_fg"], insertbackground=theme["entry_fg"])
+            elif isinstance(child, tk.Button):
+                # Keep button colors as-is for important action buttons
+                pass
+            elif isinstance(child, tk.OptionMenu):
+                child.config(bg=theme["entry_bg"], fg=theme["entry_fg"], activebackground=theme["bg"], activeforeground=theme["fg"])
+            elif isinstance(child, tk.Checkbutton):
+                child.config(bg=theme["frame_bg"], fg=theme["fg"], selectcolor=theme["frame_bg"], activebackground=theme["frame_bg"], activeforeground=theme["fg"])
+            
+            # Recursively apply to nested widgets
+            if child.winfo_children():
+                self._apply_theme_recursive(child, theme)
 
     def toggle_dark_mode(self):
         """Chuyển đổi giữa chế độ Sáng và Tối"""
@@ -268,31 +284,35 @@ class ElectricCarRoutingApp:
         # Đã chuyển ô nhập địa chỉ vào khung riêng, không cần tạo ở đây nữa
     def _setup_route_input(self):
         # Khung nhập điểm bắt đầu
-        frame_start = tk.LabelFrame(self.config_frame, text="2. Điểm Bắt Đầu", padx=5, pady=5, bg="#111", fg="white")
-        frame_start.pack(fill='x', pady=(10, 0))
-        tk.Label(frame_start, text="Tọa độ (Vĩ độ, Kinh độ)", bg="#111", fg="white").pack(anchor='w')
-        self.entry_start = tk.Entry(frame_start, width=35, bg="#222", fg="white", insertbackground="white")
+        self.frame_start = tk.LabelFrame(self.config_frame, text="2. Điểm Bắt Đầu", padx=5, pady=5)
+        self.frame_start.pack(fill='x', pady=(10, 0))
+        self.lbl_start_coord = tk.Label(self.frame_start, text="Tọa độ (Vĩ độ, Kinh độ)")
+        self.lbl_start_coord.pack(anchor='w')
+        self.entry_start = tk.Entry(self.frame_start, width=35)
         self.entry_start.insert(0, "20.825,105.351")
         self.entry_start.pack(fill='x', pady=2)
-        tk.Label(frame_start, text="Địa chỉ", bg="#111", fg="white").pack(anchor='w')
-        self.entry_start_address = tk.Entry(frame_start, width=35, bg="#222", fg="white", insertbackground="white")
+        self.lbl_start_addr = tk.Label(self.frame_start, text="Địa chỉ")
+        self.lbl_start_addr.pack(anchor='w')
+        self.entry_start_address = tk.Entry(self.frame_start, width=35)
         self.entry_start_address.insert(0, "Kim Đồng, Hòa Bình, Phú Thọ, Việt Nam")
         self.entry_start_address.pack(fill='x', pady=2)
 
         # Khung nhập điểm kết thúc
-        frame_end = tk.LabelFrame(self.config_frame, text="3. Điểm Kết Thúc", padx=5, pady=5, bg="#111", fg="white")
-        frame_end.pack(fill='x', pady=(10, 0))
-        tk.Label(frame_end, text="Tọa độ (Vĩ độ, Kinh độ)", bg="#111", fg="white").pack(anchor='w')
-        self.entry_end = tk.Entry(frame_end, width=35, bg="#222", fg="white", insertbackground="white")
+        self.frame_end = tk.LabelFrame(self.config_frame, text="3. Điểm Kết Thúc", padx=5, pady=5)
+        self.frame_end.pack(fill='x', pady=(10, 0))
+        self.lbl_end_coord = tk.Label(self.frame_end, text="Tọa độ (Vĩ độ, Kinh độ)")
+        self.lbl_end_coord.pack(anchor='w')
+        self.entry_end = tk.Entry(self.frame_end, width=35)
         self.entry_end.insert(0, "10.771,106.701")
         self.entry_end.pack(fill='x', pady=2)
-        tk.Label(frame_end, text="Địa chỉ", bg="#111", fg="white").pack(anchor='w')
-        self.entry_end_address = tk.Entry(frame_end, width=35, bg="#222", fg="white", insertbackground="white")
+        self.lbl_end_addr = tk.Label(self.frame_end, text="Địa chỉ")
+        self.lbl_end_addr.pack(anchor='w')
+        self.entry_end_address = tk.Entry(self.frame_end, width=35)
         self.entry_end_address.insert(0, "Khu phố 8, Phường Bến Thành, Thủ Đức, TP Hồ Chí Minh, Việt Nam")
         self.entry_end_address.pack(fill='x', pady=2)
 
         # Nút switch (⇄) để đảo vị trí bắt đầu/kết thúc, đặt giữa 2 khung
-        self.btn_switch_coords = tk.Button(self.config_frame, text="⇄", font=("Arial", 12, "bold"), width=3, command=self.switch_coords, bg="#222", fg="white")
+        self.btn_switch_coords = tk.Button(self.config_frame, text="⇄", font=("Arial", 12, "bold"), width=3, command=self.switch_coords)
         self.btn_switch_coords.pack(pady=8)
 
         # Pin khởi hành

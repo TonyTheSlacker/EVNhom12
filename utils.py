@@ -37,6 +37,11 @@ R_EARTH = 6371.0
 ROAD_FACTOR = 1.25
 
 def haversine(lat1, lng1, lat2, lng2):
+    """
+    Calculate Haversine distance between two points (km).
+    Note: This is a duplicate of the function in file.py and pdf_utils.py.
+    Consider using the version from file.py as the canonical implementation.
+    """
     lat1, lng1, lat2, lng2 = map(radians, [lat1, lng1, lat2, lng2])
     dlat = lat2 - lat1
     dlng = lng2 - lng1
@@ -44,29 +49,37 @@ def haversine(lat1, lng1, lat2, lng2):
     c = 2 * atan2(sqrt(a), sqrt(1-a))
     return R_EARTH * c
 
-def check_bot_stations(route_points, bot_file='BOT.csv', tol_km=2):
-    df_bot = pd.read_csv(bot_file)
-    bot_stations = []
-    # Làm tròn tọa độ lộ trình để tăng độ chính xác so với BOT
-    route_points_rounded = [(round(lat, 4), round(lng, 4)) for lat, lng in route_points]
-    for idx, row in df_bot.iterrows():
-        vido_kinhdo = row["Vĩ độ, Kinh độ"]
-        if isinstance(vido_kinhdo, str):
-            bot_lat, bot_lng = map(float, vido_kinhdo.split(','))
-        else:
-            bot_lat = row["Vĩ độ, Kinh độ"]
-            bot_lng = row["Vĩ độ, Kinh độ.1"] if "Vĩ độ, Kinh độ.1" in row else 0
-        bot_lat, bot_lng = round(bot_lat, 4), round(bot_lng, 4)
-        for lat, lng in route_points_rounded:
-            # Tăng khoảng cách kiểm tra lên 5km cho dễ test
-            if haversine(lat, lng, bot_lat, bot_lng) <= 5:
-                bot_stations.append({
-                    'name': row['Tên'],
-                    'address': row['Địa chỉ / Lý trình / Hành trình'],
-                    'fee': row['Mức thu (Xe điện/Nhóm 1)'],
-                    'lat': bot_lat,
-                    'lng': bot_lng
-                })
-                break
-    print(f"DEBUG BOT: Lộ trình có {len(bot_stations)} trạm BOT đi qua.")
-    return bot_stations
+def check_bot_stations_legacy(route_points, bot_file='BOT.csv', tol_km=5):
+    """
+    Legacy function for checking BOT stations (kept for backward compatibility).
+    Note: Use check_bot_stations from pdf_utils.py for production code.
+    """
+    try:
+        df_bot = pd.read_csv(bot_file)
+        bot_stations = []
+        # Làm tròn tọa độ lộ trình để tăng độ chính xác so với BOT
+        route_points_rounded = [(round(lat, 4), round(lng, 4)) for lat, lng in route_points]
+        for idx, row in df_bot.iterrows():
+            vido_kinhdo = row["Vĩ độ, Kinh độ"]
+            if isinstance(vido_kinhdo, str):
+                bot_lat, bot_lng = map(float, vido_kinhdo.split(','))
+            else:
+                bot_lat = row["Vĩ độ, Kinh độ"]
+                bot_lng = row["Vĩ độ, Kinh độ.1"] if "Vĩ độ, Kinh độ.1" in row else 0
+            bot_lat, bot_lng = round(bot_lat, 4), round(bot_lng, 4)
+            for lat, lng in route_points_rounded:
+                # Tăng khoảng cách kiểm tra lên 5km cho dễ test
+                if haversine(lat, lng, bot_lat, bot_lng) <= tol_km:
+                    bot_stations.append({
+                        'name': row['Tên'],
+                        'address': row['Địa chỉ / Lý trình / Hành trình'],
+                        'fee': row['Mức thu (Xe điện/Nhóm 1)'],
+                        'lat': bot_lat,
+                        'lng': bot_lng
+                    })
+                    break
+        print(f"DEBUG BOT: Lộ trình có {len(bot_stations)} trạm BOT đi qua.")
+        return bot_stations
+    except Exception as e:
+        print(f"Error in check_bot_stations_legacy: {e}")
+        return []
