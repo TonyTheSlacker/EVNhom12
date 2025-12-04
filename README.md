@@ -68,6 +68,15 @@
   python test_file.py -v
   ```
 
+## Ví dụ sử dụng
+
+- Xem file `example_usage.py` để biết cách sử dụng thuật toán tìm đường một cách programmatic (không qua GUI)
+- Chạy các ví dụ:
+  ```bash
+  python example_usage.py
+  ```
+  Lưu ý: Các ví dụ có thể mất vài phút để hoàn thành do tính toán lộ trình.
+
 ## Tác giả & Đóng góp
 
 - **Châu Hoàn Thiện – 49.01.103.077**

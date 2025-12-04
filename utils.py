@@ -1,6 +1,9 @@
-def print_info(xe):
+def print_info(xe) -> None:
     """
     In thông tin chi tiết của đối tượng ElectricCar ra màn hình console.
+    
+    Args:
+        xe: Đối tượng ElectricCar cần hiển thị thông tin
     
     Lưu ý: Các thuộc tính đã được cập nhật từ (ten, quang_duong, pin) 
     sang (name, max_km_per_charge, battery_capacity) để đồng bộ với models.py.

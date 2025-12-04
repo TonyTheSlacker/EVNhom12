@@ -57,6 +57,20 @@ class TestHaversine(unittest.TestCase):
         dist2 = haversine(10.0, 106.0, 21.0, 105.0)
         self.assertGreater(dist1, 0)
         self.assertAlmostEqual(dist1, dist2, places=5)
+    
+    def test_haversine_invalid_latitude(self):
+        """Test that haversine raises ValueError for invalid latitude"""
+        with self.assertRaises(ValueError):
+            haversine(91.0, 105.0, 10.0, 106.0)  # lat > 90
+        with self.assertRaises(ValueError):
+            haversine(21.0, 105.0, -91.0, 106.0)  # lat < -90
+    
+    def test_haversine_invalid_longitude(self):
+        """Test that haversine raises ValueError for invalid longitude"""
+        with self.assertRaises(ValueError):
+            haversine(21.0, 181.0, 10.0, 106.0)  # lng > 180
+        with self.assertRaises(ValueError):
+            haversine(21.0, 105.0, 10.0, -181.0)  # lng < -180
 
 
 class TestFindNearestNode(unittest.TestCase):
