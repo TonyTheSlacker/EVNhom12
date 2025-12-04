@@ -19,7 +19,7 @@ try:
 except ImportError:
     messagebox.showerror("Lỗi", "Thiếu file.py hoặc không import được các hàm cần thiết từ file.py.")
     # Fallback cho các biến
-    TIMEOUT_SECONDS = 120 
+    TIMEOUT_SECONDS = 240 
     AVG_SPEED_KMH = 100 
     R_EARTH = 6371.0
     ROAD_FACTOR = 1.25
@@ -225,8 +225,6 @@ class ElectricCarRoutingApp:
     def apply_theme(self, theme):
         """Áp dụng theme (Light/Dark) cho toàn bộ GUI"""
         self.master.config(bg=theme["bg"])
-        self.update_start_address()
-        self.update_end_address()
         self.config_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
         self.result_frame.config(bg=theme["frame_bg"], fg=theme["frame_fg"])
         for widget in self.config_frame.winfo_children():
@@ -258,66 +256,123 @@ class ElectricCarRoutingApp:
         tk.Label(self.config_frame, text="1. Chọn Mẫu Xe:", font=("Arial", 10, "bold")).pack(anchor='w', pady=(5, 0))
         tk.OptionMenu(self.config_frame, self.selected_car, *self.car_names, command=self.update_car_info).pack(fill='x', pady=2)
 
+        # Thông tin xe
+        self.lbl_car_info = tk.Label(self.config_frame, text="", font=("Arial", 9), anchor='w', justify='left', bg=self.config_frame.cget("bg"), fg="#00bfff")
+        self.lbl_car_info.pack(fill='x', pady=(0, 5))
+        self.update_car_info(self.selected_car.get())
+
         # Chọn thuật toán
         tk.Label(self.config_frame, text="Thuật toán tìm kiếm:", font=("Arial", 10, "bold")).pack(anchor='w', pady=(10, 0))
         tk.OptionMenu(self.config_frame, self.selected_algorithm, *self.algorithms).pack(fill='x', pady=2)
 
-        # Hiển thị thông tin xe
-        self.lbl_car_info = tk.Label(self.config_frame, text="Thông số xe:", justify=tk.LEFT, fg="blue", wraplength=300)
-        self.lbl_car_info.pack(anchor='w', pady=5)
-        self.update_car_info(self.car_names[0])
-
+        # Đã chuyển ô nhập địa chỉ vào khung riêng, không cần tạo ở đây nữa
     def _setup_route_input(self):
-        # Input Tọa độ
-        tk.Label(self.config_frame, text="2. Tọa độ (Vĩ độ, Kinh độ - VD: 10.76,106.69)", font=("Arial", 10, "bold")).pack(anchor='w', pady=(10, 0))
-        
-
-        tk.Label(self.config_frame, text="Bắt đầu:").pack(anchor='w')
-        self.entry_start = tk.Entry(self.config_frame, width=35)
-        self.entry_start.insert(0, "20.825,105.351") # Giá trị mặc định: Hòa Bình
+        # Khung nhập điểm bắt đầu
+        frame_start = tk.LabelFrame(self.config_frame, text="2. Điểm Bắt Đầu", padx=5, pady=5, bg="#111", fg="white")
+        frame_start.pack(fill='x', pady=(10, 0))
+        tk.Label(frame_start, text="Tọa độ (Vĩ độ, Kinh độ)", bg="#111", fg="white").pack(anchor='w')
+        self.entry_start = tk.Entry(frame_start, width=35, bg="#222", fg="white", insertbackground="white")
+        self.entry_start.insert(0, "20.825,105.351")
         self.entry_start.pack(fill='x', pady=2)
+        tk.Label(frame_start, text="Địa chỉ", bg="#111", fg="white").pack(anchor='w')
+        self.entry_start_address = tk.Entry(frame_start, width=35, bg="#222", fg="white", insertbackground="white")
+        self.entry_start_address.insert(0, "Kim Đồng, Hòa Bình, Phú Thọ, Việt Nam")
+        self.entry_start_address.pack(fill='x', pady=2)
 
-        # Label hiển thị địa chỉ điểm bắt đầu
-        self.lbl_start_address = tk.Label(self.config_frame, text="Địa chỉ: ...", fg="#888", wraplength=300, anchor='w', justify='left')
-        self.lbl_start_address.pack(fill='x', pady=(0, 5))
-
-        # Nút switch (⇄) để đảo vị trí bắt đầu/kết thúc
-        self.btn_switch_coords = tk.Button(self.config_frame, text="⇄", font=("Arial", 12, "bold"), width=3, command=self.switch_coords)
-        self.btn_switch_coords.pack(pady=2)
-
-        tk.Label(self.config_frame, text="Kết thúc:").pack(anchor='w')
-        self.entry_end = tk.Entry(self.config_frame, width=35)
-        self.entry_end.insert(0, "10.771,106.701") # Giá trị mặc định: TP.HCM
+        # Khung nhập điểm kết thúc
+        frame_end = tk.LabelFrame(self.config_frame, text="3. Điểm Kết Thúc", padx=5, pady=5, bg="#111", fg="white")
+        frame_end.pack(fill='x', pady=(10, 0))
+        tk.Label(frame_end, text="Tọa độ (Vĩ độ, Kinh độ)", bg="#111", fg="white").pack(anchor='w')
+        self.entry_end = tk.Entry(frame_end, width=35, bg="#222", fg="white", insertbackground="white")
+        self.entry_end.insert(0, "10.771,106.701")
         self.entry_end.pack(fill='x', pady=2)
+        tk.Label(frame_end, text="Địa chỉ", bg="#111", fg="white").pack(anchor='w')
+        self.entry_end_address = tk.Entry(frame_end, width=35, bg="#222", fg="white", insertbackground="white")
+        self.entry_end_address.insert(0, "Khu phố 8, Phường Bến Thành, Thủ Đức, TP Hồ Chí Minh, Việt Nam")
+        self.entry_end_address.pack(fill='x', pady=2)
 
-        # Label hiển thị địa chỉ điểm kết thúc
-        self.lbl_end_address = tk.Label(self.config_frame, text="Địa chỉ: ...", fg="#888", wraplength=300, anchor='w', justify='left')
-        self.lbl_end_address.pack(fill='x', pady=(0, 5))
-
-        # Gắn sự kiện cập nhật địa chỉ khi nhập tọa độ (chỉ gọi khi FocusOut để tránh gọi liên tục)
-        self.entry_start.bind('<FocusOut>', lambda e: self.update_start_address())
-        self.entry_end.bind('<FocusOut>', lambda e: self.update_end_address())
+        # Nút switch (⇄) để đảo vị trí bắt đầu/kết thúc, đặt giữa 2 khung
+        self.btn_switch_coords = tk.Button(self.config_frame, text="⇄", font=("Arial", 12, "bold"), width=3, command=self.switch_coords, bg="#222", fg="white")
+        self.btn_switch_coords.pack(pady=8)
 
         # Pin khởi hành
-        tk.Label(self.config_frame, text="3. Pin khởi hành (0-100%):", font=("Arial", 10, "bold")).pack(anchor='w', pady=(10, 0))
-        self.entry_pin = tk.Entry(self.config_frame, width=10)
+        tk.Label(self.config_frame, text="4. Pin khởi hành (0-100%):", font=("Arial", 10, "bold"), bg=self.config_frame.cget("bg"), fg="white").pack(anchor='w', pady=(10, 0))
+        self.entry_pin = tk.Entry(self.config_frame, width=10, bg="#222", fg="white", insertbackground="white")
         self.entry_pin.insert(0, "80")
         self.entry_pin.pack(anchor='w', pady=2)
 
         # Tránh trạm thu phí
         self.qua_tram_thu_phi_var = tk.BooleanVar(self.master, value=False)
-        self.chk_bot = tk.Checkbutton(self.config_frame, text="Tránh trạm thu phí BOT", variable=self.qua_tram_thu_phi_var)
+        self.chk_bot = tk.Checkbutton(self.config_frame, text="Tránh trạm thu phí BOT", variable=self.qua_tram_thu_phi_var, bg=self.config_frame.cget("bg"), fg="white", selectcolor="#222", activebackground="#222", activeforeground="white")
         self.chk_bot.pack(anchor='w', pady=5)
+
+        # Sự kiện cập nhật tự động
+        self.entry_start.bind('<FocusOut>', lambda e: self._update_start_address_from_coords())
+        self.entry_start_address.bind('<FocusOut>', lambda e: self._update_start_coords_from_address())
+        self.entry_end.bind('<FocusOut>', lambda e: self._update_end_address_from_coords())
+        self.entry_end_address.bind('<FocusOut>', lambda e: self._update_end_coords_from_address())
+
+    def _update_start_address_from_coords(self):
+        value = self.entry_start.get().strip()
+        try:
+            lat, lng = [float(x.strip()) for x in value.split(',')]
+            address = self.reverse_geocode(lat, lng)
+            self.entry_start_address.delete(0, tk.END)
+            self.entry_start_address.insert(0, address)
+        except Exception:
+            pass
+
+    def _update_start_coords_from_address(self):
+        address = self.entry_start_address.get().strip()
+        if address:
+            try:
+                location = self.geolocator.geocode(address, timeout=5)
+                if location:
+                    coords = f"{location.latitude},{location.longitude}"
+                    self.entry_start.delete(0, tk.END)
+                    self.entry_start.insert(0, coords)
+                else:
+                    messagebox.showerror("Không tìm thấy địa chỉ", f"Không thể tìm thấy tọa độ cho địa chỉ: {address}")
+            except Exception:
+                messagebox.showerror("Lỗi tra cứu địa chỉ", f"Đã xảy ra lỗi khi tra cứu địa chỉ: {address}")
+
+    def _update_end_address_from_coords(self):
+        value = self.entry_end.get().strip()
+        try:
+            lat, lng = [float(x.strip()) for x in value.split(',')]
+            address = self.reverse_geocode(lat, lng)
+            self.entry_end_address.delete(0, tk.END)
+            self.entry_end_address.insert(0, address)
+        except Exception:
+            pass
+
+    def _update_end_coords_from_address(self):
+        address = self.entry_end_address.get().strip()
+        if address:
+            try:
+                location = self.geolocator.geocode(address, timeout=5)
+                if location:
+                    coords = f"{location.latitude},{location.longitude}"
+                    self.entry_end.delete(0, tk.END)
+                    self.entry_end.insert(0, coords)
+                else:
+                    messagebox.showerror("Không tìm thấy địa chỉ", f"Không thể tìm thấy tọa độ cho địa chỉ: {address}")
+            except Exception:
+                messagebox.showerror("Lỗi tra cứu địa chỉ", f"Đã xảy ra lỗi khi tra cứu địa chỉ: {address}")
 
     def switch_coords(self):
         start_val = self.entry_start.get()
         end_val = self.entry_end.get()
+        start_addr = self.entry_start_address.get()
+        end_addr = self.entry_end_address.get()
         self.entry_start.delete(0, tk.END)
         self.entry_start.insert(0, end_val)
         self.entry_end.delete(0, tk.END)
         self.entry_end.insert(0, start_val)
-        self.update_start_address()
-        self.update_end_address()
+        self.entry_start_address.delete(0, tk.END)
+        self.entry_start_address.insert(0, end_addr)
+        self.entry_end_address.delete(0, tk.END)
+        self.entry_end_address.insert(0, start_addr)
 
     # Thêm cache cho geocoding
     geocode_cache = {}
@@ -339,23 +394,7 @@ class ElectricCarRoutingApp:
         except Exception:
             return "Không xác định được địa chỉ."
 
-    def update_start_address(self):
-        value = self.entry_start.get()
-        try:
-            lat, lng = [float(x.strip()) for x in value.split(',')]
-            address = self.reverse_geocode(lat, lng)
-            self.lbl_start_address.config(text=f"Địa chỉ: {address}")
-        except Exception:
-            self.lbl_start_address.config(text="Địa chỉ: Không hợp lệ hoặc không xác định.")
-
-    def update_end_address(self):
-        value = self.entry_end.get()
-        try:
-            lat, lng = [float(x.strip()) for x in value.split(',')]
-            address = self.reverse_geocode(lat, lng)
-            self.lbl_end_address.config(text=f"Địa chỉ: {address}")
-        except Exception:
-            self.lbl_end_address.config(text="Địa chỉ: Không hợp lệ hoặc không xác định.")
+    # Đã loại bỏ hàm update_start_address và update_end_address vì không còn dùng nữa
     def _setup_buttons(self):
         self.btn_search = tk.Button(self.config_frame, text="TÌM LỘ TRÌNH TỐI ƯU", command=self.run_search, bg="#4CAF50", fg="white", font=("Arial", 11, "bold"))
         self.btn_search.pack(fill='x', pady=15)
@@ -415,9 +454,8 @@ class ElectricCarRoutingApp:
         """Cập nhật thông số xe khi chọn từ Dropdown"""
         car = self._get_selected_car()
         if car:
-            info = f"Pin: {car.battery_capacity} kWh\n"
-            info += f"Quãng đường: {car.max_km_per_charge} km\n"
-            info += f"Tiêu thụ: {car.tinh_tieu_thu():.4f} kWh/km" 
+            # Hiển thị thông tin xe đẹp, khớp thuộc tính
+            info = f"Thông số xe:\n- Tên: {car.name}\n- Pin: {getattr(car, 'battery_capacity', getattr(car, 'pin_capacity', 'N/A'))} kWh\n- Quãng đường tối đa: {getattr(car, 'max_km_per_charge', getattr(car, 'max_range', 'N/A'))} km\n- Tiêu thụ: {car.tinh_tieu_thu():.4f} kWh/km"
             self.lbl_car_info.config(text=info)
             
     def _clear_summary(self):
@@ -542,8 +580,8 @@ class ElectricCarRoutingApp:
         full_path_text = f"TÓM TẮT:\n"
         full_path_text += f"Xe: {car.name} | Pin ban đầu: {pin_percent}%\n"
         full_path_text += f"Thuật toán: {algorithm} | Thời gian xử lý: {processing_time:.3f} giây\n"
-        full_path_text += f"Xuất phát: {self.entry_start.get()} (Gần trạm {start_station})\n"
-        full_path_text += f"Kết thúc: {self.entry_end.get()} (Gần trạm {end_station})\n"
+        full_path_text += f"Xuất phát: {self.entry_start_address.get()} (Gần trạm {start_station})\n"
+        full_path_text += f"Kết thúc: {self.entry_end_address.get()} (Gần trạm {end_station})\n"
         full_path_text += "---------------------------------------\n"
 
         for i, step in enumerate(result['path']):
