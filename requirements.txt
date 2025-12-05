@@ -1,2 +1,6 @@
 numpy
 matplotlib
+pandas
+geopy
+folium
+fpdf

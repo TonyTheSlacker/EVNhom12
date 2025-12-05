@@ -16,7 +16,27 @@ ROAD_FACTOR = 1.25 # HỆ SỐ ƯỚC TÍNH ĐƯỜNG BỘ: 1.25 x Đường chi
 # ======================= #
 
 def haversine(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
-    """Tính khoảng cách Haversine (Đường chim bay) giữa hai điểm (km)"""
+    """
+    Tính khoảng cách Haversine (Đường chim bay) giữa hai điểm (km).
+    
+    Args:
+        lat1: Vĩ độ điểm 1 (-90 đến 90)
+        lng1: Kinh độ điểm 1 (-180 đến 180)
+        lat2: Vĩ độ điểm 2 (-90 đến 90)
+        lng2: Kinh độ điểm 2 (-180 đến 180)
+    
+    Returns:
+        Khoảng cách giữa hai điểm tính bằng km
+    
+    Raises:
+        ValueError: Nếu tọa độ không hợp lệ
+    """
+    # Validate coordinates
+    if not (-90 <= lat1 <= 90) or not (-90 <= lat2 <= 90):
+        raise ValueError(f"Vĩ độ phải trong khoảng -90 đến 90. Nhận được: lat1={lat1}, lat2={lat2}")
+    if not (-180 <= lng1 <= 180) or not (-180 <= lng2 <= 180):
+        raise ValueError(f"Kinh độ phải trong khoảng -180 đến 180. Nhận được: lng1={lng1}, lng2={lng2}")
+    
     lat1, lng1, lat2, lng2 = map(radians, [lat1, lng1, lat2, lng2])
     dlat = lat2 - lat1
     dlng = lng2 - lng1
