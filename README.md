@@ -52,19 +52,19 @@ def create_route_map(route_points, df_charge, bot_stations):
       pandas, numpy, geopy, folium, fpdf
 
 ### Quick Start
-    1. Clone the repository:
-    ```bash
-      git clone [https://github.com/TonyTheSlacker/EVNhom12.git](https://github.com/TonyTheSlacker/EVNhom12.git)
-      cd EVNhom12
-    ```
-    2. Install dependencies:
-    ```bash
-       pip install -r requirements.txt
-    ```
-    3. Run the application:
-    ```bash
-       python main.py
-    ```
+1. Clone the repository:
+```bash
+  git clone [https://github.com/TonyTheSlacker/EVNhom12.git](https://github.com/TonyTheSlacker/EVNhom12.git)
+  cd EVNhom12
+```
+2. Install dependencies:
+```bash
+   pip install -r requirements.txt
+```
+3. Run the application:
+```bash
+   python main.py
+```
 ## 📊 Supported Vehicles
 ### The system includes pre-configured models for major EV manufacturers:
     VinFast: VF e34, VF8, VF9, VF5, VF6
