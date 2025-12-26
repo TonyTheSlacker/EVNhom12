@@ -54,7 +54,7 @@ def create_route_map(route_points, df_charge, bot_stations):
 ### Quick Start
 1. Clone the repository:
 ```bash
-  git clone [https://github.com/TonyTheSlacker/EVNhom12.git](https://github.com/TonyTheSlacker/EVNhom12.git)
+  git clone https://github.com/TonyTheSlacker/EVNhom12.git
   cd EVNhom12
 ```
 2. Install dependencies:
@@ -70,13 +70,5 @@ def create_route_map(route_points, df_charge, bot_stations):
     VinFast: VF e34, VF8, VF9, VF5, VF6
     Tesla: Model S, Model 3, Model X, Model Y
     Others: Mercedes EQS, Porsche Taycan, Hyundai Ioniq 5
-
-## 👥 Authors & Contributions
-### This project was developed as a specialized engineering capstone by Group 12:
-    Châu Hoàn Thiện: Core UCS Algorithm, Data Processing, PDF Engine.
-    Châu Vĩ Khôn: UI/UX Design (Tkinter), Folium Map Integration.
-    Diệp Quang Huy: A* Algorithm Foundation.
-    Liêu Lâm Tài: Unit Testing & QA.
-    Lê Việt Hoàng Thảo: Data Validation & Reporting.
 --------------------------------------------------------------------------------------------------------------------------
-Disclaimer: This project uses static datasets for charging stations/tolls and is intended for simulation/academic purposes.
+***Disclaimer: This project uses static datasets for charging stations/tolls and is intended for simulation/academic purposes.***
