@@ -1,91 +1,82 @@
-# Dự án Lập Kế Hoạch Lộ Trình Xe Ô Tô Điện
+# EV Route Planner (Python)
 
-Ứng dụng Python mô phỏng, tối ưu lộ trình di chuyển cho xe ô tô điện, hỗ trợ tìm đường qua các trạm sạc, tránh trạm BOT, xuất PDF, và hiển thị bản đồ tương tác.
+![Language](https://img.shields.io/badge/Language-Python_3.x-3776AB?logo=python&logoColor=white)
+![UI Engine](https://img.shields.io/badge/UI-Tkinter-2C3E50)
+![Maps](https://img.shields.io/badge/Maps-Folium-77B829)
+![Algorithm](https://img.shields.io/badge/Algorithm-A*-red)
 
-## Tính năng chính
+An intelligent routing simulation for Electric Vehicles (EVs) that calculates the optimal path between cities while accounting for **battery constraints**, **charging station availability**, and **toll costs (BOT)**.
 
-- Nhập địa chỉ hoặc tọa độ cho điểm bắt đầu/kết thúc, tự động đồng bộ.
-- Tìm lộ trình tối ưu bằng thuật toán A* hoặc UCS, dựa trên dữ liệu trạm sạc thực tế.
-- Tính toán quãng đường, thời gian lái xe, thời gian sạc, chi phí sạc, phí BOT.
-- Tránh trạm thu phí BOT nếu người dùng chọn.
-- Hiển thị chi tiết lộ trình, các trạm sạc, trạng thái pin, hoạt động xe.
-- Xuất kết quả lộ trình ra file PDF.
-- Hiển thị bản đồ lộ trình bằng Folium (HTML).
-- Giao diện Tkinter hỗ trợ Dark Mode, trực quan, dễ sử dụng.
+Unlike standard GPS apps, this system allows users to compare different pathfinding strategies (**A*** vs **Uniform Cost Search**) and visualize the results on an interactive map.
 
-## Lưu ý (Note)
+---
 
-- Đây là project sinh viên, chưa tối ưu cho thực tế, chỉ mang tính mô phỏng và học thuật.
-- Đường đi tính toán là đường chim bay (Haversine), chưa phải đường bộ thực tế, chưa tích hợp bản đồ giao thông thật.
-- Dữ liệu trạm sạc/BOT là mẫu, không đầy đủ hoặc cập nhật liên tục.
-- Chưa tối ưu về tốc độ thuật toán, hiệu năng, và giao diện người dùng chuyên nghiệp.
-- Một số tính năng nâng cao (tìm đường tránh kẹt xe, tối ưu chi phí thực tế, bản đồ tương tác nâng cao,...) chưa có.
-- Các thuật toán chỉ dựa trên dữ liệu tĩnh, không có API bản đồ hoặc dữ liệu động.
-- Chỉ hỗ trợ các mẫu xe điện có sẵn trong danh sách, chưa cho phép thêm xe mới từ giao diện.
+## ⚡ Key Features
 
-## Cấu trúc dự án
+* **Algorithmic Pathfinding:** Implements **A*** (using Haversine distance heuristics) and **UCS** to find the most efficient route.
+* **Constraint Management:** Automatically routes the vehicle through charging stations when battery levels drop below the safety threshold.
+* **Cost Optimization:** Optional routing logic to avoid toll stations (BOT) to minimize travel costs.
+* **Interactive Visualization:** Generates dynamic HTML maps using **Folium** to display the route, charging stops, and POIs.
+* **Data Export:** Generates detailed PDF reports of the itinerary, including charging times and energy consumption stats.
 
-- `main.py`: Giao diện người dùng, xử lý nhập liệu, hiển thị kết quả.
-- `file.py`: Thuật toán tìm đường, logic tối ưu lộ trình.
-- `models.py`: Định nghĩa lớp xe điện, danh sách xe mẫu.
-- `pdf_utils.py`: Xuất lộ trình ra file PDF, xử lý dữ liệu BOT.
-- `utils.py`: Hàm tiện ích, tính toán phụ trợ.
-- `export_pdf.py`: (Tùy chọn) hỗ trợ xuất PDF.
-- `test_file.py`: Kiểm thử đơn vị cho các hàm chính.
-- `requirements.txt`: Thư viện cần thiết.
-- `charging_stations.csv`: Dữ liệu trạm sạc (tên, địa chỉ, tọa độ).
-- `BOT.csv`: Dữ liệu trạm thu phí BOT (tên, địa chỉ, tọa độ, phí).
-- `routes/`: Thư mục chứa các file PDF lộ trình đã xuất.
-- `route_map_temp.html`: File bản đồ lộ trình tạm thời.
+## 🛠️ Technical Architecture
 
-## Hướng dẫn sử dụng
+### Core Algorithms
+The system treats the map as a weighted graph where nodes are coordinates/stations and edges are road segments.
+* **Heuristic Function:** Uses the **Haversine formula** to calculate the great-circle distance between coordinates for the A* heuristic.
+* **Energy Model:** Calculates energy consumption (kWh) based on specific vehicle models (e.g., VinFast, Tesla) and distance traveled.
 
-1. Cài đặt các thư viện cần thiết:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   Hoặc cài đặt thủ công:
-   ```bash
-   pip install pandas numpy matplotlib geopy folium fpdf
-   ```
-2. Chuẩn bị dữ liệu:
-   - Đảm bảo có file `charging_stations.csv` và `BOT.csv` trong thư mục dự án.
-   - Xem file `DATA_FORMAT.md` để biết chi tiết định dạng dữ liệu CSV.
-3. Chạy chương trình:
-   ```bash
-   python main.py
-   ```
-4. Sử dụng giao diện để nhập thông tin, chọn xe, thuật toán, và xuất kết quả.
+### System Components
+* **`main.py`:** The GUI layer built with **Tkinter**, handling user inputs and async algorithm execution.
+* **`file.py`:** The logic core containing the A* and UCS graph traversal implementations.
+* **`models.py`:** Object-oriented definitions for EV specifications (Battery Capacity, Range, Consumption).
+* **`pdf_utils.py`:** A report generation engine using FPDF.
 
-## Kiểm thử
+```python
+# Snippet: Map Generation Logic (main.py)
+def create_route_map(route_points, df_charge, bot_stations):
+    """
+    Generates an interactive Folium map with markers for:
+    - Start/End points
+    - Charging stops (Orange bolts)
+    - Toll stations (Pink circles)
+    """
+    m = folium.Map(location=[start_lat, start_lng], zoom_start=6)
+    folium.PolyLine(locations=route_points, color="blue", weight=5).add_to(m)
+    # ... marker logic ...
+```
 
-- Chạy kiểm thử đơn vị:
-  ```bash
-  python test_file.py
-  ```
-- Chạy kiểm thử chi tiết:
-  ```bash
-  python test_file.py -v
-  ```
+## 🚀 Installation & Usage
+### Prerequisites
+      Python 3.8+
+      pandas, numpy, geopy, folium, fpdf
 
-## Ví dụ sử dụng
+### Quick Start
+    1. Clone the repository:
+    ```bash
+      git clone [https://github.com/TonyTheSlacker/EVNhom12.git](https://github.com/TonyTheSlacker/EVNhom12.git)
+      cd EVNhom12
+    ```
+    2. Install dependencies:
+    ```bash
+       pip install -r requirements.txt
+    ```
+    3. Run the application:
+    ```bash
+       python main.py
+    ```
+## 📊 Supported Vehicles
+### The system includes pre-configured models for major EV manufacturers:
+    VinFast: VF e34, VF8, VF9, VF5, VF6
+    Tesla: Model S, Model 3, Model X, Model Y
+    Others: Mercedes EQS, Porsche Taycan, Hyundai Ioniq 5
 
-- Xem file `example_usage.py` để biết cách sử dụng thuật toán tìm đường một cách programmatic (không qua GUI)
-- Chạy các ví dụ:
-  ```bash
-  python example_usage.py
-  ```
-  Lưu ý: Các ví dụ có thể mất vài phút để hoàn thành do tính toán lộ trình.
-
-## Tác giả & Đóng góp
-
-- **Châu Hoàn Thiện – 49.01.103.077**
-  - Xây dựng thuật toán UCS, nhập tọa độ/địa chỉ, xuất PDF lộ trình, xử lý dữ liệu BOT.csv và charging_stations.csv, các chức năng phụ trợ, darkmode.
-- **Châu Vĩ Khôn – 45.01.104.116**
-  - Thiết kế giao diện Tkinter, tạo UI, sửa lỗi thuật toán UCS, bổ sung xuất bản đồ HTML (Folium), tối ưu trải nghiệm người dùng, fix các lỗi còn lại.
-- **Diệp Quang Huy – 49.01.104.050**
-  - Xây dựng thuật toán A* ban đầu, cung cấp nền tảng cho phần tìm đường tối ưu.
-- **Liêu Lâm Tài – 48.01.104.116**
-  - Viết kiểm thử đơn vị (`test_file.py`), kiểm tra dữ liệu đầu vào, hỗ trợ tạo hàm tiện ích.
-- **Lê Việt Hoàng Thảo – 47.01.104.196**
-  - Viết hàm xuất danh sách trạm sạc ra PDF (`export_pdf.py`), hỗ trợ kiểm tra dữ liệu, đóng góp ý tưởng giao diện.
+## 👥 Authors & Contributions
+### This project was developed as a specialized engineering capstone by Group 12:
+    Châu Hoàn Thiện: Core UCS Algorithm, Data Processing, PDF Engine.
+    Châu Vĩ Khôn: UI/UX Design (Tkinter), Folium Map Integration.
+    Diệp Quang Huy: A* Algorithm Foundation.
+    Liêu Lâm Tài: Unit Testing & QA.
+    Lê Việt Hoàng Thảo: Data Validation & Reporting.
+--------------------------------------------------------------------------------------------------------------------------
+Disclaimer: This project uses static datasets for charging stations/tolls and is intended for simulation/academic purposes.
